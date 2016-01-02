@@ -19,6 +19,7 @@
     "grunt-contrib-uglify": "",
     "grunt-env": "",
     "grunt-ftp-deploy": "",
+    "grunt-marked": "",
     "grunt-open": "",
     "grunt-preprocess": ""
   }
