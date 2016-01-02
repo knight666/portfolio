@@ -1,0 +1,7 @@
+# Project
+
+syntax: glob
+build/*
+intermediate/*
+media/**/*.js
+.ftppass

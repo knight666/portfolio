@@ -1,0 +1,25 @@
+{
+  "name": "Portfolio",
+  "version": "0.1.0",
+  "buildnum": "1",
+  "repository": {
+    "type": "hg",
+    "url": "https://bitbucket.org/knight666/portfolio"
+  },
+  "devDependencies": {
+    "grunt": "",
+    "matchdep": "",
+    "requirejs": "",
+    "marked": "",
+    "grunt-build-number": "",
+    "grunt-contrib-clean": "",
+    "grunt-contrib-concat": "",
+    "grunt-contrib-copy": "",
+    "grunt-contrib-requirejs": "",
+    "grunt-contrib-uglify": "",
+    "grunt-env": "",
+    "grunt-ftp-deploy": "",
+    "grunt-open": "",
+    "grunt-preprocess": ""
+  }
+}
