@@ -23,6 +23,18 @@ module.exports = function(grunt) {
 			files: [ 'package.json' ],
 		},
 
+		copy: {
+			bootstrap: {
+				expand: true,
+				cwd: 'node_modules/bootstrap/dist/',
+				src: [
+					'css/*.min.css',
+					'js/*.min.js',
+				],
+				dest: '<%= OUTPUT_PATH %>/'
+			},
+		},
+
 		env: {
 			debug: {
 				NODE_ENV: 'DEVELOPMENT',
@@ -75,6 +87,7 @@ module.exports = function(grunt) {
 		'env:' + grunt.config('TARGET'),
 		'clean:build',
 		'pages',
+		'copy:bootstrap'
 	];
 	grunt.registerTask('default', defaultTasks);
 }
