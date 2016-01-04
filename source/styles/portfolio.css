@@ -2,7 +2,18 @@
 	float: right;
 	max-width: 300px;
 	margin: 10px;
+	margin-top: 50px;
 }
 #page-content {
 	max-width: 80%;
+}
+
+.badge-xbox-one {
+	background-color: #137D10;
+}
+.badge-playstation-4 {
+	background-color: #063279;
+}
+.badge-steam {
+	background-color: #000000;
 }
