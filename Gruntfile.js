@@ -86,10 +86,21 @@ module.exports = function(grunt) {
 			grunt.log.writeln('Processing "' + fullPath + '" -> "' + outputPath + '".');
 
 			var context = grunt.file.readJSON(fullPath);
+
+			var content = "";
+			context['paragraphs'].forEach(function(item) {
+				grunt.log.writeln(item);
+				if (item['header'])
+				{
+					content += marked('### ' + item['header'] + ' ###\n\n');
+				}
+				content += marked(item['text']);
+			});
+
 			var template = grunt.file.read(grunt.template.process('<%= SOURCE_PATH %>/page-template.html'));
 			template = template.replace(/##TITLE##/g, context['title']);
 			template = template.replace(/##DESCRIPTION##/g, marked(context['description']));
-			template = template.replace(/##CONTENT##/g, marked(context['content']));
+			template = template.replace(/##CONTENT##/g, content);
 
 			grunt.file.write(outputPath, template);
 		});
