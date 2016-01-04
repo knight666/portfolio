@@ -7,20 +7,23 @@
     "url": "https://bitbucket.org/knight666/portfolio"
   },
   "devDependencies": {
-    "grunt": "",
-    "matchdep": "",
-    "requirejs": "",
-    "marked": "",
-    "grunt-build-number": "",
-    "grunt-contrib-clean": "",
-    "grunt-contrib-concat": "",
-    "grunt-contrib-copy": "",
-    "grunt-contrib-requirejs": "",
-    "grunt-contrib-uglify": "",
-    "grunt-env": "",
-    "grunt-ftp-deploy": "",
-    "grunt-marked": "",
-    "grunt-open": "",
-    "grunt-preprocess": ""
+    "grunt": "~0.4.5",
+    "grunt-build-number": "~1.0.0",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-contrib-concat": "~0.5.1",
+    "grunt-contrib-copy": "~0.8.0",
+    "grunt-contrib-requirejs": "~0.4.4",
+    "grunt-contrib-uglify": "~0.11.0",
+    "grunt-env": "~0.4.4",
+    "grunt-ftp-deploy": "~0.1.10",
+    "grunt-marked": "~0.1.2",
+    "grunt-open": "~0.2.3",
+    "grunt-preprocess": "~5.0.1",
+    "marked": "~0.3.5",
+    "matchdep": "~1.0.0",
+    "requirejs": "~2.1.22"
+  },
+  "engines": {
+    "node": ">=2.7.4"
   }
 }

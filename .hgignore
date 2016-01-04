@@ -4,4 +4,5 @@ syntax: glob
 build/*
 intermediate/*
 media/**/*.js
+node_modules/*
 .ftppass
