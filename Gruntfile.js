@@ -10,11 +10,11 @@ module.exports = function(grunt) {
 		TARGET: grunt.option('build') || process.env.GRUNT_ENV || 'debug',
 		VERSION: versionNumber,
 
-		MEDIA_PATH: 'media/',
-		SOURCE_PATH: 'source/',
-		INTERMEDIATE_PATH: 'intermediate/',
-		STYLES_PATH: 'styles/',
-		OUTPUT_PATH: 'build/<%= TARGET %>/',
+		MEDIA_PATH: 'media',
+		SOURCE_PATH: 'source',
+		INTERMEDIATE_PATH: 'intermediate',
+		STYLES_PATH: 'styles',
+		OUTPUT_PATH: 'build/<%= TARGET %>',
 
 		buildnumber: {
 			options: {
@@ -37,30 +37,36 @@ module.exports = function(grunt) {
 		clean: {
 			build: [ '<%= OUTPUT_PATH %>' ],
 		},
+	});
 
-		marked: {
-			options: {
-				highlight: false,
-				gfm: true,
-				tables: true,
-				breaks: false,
-				pedantic: false,
-				sanitize: true,
-				smartLists: true,
-				smartypants: false
-			},
-			dist: {
-				files: [{
-					expand: true,
-					src: ['<%= SOURCE_PATH %>/**/*.md'],
-					dest: '<%= OUTPUT_PATH %>',
-					rename: function(dest, src) {
-						var filename = src.match(/([^ \/]+?)\.md$/)[0];
-						return dest + filename.replace(/md$/, 'html');
-					}
-				}]
-			},
-		},
+	grunt.registerTask('pages', function () {
+		var marked = require('marked');
+		marked.setOptions({
+			renderer: new marked.Renderer(),
+			breaks: false,
+			gfm: true,
+			highlight: false,
+			tables: true,
+			pedantic: false,
+			sanitize: true,
+			smartLists: true,
+			smartypants: false
+		});
+
+		grunt.file.expand(grunt.template.process('<%= SOURCE_PATH %>/pages/*.json')).forEach(function(fullPath) {
+			var filename = fullPath.match(/([^ \/]+?)\.json$/)[1] + '.html';
+			var outputPath = grunt.template.process('<%= OUTPUT_PATH %>/pages/' + filename);
+
+			grunt.log.writeln('Processing "' + fullPath + '" -> "' + outputPath + '".');
+
+			var context = grunt.file.readJSON(fullPath);
+			var template = grunt.file.read(grunt.template.process('<%= SOURCE_PATH %>/page-template.html'));
+			template = template.replace(/##TITLE##/g, context['title']);
+			template = template.replace(/##DESCRIPTION##/g, marked(context['description']));
+			template = template.replace(/##CONTENT##/g, marked(context['content']));
+
+			grunt.file.write(outputPath, template);
+		});
 	});
 
 	// build
@@ -68,7 +74,7 @@ module.exports = function(grunt) {
 	var defaultTasks = [
 		'env:' + grunt.config('TARGET'),
 		'clean:build',
-		'marked'
+		'pages',
 	];
 	grunt.registerTask('default', defaultTasks);
 }
