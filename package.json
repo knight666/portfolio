@@ -23,6 +23,7 @@
     "grunt-preprocess": "~5.0.1",
     "marked": "~0.3.5",
     "matchdep": "~1.0.0",
+    "preprocess": "~3.0.2",
     "requirejs": "~2.1.22"
   },
   "engines": {

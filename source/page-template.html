@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Portfolio - ##TITLE##</title>
+	<title>Portfolio - <!-- @echo PAGE_TITLE --></title>
 	
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" >
 	<link rel="stylesheet" type="text/css" href="../css/portfolio.css" >
@@ -14,7 +14,7 @@
 	<div class="container">
 		<div class="panel panel-primary" id="page-header">
 			<div class="panel-body">
-				##DESCRIPTION##
+				<!-- @echo PAGE_DESCRIPTION -->
 				<table class="table table-striped">
 					<tr>
 						<td>Released</td>
@@ -36,10 +36,9 @@
 			</div>
 		</div>
 		<div class="page-header">
-			<h1>##TITLE##</h1>
+			<h1><!-- @echo PAGE_TITLE --></h1>
 		</div>
-		<div id="page-content">
-			##CONTENT##		</div>
+		<div id="page-content"><!-- @echo PAGE_CONTENT --></div>
 	</div>
 
 	<!-- Bootstrap -->
