@@ -33,6 +33,20 @@ module.exports = function(grunt) {
 				],
 				dest: '<%= OUTPUT_PATH %>/'
 			},
+			jquery: {
+				expand: true,
+				cwd: 'node_modules/jquery/dist/',
+				src: [
+					'*.min.js',
+				],
+				dest: '<%= OUTPUT_PATH %>/js/'
+			},
+			styles: {
+				expand: true,
+				cwd: '<%= SOURCE_PATH %>/styles/',
+				src: '*.css',
+				dest: '<%= OUTPUT_PATH %>/css/'
+			},
 		},
 
 		env: {
@@ -87,7 +101,9 @@ module.exports = function(grunt) {
 		'env:' + grunt.config('TARGET'),
 		'clean:build',
 		'pages',
-		'copy:bootstrap'
+		'copy:bootstrap',
+		'copy:jquery',
+		'copy:styles',
 	];
 	grunt.registerTask('default', defaultTasks);
 }
