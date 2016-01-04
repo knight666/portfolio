@@ -2,14 +2,32 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<title>Portfolio - ##TITLE##</title>
-	<!--link rel="stylesheet" type="text/css" href="styles/main.css" /-->
+	
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" >
+	<link rel="stylesheet" type="text/css" href="../css/portfolio.css" >
 </head>
 <body>
-	<div id="page-header">
-		<div class="title">##TITLE##</div>
-		<div class="description">##DESCRIPTION##</div>
+	<div class="container">
+		<div class="page-header">
+			<h1>##TITLE##</h1>
+		</div>
+		<div class="panel panel-primary" id="page-header">
+			<div class="panel-heading">
+				<h3 class="panel-title">Brief</h3>
+			</div>
+			<div class="panel-body">
+				##DESCRIPTION##			</div>
+		</div>
+		<div id="page-content">
+			##CONTENT##		</div>
 	</div>
-	<div id="page-content">##CONTENT##</div>
+
+	<!-- Bootstrap -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
 </body>
 </html>

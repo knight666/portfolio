@@ -1,0 +1,8 @@
+#page-header {
+	float: right;
+	max-width: 300px;
+	margin: 10px;
+}
+#page-content {
+	max-width: 80%;
+}
