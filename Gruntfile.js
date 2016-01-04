@@ -63,6 +63,18 @@ module.exports = function(grunt) {
 		clean: {
 			build: [ '<%= OUTPUT_PATH %>' ],
 		},
+
+		'ftp-deploy': {
+			build: {
+				auth: {
+					host: 'ftp.knight666.com',
+					port: 21,
+					authKey: 'website',
+				},
+				src: '<%= OUTPUT_PATH %>',
+				dest: '/domains/knight666.com/public_html/portfolio/',
+			}
+		},
 	});
 
 	grunt.registerTask('index', function () {
@@ -191,5 +203,13 @@ module.exports = function(grunt) {
 		'copy:jquery',
 		'copy:styles',
 	];
+
+	// deploy to server
+	
+	if (grunt.option('deploy'))
+	{
+		defaultTasks.push('ftp-deploy:build');
+	}
+
 	grunt.registerTask('default', defaultTasks);
 }
