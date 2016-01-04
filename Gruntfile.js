@@ -65,6 +65,31 @@ module.exports = function(grunt) {
 		},
 	});
 
+	grunt.registerTask('index', function () {
+		var pp = require('preprocess');
+
+		var context = {
+			'PROJECT_LIST': ''
+		};
+
+		grunt.file.expand(grunt.template.process('<%= SOURCE_PATH %>/pages/*.json')).forEach(function(fullPath) {
+			var entry = grunt.file.readJSON(fullPath);
+
+			var project = {
+				'filename': fullPath.match(/([^ \/]+?)\.json$/)[1] + '.html',
+				'title': entry['title']
+			};
+
+			context['PROJECT_LIST'] += '<li class="list-group-item"><a href="pages/' + project['filename'] + '">' + project['title'] + '</a></li>\n';
+		});
+
+		// compile template
+
+		var template = grunt.template.process('<%= SOURCE_PATH %>/index-template.html');
+		var processed = pp.preprocess(grunt.file.read(template), context);
+		grunt.file.write(grunt.template.process('<%= OUTPUT_PATH %>/index.html'), processed);
+	});
+
 	grunt.registerTask('pages', function () {
 		var marked = require('marked');
 		marked.setOptions({
@@ -160,6 +185,7 @@ module.exports = function(grunt) {
 	var defaultTasks = [
 		'env:' + grunt.config('TARGET'),
 		'clean:build',
+		'index',
 		'pages',
 		'copy:bootstrap',
 		'copy:jquery',
