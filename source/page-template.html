@@ -16,22 +16,26 @@
 			<div class="panel-body">
 				<!-- @echo PAGE_DESCRIPTION -->
 				<table class="table table-striped">
+					<!-- @ifdef PAGE_BRIEF_RELEASED -->
 					<tr>
 						<td>Released</td>
-						<td>December 2014</td>
+						<td><!-- @echo PAGE_BRIEF_RELEASED --></td>
 					</tr>
+					<!-- @endif -->
+					<!-- @ifdef PAGE_BRIEF_EMPLOYER -->
 					<tr>
 						<td>Employer</td>
-						<td>Nixxes Software</td>
+						<td><!-- @echo PAGE_BRIEF_EMPLOYER --></td>
 					</tr>
+					<!-- @endif -->
+					<!-- @ifdef PAGE_BRIEF_PLATFORMS -->
 					<tr>
 						<td>Platforms</td>
 						<td>
-							<a href="#" class="badge badge-xbox-one">Xbox One</a>
-							<a href="#" class="badge badge-playstation-4">PlayStation 4</a>
-							<a href="#" class="badge badge-steam">Steam</a>
+<!-- @echo PAGE_BRIEF_PLATFORMS -->
 						</td>
 					</tr>
+					<!-- @endif -->
 				</table>
 			</div>
 		</div>
