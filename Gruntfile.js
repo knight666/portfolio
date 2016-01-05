@@ -82,6 +82,8 @@ module.exports = function(grunt) {
 	var pp = require('preprocess');
 
 	var compileTemplate = function(template, context, outputName) {
+		grunt.log.writeln('Compiling template "' + template + '".');
+
 		var loaded = grunt.template.process('<%= TEMPLATES_PATH %>/' + template + '.html');
 		var processed = pp.preprocess(grunt.file.read(loaded), context);
 		grunt.file.write(grunt.template.process('<%= OUTPUT_PATH %>/' + (outputName || template) + '.html'), processed);
@@ -104,6 +106,7 @@ module.exports = function(grunt) {
 		});
 
 		compileTemplate('index', context);
+		compileTemplate('projects', context);
 	});
 
 	grunt.registerTask('pages', function () {
