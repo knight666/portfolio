@@ -12,6 +12,7 @@ module.exports = function(grunt) {
 
 		MEDIA_PATH: 'media',
 		SOURCE_PATH: 'source',
+		TEMPLATES_PATH: '<%= SOURCE_PATH %>/templates',
 		INTERMEDIATE_PATH: 'intermediate',
 		STYLES_PATH: 'styles',
 		OUTPUT_PATH: 'build/<%= TARGET %>',
@@ -77,9 +78,16 @@ module.exports = function(grunt) {
 		},
 	});
 
-	grunt.registerTask('index', function () {
-		var pp = require('preprocess');
+	var marked = require('marked');
+	var pp = require('preprocess');
 
+	var compileTemplate = function(template, context, outputName) {
+		var loaded = grunt.template.process('<%= TEMPLATES_PATH %>/' + template + '.html');
+		var processed = pp.preprocess(grunt.file.read(loaded), context);
+		grunt.file.write(grunt.template.process('<%= OUTPUT_PATH %>/' + (outputName || template) + '.html'), processed);
+	}
+
+	grunt.registerTask('index', function () {
 		var context = {
 			'PROJECT_LIST': ''
 		};
@@ -95,15 +103,10 @@ module.exports = function(grunt) {
 			context['PROJECT_LIST'] += '<li class="list-group-item"><a href="pages/' + project['filename'] + '">' + project['title'] + '</a></li>\n';
 		});
 
-		// compile template
-
-		var template = grunt.template.process('<%= SOURCE_PATH %>/index-template.html');
-		var processed = pp.preprocess(grunt.file.read(template), context);
-		grunt.file.write(grunt.template.process('<%= OUTPUT_PATH %>/index.html'), processed);
+		compileTemplate('index', context);
 	});
 
 	grunt.registerTask('pages', function () {
-		var marked = require('marked');
 		marked.setOptions({
 			renderer: new marked.Renderer(),
 			breaks: false,
@@ -116,13 +119,8 @@ module.exports = function(grunt) {
 			smartypants: false
 		});
 
-		var pp = require('preprocess');
-
 		grunt.file.expand(grunt.template.process('<%= SOURCE_PATH %>/pages/*.json')).forEach(function(fullPath) {
-			var filename = fullPath.match(/([^ \/]+?)\.json$/)[1] + '.html';
-			var outputPath = grunt.template.process('<%= OUTPUT_PATH %>/pages/' + filename);
-
-			grunt.log.writeln('Processing "' + fullPath + '" -> "' + outputPath + '".');
+			grunt.log.writeln('Processing "' + fullPath + '".');
 
 			var entry = grunt.file.readJSON(fullPath);
 
@@ -184,11 +182,8 @@ module.exports = function(grunt) {
 				});
 			}
 
-			// compile template
-
-			var template = grunt.template.process('<%= SOURCE_PATH %>/page-template.html');
-			var processed = pp.preprocess(grunt.file.read(template), context);
-			grunt.file.write(outputPath, processed);
+			var filename = fullPath.match(/([^ \/]+?)\.json$/)[1];
+			compileTemplate('project', context, 'pages/' + filename);
 		});
 	});
 
