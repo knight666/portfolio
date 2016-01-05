@@ -47,7 +47,7 @@ module.exports = function(grunt) {
 		'env:' + grunt.config('TARGET'),
 		'clean:build',
 		'index',
-		'pages',
+		'projects',
 		'copy:bootstrap',
 		'copy:jquery',
 		'copy:styles',

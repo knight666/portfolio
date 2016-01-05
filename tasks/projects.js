@@ -1,7 +1,7 @@
 var marked = require('marked');
 
 module.exports = function(grunt) {
-	grunt.registerTask('pages', function () {
+	grunt.registerTask('projects', function () {
 		marked.setOptions({
 			renderer: new marked.Renderer(),
 			breaks: false,
@@ -14,7 +14,7 @@ module.exports = function(grunt) {
 			smartypants: false
 		});
 
-		grunt.file.expand(grunt.template.process('<%= SOURCE_PATH %>/pages/*.json')).forEach(function(fullPath) {
+		grunt.file.expand(grunt.template.process('<%= SOURCE_PATH %>/projects/*.json')).forEach(function(fullPath) {
 			grunt.log.writeln('Processing "' + fullPath + '".');
 
 			var entry = grunt.file.readJSON(fullPath);
@@ -78,7 +78,7 @@ module.exports = function(grunt) {
 			}
 
 			var filename = fullPath.match(/([^ \/]+?)\.json$/)[1];
-			grunt.project_utils.compileTemplate(grunt, 'project', context, 'pages/' + filename);
+			grunt.project_utils.compileTemplate(grunt, 'project', context, 'projects/' + filename);
 		});
 	});
 };
