@@ -1,6 +1,6 @@
 module.exports = function(grunt) {
 	// load dependencies
-	
+
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
 	var glob = require('glob');
@@ -30,13 +30,16 @@ module.exports = function(grunt) {
 	grunt.util._.extend(config, configTasks);
 	grunt.initConfig(config);
 
-	var compileTemplate = function(template, context, outputName) {
-		grunt.log.writeln('Compiling template "' + template + '".');
+	// load utilities
 
-		var loaded = grunt.template.process('<%= TEMPLATES_PATH %>/' + template + '.html');
-		var processed = pp.preprocess(grunt.file.read(loaded), context);
-		grunt.file.write(grunt.template.process('<%= OUTPUT_PATH %>/' + (outputName || template) + '.html'), processed);
-	}
+	var utils = {};
+
+	glob.sync('*', { cwd: './tasks/utils/' }).forEach(function(option) {
+		var key = option.replace(/\.js$/,'');
+		utils[key] = require('./tasks/utils/' + option);
+	});
+
+	// load additional tasks
 
 	grunt.registerTask('index', function () {
 		var context = {
@@ -54,8 +57,8 @@ module.exports = function(grunt) {
 			context['PROJECT_LIST'] += '<li class="list-group-item"><a href="pages/' + project['filename'] + '">' + project['title'] + '</a></li>\n';
 		});
 
-		compileTemplate('index', context);
-		compileTemplate('projects', context);
+		utils.compileTemplate(grunt, 'index', context);
+		utils.compileTemplate(grunt, 'projects', context);
 	});
 
 	grunt.registerTask('pages', function () {
@@ -135,7 +138,7 @@ module.exports = function(grunt) {
 			}
 
 			var filename = fullPath.match(/([^ \/]+?)\.json$/)[1];
-			compileTemplate('project', context, 'pages/' + filename);
+			utils.compileTemplate(grunt, 'project', context, 'pages/' + filename);
 		});
 	});
 
