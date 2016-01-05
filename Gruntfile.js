@@ -1,85 +1,34 @@
 module.exports = function(grunt) {
+	// load dependencies
+	
 	require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
-	
-	var package = grunt.file.readJSON('package.json');
-	var versionNumber = package['version'].substring(0, package['version'].length - 2) + '.' + (package['buildnum'] || '0');
-	
-	grunt.initConfig({
-		pkg: grunt.file.readJSON('package.json'),
 
+	var glob = require('glob');
+	var marked = require('marked');
+	var pp = require('preprocess');
+
+	// setup config
+
+	var config = {
 		TARGET: grunt.option('build') || process.env.GRUNT_ENV || 'debug',
-		VERSION: versionNumber,
-
-		MEDIA_PATH: 'media',
 		SOURCE_PATH: 'source',
 		TEMPLATES_PATH: '<%= SOURCE_PATH %>/templates',
 		INTERMEDIATE_PATH: 'intermediate',
 		STYLES_PATH: 'styles',
-		OUTPUT_PATH: 'build/<%= TARGET %>',
+		OUTPUT_PATH: 'build',
+	};
 
-		buildnumber: {
-			options: {
-				field: 'buildnum',
-			},
-			files: [ 'package.json' ],
-		},
+	// load options from tasks folder
 
-		copy: {
-			bootstrap: {
-				expand: true,
-				cwd: 'node_modules/bootstrap/dist/',
-				src: [
-					'css/*.min.css',
-					'js/*.min.js',
-				],
-				dest: '<%= OUTPUT_PATH %>/'
-			},
-			jquery: {
-				expand: true,
-				cwd: 'node_modules/jquery/dist/',
-				src: [
-					'*.min.js',
-				],
-				dest: '<%= OUTPUT_PATH %>/js/'
-			},
-			styles: {
-				expand: true,
-				cwd: '<%= SOURCE_PATH %>/styles/',
-				src: '*.css',
-				dest: '<%= OUTPUT_PATH %>/css/'
-			},
-		},
+	var configTasks = {};
 
-		env: {
-			debug: {
-				NODE_ENV: 'DEVELOPMENT',
-				APPNAME: '<%= pkg.name %> ' + versionNumber + ' (DEBUG)',
-			},
-			release: {
-				NODE_ENV: 'PRODUCTION',
-				APPNAME: '<%= pkg.name %> ' + versionNumber,
-			},
-		},
-
-		clean: {
-			build: [ '<%= OUTPUT_PATH %>' ],
-		},
-
-		'ftp-deploy': {
-			build: {
-				auth: {
-					host: 'ftp.knight666.com',
-					port: 21,
-					authKey: 'website',
-				},
-				src: '<%= OUTPUT_PATH %>',
-				dest: '/domains/knight666.com/public_html/portfolio/',
-			}
-		},
+	glob.sync('*', { cwd: './tasks/options/' }).forEach(function(option) {
+		var key = option.replace(/\.js$/,'');
+		configTasks[key] = require('./tasks/options/' + option);
 	});
 
-	var marked = require('marked');
-	var pp = require('preprocess');
+	grunt.util._.extend(config, configTasks);
+	grunt.initConfig(config);
 
 	var compileTemplate = function(template, context, outputName) {
 		grunt.log.writeln('Compiling template "' + template + '".');
