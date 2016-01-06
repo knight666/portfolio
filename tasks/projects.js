@@ -2,8 +2,22 @@ var marked = require('marked');
 
 module.exports = function(grunt) {
 	grunt.registerTask('projects', function () {
+		var renderer = new marked.Renderer();
+		renderer.image = function(href, title, text) {
+			title = title.replace(/&quot;/g, '"');
+			var properties = JSON.parse(title);
+
+			var orientation = properties.orientation || 'left';
+
+			return '<div class="image-box-' + orientation + '">' +
+				'<a href="../images/' + href + '" class="thumbnail">' +
+					'<img src="../images/thumbnails/' + href + '" alt="' + text + '" />' +
+				'</a>' +
+			'</div>';
+		},
+
 		marked.setOptions({
-			renderer: new marked.Renderer(),
+			renderer: renderer,
 			breaks: false,
 			gfm: true,
 			highlight: false,
@@ -27,28 +41,36 @@ module.exports = function(grunt) {
 
 			// build text
 
-			entry['paragraphs'].forEach(function(item) {
-				if (item['header'])
-				{
-					context['PAGE_CONTENT'] += marked('### ' + item['header'] + ' ###\n\n');
-				}
+			if (entry['paragraphs'])
+			{
+				entry['paragraphs'].forEach(function(item) {
+					if (item['header'])
+					{
+						context['PAGE_CONTENT'] += marked('### ' + item['header'] + ' ###\n\n');
+					}
 
-				// images
+					// images
 
-				if (item['images'])
-				{
-					item['images'].forEach(function(image) {
-						var source = image['source'] || 'missing.png';
-						var orientation = image['orientation'] || 'left';
+					if (item['images'])
+					{
+						item['images'].forEach(function(image) {
+							var source = image['source'] || 'missing.png';
+							var orientation = image['orientation'] || 'left';
 
-						context['PAGE_CONTENT'] += '<div class="image-box-' + orientation + '"><a href="../images/' + source + '" class="thumbnail"><img src="../images/thumbnails/' + source + '" alt="' + (image['description'] || '') + '" /></a></div>';
-					});
-				}
+							context['PAGE_CONTENT'] += '<div class="image-box-' + orientation + '"><a href="../images/' + source + '" class="thumbnail"><img src="../images/thumbnails/' + source + '" alt="' + (image['description'] || '') + '" /></a></div>';
+						});
+					}
 
-				// text
+					// text
 
-				context['PAGE_CONTENT'] += marked(item['text']);
-			});
+					context['PAGE_CONTENT'] += marked(item['text']);
+				});
+			}
+			else
+			{
+				source_path = grunt.template.process('<%= SOURCE_PATH %>/projects/' + entry['source']);
+				context['PAGE_CONTENT'] = marked(grunt.file.read(source_path));
+			}
 
 			// build brief
 
