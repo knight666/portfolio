@@ -29,5 +29,15 @@ The items on the context bar have a number of properties, including a localizati
 
 Adding the context bar turned out to be such a productivity booster that we reused its implementation for other _Crystal Dynamics_ titles.
 
+### Redesigning the options screens ###
+
+Although _Lara Croft and the Temple of Osiris_ had a perfectly functional settings screen on Xbox One, I ended up designing a whole now settings screen, specfically for PC. This is because PC users famously want to tweak many more settings for their games. They want to be able to turn on every graphical bell and whistle, because they want to show off their new rig to their friends. The existing settings screen was insufficient for the needs of these users, because it did not support mouse interaction of any kind.
+
+By using and extending existing Scaleform classes for common UI controls like buttons, checkboxes and sliders, I was able to create a settings subscreen. These subscreens could then be filled with controls for every category of settings. This saved us a lot of time, because controls could be copied and moved between subscreens with ease.
+
+Here's what YouTube personality TotalBiscuit had to say in his video review:
+
+    Blah blah blah settings
+
 [1]: p2N1h.jpg "{ "orientation": "left" }"
 [2]: p2N1h.jpg "{ "orientation": "right" }"
