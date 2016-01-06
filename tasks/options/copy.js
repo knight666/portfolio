@@ -1,4 +1,10 @@
 module.exports = {
+	images: {
+		expand: true,
+		cwd: 'images/',
+		src: [ '*.*' ],
+		dest: '<%= OUTPUT_PATH %>/images/'
+	},
 	bootstrap: {
 		expand: true,
 		cwd: 'node_modules/bootstrap/dist/',

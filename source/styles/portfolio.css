@@ -13,6 +13,21 @@
 	background-color: #313439;
 }
 
+.image-box-left {
+	max-width: 200px;
+	display: inline;
+	float: left !important;
+	margin-right: 20px;
+}
+.image-box-right {
+	max-width: 200px;
+	display: inline;
+	float: right !important;
+	margin-left: 20px;
+}
+
+/* Badges */
+
 .badge-xbox-one {
 	background-color: #137D10;
 }

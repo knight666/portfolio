@@ -32,6 +32,21 @@ module.exports = function(grunt) {
 				{
 					context['PAGE_CONTENT'] += marked('### ' + item['header'] + ' ###\n\n');
 				}
+
+				// images
+
+				if (item['images'])
+				{
+					item['images'].forEach(function(image) {
+						var source = image['source'] || 'missing.png';
+						var orientation = image['orientation'] || 'left';
+
+						context['PAGE_CONTENT'] += '<div class="image-box-' + orientation + '"><a href="../images/' + source + '" class="thumbnail"><img src="../images/' + source + '" alt="' + (image['description'] || '') + '" /></a></div>';
+					});
+				}
+
+				// text
+
 				context['PAGE_CONTENT'] += marked(item['text']);
 			});
 
