@@ -6,6 +6,12 @@
 #page-content {
 	max-width: 80%;
 }
+#page-footer {
+	margin-top: 100px;
+	padding: 50px 0px;
+	color: #FFFFFF;
+	background-color: #313439;
+}
 
 .badge-xbox-one {
 	background-color: #137D10;
