@@ -1,8 +1,8 @@
 module.exports = {
 	images: {
 		expand: true,
-		cwd: '<%= IMAGES_PATH %>',
-		src: '*.*',
+		cwd: '<%= IMAGES_PATH %>/',
+		src: '**/*.*',
 		dest: '<%= OUTPUT_PATH %>/images/'
 	},
 	bootstrap: {

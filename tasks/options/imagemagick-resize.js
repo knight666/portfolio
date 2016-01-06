@@ -4,7 +4,7 @@ module.exports = {
 		to: '<%= THUMBNAILS_PATH %>/',
 		files: '*.*',
 		props: {
-			width: 256
+			width: 200
 		},
 		fatals: true
 	}
