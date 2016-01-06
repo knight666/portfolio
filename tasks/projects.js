@@ -41,7 +41,7 @@ module.exports = function(grunt) {
 						var source = image['source'] || 'missing.png';
 						var orientation = image['orientation'] || 'left';
 
-						context['PAGE_CONTENT'] += '<div class="image-box-' + orientation + '"><a href="../images/' + source + '" class="thumbnail"><img src="../images/' + source + '" alt="' + (image['description'] || '') + '" /></a></div>';
+						context['PAGE_CONTENT'] += '<div class="image-box-' + orientation + '"><a href="../images/' + source + '" class="thumbnail"><img src="../images/thumbnails/' + source + '" alt="' + (image['description'] || '') + '" /></a></div>';
 					});
 				}
 
