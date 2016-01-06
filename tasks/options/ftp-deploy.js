@@ -6,6 +6,6 @@ module.exports = {
 			authKey: 'website',
 		},
 		src: '<%= OUTPUT_PATH %>',
-		dest: '/domains/knight666.com/public_html/portfolio/',
+		dest: '/domains/knight666.com/public_html/portfolio2/',
 	}
 };
