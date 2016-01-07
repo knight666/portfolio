@@ -11,11 +11,15 @@ module.exports = function(grunt) {
 			{
 				renderer.video_count++;
 
+				style = text ? ' style="background-image: url(\'../images/' + text + '\'); background-position: center; background-repeat: no-repeat;"' : '';
+
 				return '<div id="#video-' + renderer.video_count + '" class="embed-responsive embed-responsive-16by9 project-video-load-container">' +
-							'<a href="#video-' + renderer.video_count + '" name="project-video" class="project-video-load" video="' + href + '">' +
-								'<h2>' +
-									'<span class="glyphicon glyphicon-play" aria-hidden="true"></span> PLAY VIDEO' +
-								'</h2>' +
+							'<a href="#video-' + renderer.video_count + '" name="project-video" class="project-video-load" video="' + href + '"' + style + '>' +
+								'<div class="project-video-play-container">' +
+									'<h2 class="project-video-play">' +
+										'<span class="glyphicon glyphicon-play" aria-hidden="true"></span>' +
+									'</h2>' +
+								'</div>' +
 							'</a>' +
 						'</div>';
 			}
