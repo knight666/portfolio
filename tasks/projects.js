@@ -65,27 +65,12 @@ module.exports = function(grunt) {
 
 			if (brief['platforms'])
 			{
-				var platformTypes = {
-					'steam': {
-						'style': 'badge badge-steam',
-						'name': 'Steam'
-					},
-					'xboxone': {
-						'style': 'badge badge-xbox-one',
-						'name': 'Xbox One'
-					},
-					'ps4': {
-						'style': 'badge badge-playstation-4',
-						'name': 'PlayStation 4'
-					}
-				}
-
 				context['PAGE_BRIEF_PLATFORMS'] = '';
 
 				brief['platforms'].forEach(function(item) {
-					var type = platformTypes[item];
+					var type = grunt.project_utils.getPlatform(item);
 
-					context['PAGE_BRIEF_PLATFORMS'] += '<a href="#" class="' + type['style'] + '">' + type['name'] + '</a>\n';
+					context['PAGE_BRIEF_PLATFORMS'] += '<a href="../by-platform.html#' + item + '" class="' + type['style'] + '">' + type['name'] + '</a>\n';
 				});
 			}
 
