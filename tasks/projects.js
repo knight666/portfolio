@@ -51,43 +51,42 @@ module.exports = function(grunt) {
 			var entry = grunt.file.readJSON(fullPath);
 
 			var context = {
-				'PAGE_TITLE': entry['title'],
+				'PAGE_TITLE': entry.title,
 				'PAGE_DESCRIPTION': '',
 				'PAGE_CONTENT': '',
 			};
 
 			// build text
 
-			if (entry['source'])
+			if (entry.source)
 			{
 				current_dir = fullPath.substring(0, fullPath.lastIndexOf('/') + 1);
-				context['PAGE_CONTENT'] = marked(grunt.file.read(current_dir + entry['source']));
+				context['PAGE_CONTENT'] = marked(grunt.file.read(current_dir + entry.source));
 			}
 
 			// build brief
 
-			var brief = entry['brief'];
+			context['PAGE_DESCRIPTION'] = marked(entry.brief.description);
 
-			context['PAGE_DESCRIPTION'] = marked(brief['description']);
-
-			if (brief['released'])
+			if (entry.brief.released)
 			{
-				context['PAGE_BRIEF_RELEASED'] = brief['released'];
+				context['PAGE_BRIEF_RELEASED'] = entry.brief.released;
 			}
 
-			if (brief['employer'])
+			if (entry.brief.employer)
 			{
-				context['PAGE_BRIEF_EMPLOYER'] = brief['employer'];
+				var properties = grunt.project_utils.getEmployer(entry.brief.employer);
+				context['PAGE_BRIEF_EMPLOYER'] = '<a href="../by-employer.html#' + entry.brief.employer + '">' + properties.name + '</a>';
 			}
 
-			if (brief['platforms'])
+			if (entry.brief.platforms)
 			{
 				context['PAGE_BRIEF_PLATFORMS'] = '';
 
-				brief['platforms'].forEach(function(item) {
-					var type = grunt.project_utils.getPlatform(item);
+				entry.brief.platforms.forEach(function(item) {
+					var properties = grunt.project_utils.getPlatform(item);
 
-					context['PAGE_BRIEF_PLATFORMS'] += '<a href="../by-platform.html#' + item + '" class="' + type['style'] + '">' + type['name'] + '</a>\n';
+					context['PAGE_BRIEF_PLATFORMS'] += '<a href="../by-platform.html#' + item + '" class="' + properties.style + '">' + properties.name + '</a>\n';
 				});
 			}
 
