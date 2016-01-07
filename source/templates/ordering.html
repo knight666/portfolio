@@ -5,31 +5,20 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Portfolio</title>
+	<title>Portfolio - <!-- @echo ORDER_TITLE --></title>
 	
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" >
 	<link rel="stylesheet" type="text/css" href="css/portfolio.css" >
 </head>
 <body>
-	<div class="container">
-		<div class="panel panel-default panel-profile">
-			<div class="row">
-				<div class="text-profile-container">
-					<div class="img-profile">
-						<img src="images/profile.jpg" alt="My face" />
-					</div>
-					<div class="text-profile">
-						<h1>Hello there!</h1>
-						<p>My name is Quinten Lansu and this is my portfolio!</p>
-					</div>
-				</div>
-			</div>
-		</div>
+	<ul class="breadcrumb">
+		<li><a href="index.html">Portfolio</a></li>
+		<li><a href="projects.html">Projects</a></li>
+		<li><!-- @echo ORDER_TITLE --></li>
+	</ul>
 
-		<h2>Projects</h2>
-		<ul class="list-group">
-			<!-- @echo PROJECT_LIST -->
-		</ul>
+	<div class="container">
+<!-- @echo PROJECT_LIST -->
 	</div>
 
 	<!-- @include footer.html -->

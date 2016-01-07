@@ -50,6 +50,7 @@ module.exports = function(grunt) {
 		'clean:build',
 		'index',
 		'projects',
+		'ordering',
 		'copy:images',
 		'copy:bootstrap',
 		'copy:jquery',
