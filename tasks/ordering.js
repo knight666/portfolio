@@ -38,7 +38,7 @@ module.exports = function(grunt) {
 		});
 
 		var context = {
-			'ORDER_TITLE': 'Ordered by platform',
+			'ORDER_TITLE': '',
 			'PROJECT_LIST': ''
 		};
 
@@ -58,8 +58,9 @@ module.exports = function(grunt) {
 
 		grunt.log.writeln('Ordering projects by platform.');
 
+		context['ORDER_TITLE'] = 'Ordered by platform';
 		context['PROJECT_LIST'] = '';
-		
+
 		for (name in by_platform)
 		{
 			var platform = by_platform[name];
@@ -75,6 +76,7 @@ module.exports = function(grunt) {
 
 		grunt.log.writeln('Ordering projects by employer.');
 
+		context['ORDER_TITLE'] = 'Ordered by employer';
 		context['PROJECT_LIST'] = '';
 
 		for (name in by_employer)
