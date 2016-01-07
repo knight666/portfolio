@@ -3,6 +3,23 @@ var marked = require('marked');
 module.exports = function(grunt) {
 	grunt.registerTask('projects', function () {
 		var renderer = new marked.Renderer();
+
+		renderer.link = function(href, title, text) {
+			if (href.indexOf('yt://', 0) === 0)
+			{
+				href = 'https://www.youtube.com/embed/' + href.substring('yt://'.length) + '?rel=0&vq=highres';
+				console.log('href ' + href);
+
+				return '<div class="embed-responsive embed-responsive-16by9 project-video">' +
+							'<iframe class="embed-responsive-item" src="' + href + '" allowfullscreen=""></iframe>' +
+						'</div>';
+			}
+			else
+			{
+				return marked.Renderer.prototype.link.call(this, href, title, text);
+			}
+		}
+
 		renderer.image = function(href, title, text) {
 			title = title.replace(/&quot;/g, '"');
 			var properties = JSON.parse(title);
@@ -10,11 +27,11 @@ module.exports = function(grunt) {
 			var orientation = properties.orientation || 'left';
 
 			return '<div class="image-box-' + orientation + '">' +
-				'<a href="../images/' + href + '" class="thumbnail">' +
-					'<img src="../images/thumbnails/' + href + '" alt="' + text + '" />' +
-				'</a>' +
-			'</div>';
-		},
+						'<a href="../images/' + href + '" class="thumbnail">' +
+							'<img src="../images/thumbnails/' + href + '" alt="' + text + '" />' +
+						'</a>' +
+					'</div>';
+		}
 
 		marked.setOptions({
 			renderer: renderer,
