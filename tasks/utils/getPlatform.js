@@ -1,5 +1,5 @@
 module.exports = function(name) {
-	var platformTypes = {
+	var platformProperties = {
 		'steam': {
 			'name': 'Steam',
 			'style': 'badge badge-steam',
@@ -14,5 +14,5 @@ module.exports = function(name) {
 		}
 	}
 
-	return platformTypes[name];
+	return platformProperties[name];
 }
