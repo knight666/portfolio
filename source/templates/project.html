@@ -16,13 +16,12 @@
 			var parent = target.parentElement;
 
 			target.onclick = function() {
-				parent.removeChild(target);
-
 				var video = document.createElement("iframe");
 				video.class = "embed-responsive-item";
-				video.src = "https://www.youtube.com/embed/6FtOFv5oGEI?rel=0&amp;vq=highres&autoplay=1";
+				video.src = "https://www.youtube.com/embed/" + target.getAttribute("video") + "?rel=0&amp;vq=highres&autoplay=1";
 				video.allowfullscreen = "";
 
+				parent.removeChild(target);
 				parent.appendChild(video);
 			}
 		}
@@ -41,7 +40,7 @@
 		</div>
 
 		<div class="embed-responsive embed-responsive-16by9 project-video-load-container">
-			<a href="#" class="project-video-load" id="video-load">
+			<a href="#" class="project-video-load" id="video-load" video="6FtOFv5oGEI">
 				<h2>
 					<span class="glyphicon glyphicon-play" aria-hidden="true"></span> PLAY VIDEO
 				</h2>
