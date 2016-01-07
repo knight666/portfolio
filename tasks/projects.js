@@ -70,7 +70,7 @@ module.exports = function(grunt) {
 				brief['platforms'].forEach(function(item) {
 					var type = grunt.project_utils.getPlatform(item);
 
-					context['PAGE_BRIEF_PLATFORMS'] += '<a href="#" class="' + type['style'] + '">' + type['name'] + '</a>\n';
+					context['PAGE_BRIEF_PLATFORMS'] += '<a href="../by-platform.html#' + item + '" class="' + type['style'] + '">' + type['name'] + '</a>\n';
 				});
 			}
 

@@ -37,7 +37,7 @@ module.exports = function(grunt) {
 			var platform = by_platform[name];
 			var properties = grunt.project_utils.getPlatform(name);
 
-			var entry = '\t\t<h2>' + properties.name + '</h2>\n' +
+			var entry = '\t\t<h2 id="' + name + '">' + properties.name + '</h2>\n' +
 						'\t\t<ul class="list-group">\n';
 
 			platform.forEach(function(project) {
