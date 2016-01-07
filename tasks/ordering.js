@@ -1,5 +1,6 @@
 module.exports = function(grunt) {
 	grunt.registerTask('ordering', function () {
+		by_date = [];
 		by_platform = {};
 		by_employer = {};
 
@@ -12,6 +13,8 @@ module.exports = function(grunt) {
 				'platforms': entry.brief.platforms || [],
 				'employer': entry.brief.employer || '',
 			};
+
+			by_date.push(project);
 
 			project.platforms.forEach(function(platform) {
 				if (by_platform[platform])
@@ -48,17 +51,17 @@ module.exports = function(grunt) {
 				{
 					'id': 'date',
 					'title': 'By date',
-					'link': 'projects.html',
+					'link': 'projects-by-date.html',
 				},
 				{
 					'id': 'platform',
 					'title': 'By platform',
-					'link': 'by-platform.html',
+					'link': 'projects-by-platform.html',
 				},
 				{
 					'id': 'employer',
 					'title': 'By employer',
-					'link': 'by-employer.html',
+					'link': 'projects-by-employer.html',
 				},
 			];
 
@@ -87,6 +90,18 @@ module.exports = function(grunt) {
 			return result;
 		}
 
+		// by date
+
+		grunt.log.writeln('Ordering projects by date.');
+
+		context['ORDER_TITLE'] = 'Ordered by date';
+		context['NAVIGATION'] = writeNavigation('date');
+
+		context['PROJECT_LIST'] = '<h2>Projects</h2>\n';
+		context['PROJECT_LIST'] += writeProjectList(by_date);
+
+		grunt.project_utils.compileTemplate(grunt, 'ordering', context, 'projects-by-date');
+
 		// by platform
 
 		grunt.log.writeln('Ordering projects by platform.');
@@ -100,11 +115,11 @@ module.exports = function(grunt) {
 			var platform = by_platform[name];
 			var properties = grunt.project_utils.getPlatform(name);
 
-			context['PROJECT_LIST'] += '\t\t<h2 id="' + name + '">' + properties.name + '</h2>\n';
+			context['PROJECT_LIST'] += '<h2 id="' + name + '">' + properties.name + '</h2>\n';
 			context['PROJECT_LIST'] += writeProjectList(platform);
 		}
 
-		grunt.project_utils.compileTemplate(grunt, 'ordering', context, 'by-platform');
+		grunt.project_utils.compileTemplate(grunt, 'ordering', context, 'projects-by-platform');
 
 		// by employer
 
@@ -119,10 +134,10 @@ module.exports = function(grunt) {
 			var employer = by_employer[name];
 			var properties = grunt.project_utils.getEmployer(name);
 
-			context['PROJECT_LIST'] += '\t\t<h2 id="' + name + '">' + properties.name + '</h2>\n';
+			context['PROJECT_LIST'] += '<h2 id="' + name + '">' + properties.name + '</h2>\n';
 			context['PROJECT_LIST'] += writeProjectList(employer);
 		}
 
-		grunt.project_utils.compileTemplate(grunt, 'ordering', context, 'by-employer');
+		grunt.project_utils.compileTemplate(grunt, 'ordering', context, 'projects-by-employer');
 	});
 }
