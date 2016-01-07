@@ -4,13 +4,19 @@ module.exports = function(grunt) {
 	grunt.registerTask('projects', function () {
 		var renderer = new marked.Renderer();
 
+		renderer.video_count = 0;
+
 		renderer.link = function(href, title, text) {
 			if (href.indexOf('yt://', 0) === 0)
 			{
-				href = 'https://www.youtube.com/embed/' + href.substring('yt://'.length) + '?rel=0&vq=highres';
+				renderer.video_count++;
 
-				return '<div class="embed-responsive embed-responsive-16by9 project-video">' +
-							'<iframe class="embed-responsive-item" src="' + href + '" allowfullscreen=""></iframe>' +
+				return '<div id="#video-' + renderer.video_count + '" class="embed-responsive embed-responsive-16by9 project-video-load-container">' +
+							'<a href="#video-' + renderer.video_count + '" name="project-video" class="project-video-load" video="' + href + '">' +
+								'<h2>' +
+									'<span class="glyphicon glyphicon-play" aria-hidden="true"></span> PLAY VIDEO' +
+								'</h2>' +
+							'</a>' +
 						'</div>';
 			}
 			else
