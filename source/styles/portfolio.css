@@ -1,11 +1,3 @@
-#page-header {
-	float: right;
-	max-width: 300px;
-	margin: 10px;
-}
-#page-content {
-	max-width: 80%;
-}
 #page-footer {
 	margin-top: 100px;
 	padding: 50px 0px;
@@ -63,6 +55,19 @@
 	display: inline;
 	float: right !important;
 	margin-left: 20px;
+}
+
+/* Project */
+
+.project-brief {
+}
+
+.project-content {
+}
+
+.project-video {
+	min-width: 240px;
+	min-height: 144px;
 }
 
 /* Social */

@@ -10,7 +10,7 @@ module.exports = function(grunt) {
 				href = 'https://www.youtube.com/embed/' + href.substring('yt://'.length) + '?rel=0&vq=highres';
 				console.log('href ' + href);
 
-				return '<div class="embed-responsive embed-responsive-16by9">' +
+				return '<div class="embed-responsive embed-responsive-16by9 project-video">' +
 							'<iframe class="embed-responsive-item" src="' + href + '" allowfullscreen=""></iframe>' +
 						'</div>';
 			}
