@@ -12,17 +12,26 @@
 
 	<script language="javascript">
 		window.onload = function() {
-			var target = document.getElementById("video-load");
-			var parent = target.parentElement;
+			var targets = document.getElementsByName("project-video");
+			for (var i = 0; i < targets.length; ++i)
+			{
+				var target = targets[i];
+				var parent = target.parentElement;
 
-			target.onclick = function() {
-				var video = document.createElement("iframe");
-				video.class = "embed-responsive-item";
-				video.src = "https://www.youtube.com/embed/" + target.getAttribute("video") + "?rel=0&amp;vq=highres&autoplay=1";
-				video.allowfullscreen = "";
+				var link = target.getAttribute("video");
 
-				parent.removeChild(target);
-				parent.appendChild(video);
+				if (link.indexOf('yt://', 0) === 0)
+				{
+					target.onclick = function() {
+						var video = document.createElement("iframe");
+						video.class = "embed-responsive-item";
+						video.src = "https://www.youtube.com/embed/" + link.substring('yt://'.length) + "?rel=0&vq=highres&autoplay=1";
+						video.allowfullscreen = "";
+
+						parent.removeChild(target);
+						parent.appendChild(video);
+					}
+				}
 			}
 		}
 	</script>
@@ -40,7 +49,7 @@
 		</div>
 
 		<div class="embed-responsive embed-responsive-16by9 project-video-load-container">
-			<a href="#" class="project-video-load" id="video-load" video="6FtOFv5oGEI">
+			<a href="#" name="project-video" class="project-video-load" video="yt://6FtOFv5oGEI">
 				<h2>
 					<span class="glyphicon glyphicon-play" aria-hidden="true"></span> PLAY VIDEO
 				</h2>
