@@ -1,3 +1,5 @@
+[youtube](yt://a4iiWCaI32g)
+
 _Lara Croft and the Temple of Osiris_ is a game made by [Crystal Dynamics](http://www.crystaldynamics.com) and was released for Xbox One, PlayStation 4 and Steam. _Crystal Dynamics_ built the game for Xbox One, while the team at _Nixxes_ converted it to the PlayStation 4 and Steam platforms. In my role as a systems programmer, I ensured the game worked with mouse and keyboard input, redesigned the user interface for mouse interaction and fixed bugs related to input, UI and the underlying platform.
 
 ### Four players on a single PC ###
@@ -34,10 +36,6 @@ Adding the context bar turned out to be such a productivity booster that we reus
 Although _Lara Croft and the Temple of Osiris_ had a perfectly functional settings screen on Xbox One, I ended up designing a whole now settings screen, specfically for PC. This is because PC users famously want to tweak many more settings for their games. They want to be able to turn on every graphical bell and whistle, because they want to show off their new rig to their friends. The existing settings screen was insufficient for the needs of these users, because it did not support mouse interaction of any kind.
 
 By using and extending existing Scaleform classes for common UI controls like buttons, checkboxes and sliders, I was able to create a settings subscreen. These subscreens could then be filled with controls for every category of settings. This saved us a lot of time, because controls could be copied and moved between subscreens with ease.
-
-Here's what YouTube personality TotalBiscuit had to say in his video review:
-
-    Blah blah blah settings
 
 [1]: p2N1h.jpg "{ "orientation": "left" }"
 [2]: p2N1h.jpg "{ "orientation": "right" }"
