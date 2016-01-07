@@ -1,18 +1,20 @@
 module.exports = function(name) {
-	var platformProperties = {
+	var properties = {
 		'steam': {
 			'name': 'Steam',
-			'style': 'badge badge-steam',
 		},
-		'xboxone': {
+		'xbone': {
 			'name': 'Xbox One',
-			'style': 'badge badge-xbox-one',
 		},
 		'ps4': {
 			'name': 'PlayStation 4',
-			'style': 'badge badge-playstation-4',
 		}
 	}
 
-	return platformProperties[name];
+	if (!properties[name])
+	{
+		console.log('Failed to find platform with identifier "' + name + '".');
+	}
+
+	return properties[name];
 }
