@@ -39,17 +39,50 @@ module.exports = function(grunt) {
 
 		var context = {
 			'ORDER_TITLE': '',
-			'PROJECT_LIST': ''
+			'NAVIGATION': '',
+			'PROJECT_LIST': '',
 		};
 
+		var writeNavigation = function(active) {
+			var order = [
+				{
+					'id': 'date',
+					'title': 'By date',
+					'link': 'projects.html',
+				},
+				{
+					'id': 'platform',
+					'title': 'By platform',
+					'link': 'by-platform.html',
+				},
+				{
+					'id': 'employer',
+					'title': 'By employer',
+					'link': 'by-employer.html',
+				},
+			];
+
+			var result = '<ul class="nav nav-tabs">\n';
+
+			order.forEach(function(type) {
+				var is_active = (type.id === active) ? ' class="active"' : '';
+
+				result += '\t<li role="presentation"' + is_active + '><a href="' + type.link + '">' + type.title + '</a></li>\n';
+			});
+			
+			result += '</ul>\n';
+
+			return result;
+		}
+
 		var writeProjectList = function(list) {
-			var result = '\t\t<ul class="list-group">\n';
+			var result = '<ul class="list-group">\n';
 
 			list.forEach(function(project) {
-				result += '\t\t\t<li class="list-group-item"><a href="projects/' + project['filename'] + '">' + project['title'] + '</a></li>\n';
+				result += '\t<li class="list-group-item"><a href="projects/' + project['filename'] + '">' + project['title'] + '</a></li>\n';
 			});
 
-			result += '\t\t</ul>\n';
+			result += '</ul>\n';
 
 			return result;
 		}
@@ -59,6 +92,7 @@ module.exports = function(grunt) {
 		grunt.log.writeln('Ordering projects by platform.');
 
 		context['ORDER_TITLE'] = 'Ordered by platform';
+		context['NAVIGATION'] = writeNavigation('platform');
 		context['PROJECT_LIST'] = '';
 
 		for (name in by_platform)
@@ -77,6 +111,7 @@ module.exports = function(grunt) {
 		grunt.log.writeln('Ordering projects by employer.');
 
 		context['ORDER_TITLE'] = 'Ordered by employer';
+		context['NAVIGATION'] = writeNavigation('employer');
 		context['PROJECT_LIST'] = '';
 
 		for (name in by_employer)
