@@ -16,6 +16,5 @@ module.exports = function(grunt) {
 		});
 
 		grunt.project_utils.compileTemplate(grunt, 'index', context);
-		grunt.project_utils.compileTemplate(grunt, 'projects', context);
 	});
 };
