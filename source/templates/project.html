@@ -9,6 +9,24 @@
 	
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" >
 	<link rel="stylesheet" type="text/css" href="../css/portfolio.css" >
+
+	<script language="javascript">
+		window.onload = function() {
+			var target = document.getElementById("video-load");
+			var parent = target.parentElement;
+
+			target.onclick = function() {
+				parent.removeChild(target);
+
+				var video = document.createElement("iframe");
+				video.class = "embed-responsive-item";
+				video.src = "https://www.youtube.com/embed/6FtOFv5oGEI?rel=0&amp;vq=highres&autoplay=1";
+				video.allowfullscreen = "";
+
+				parent.appendChild(video);
+			}
+		}
+	</script>
 </head>
 <body>
 	<ul class="breadcrumb">
@@ -21,6 +39,15 @@
 		<div class="page-header">
 			<h1><!-- @echo PAGE_TITLE --></h1>
 		</div>
+
+		<div class="embed-responsive embed-responsive-16by9 project-video-load-container">
+			<a href="#" class="project-video-load" id="video-load">
+				<h2>
+					<span class="glyphicon glyphicon-play" aria-hidden="true"></span> PLAY VIDEO
+				</h2>
+			</a>
+		</div>
+
 		<div class="row">
 			<div class="col-md-4 col-xs-12">
 				<div class="panel panel-primary project-brief">
