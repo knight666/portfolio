@@ -1,8 +1,9 @@
 module.exports = function(grunt) {
 	grunt.registerTask('ordering', function () {
 		by_date = [];
-		by_platform = {};
 		by_employer = {};
+		by_platform = {};
+		by_technology = {};
 
 		grunt.file.expand(grunt.template.process('<%= SOURCE_PATH %>/projects/*.json')).forEach(function(fullPath) {
 			var entry = grunt.file.readJSON(fullPath);
@@ -12,20 +13,10 @@ module.exports = function(grunt) {
 				'title': entry.title,
 				'platforms': entry.brief.platforms || [],
 				'employer': entry.brief.employer || '',
+				'technologies': entry.brief.technologies || [],
 			};
 
 			by_date.push(project);
-
-			project.platforms.forEach(function(platform) {
-				if (by_platform[platform])
-				{
-					by_platform[platform].push(project);
-				}
-				else
-				{
-					by_platform[platform] = [ project ];
-				}
-			});
 
 			if (project.employer != '')
 			{
@@ -38,6 +29,28 @@ module.exports = function(grunt) {
 					by_employer[project.employer] = [ project ];
 				}
 			}
+
+			project.platforms.forEach(function(platform) {
+				if (by_platform[platform])
+				{
+					by_platform[platform].push(project);
+				}
+				else
+				{
+					by_platform[platform] = [ project ];
+				}
+			});
+
+			project.technologies.forEach(function(technology) {
+				if (by_technology[technology])
+				{
+					by_technology[technology].push(project);
+				}
+				else
+				{
+					by_technology[technology] = [ project ];
+				}
+			});
 		});
 
 		var context = {
@@ -62,6 +75,11 @@ module.exports = function(grunt) {
 					'id': 'employer',
 					'title': 'By employer',
 					'link': 'projects-by-employer.html',
+				},
+				{
+					'id': 'technology',
+					'title': 'By technology',
+					'link': 'projects-by-technology.html',
 				},
 			];
 
@@ -102,6 +120,25 @@ module.exports = function(grunt) {
 
 		grunt.project_utils.compileTemplate(grunt, 'ordering', context, 'projects-by-date');
 
+		// by employer
+
+		grunt.log.writeln('Ordering projects by employer.');
+
+		context['ORDER_TITLE'] = 'Ordered by employer';
+		context['NAVIGATION'] = writeNavigation('employer');
+		context['PROJECT_LIST'] = '';
+
+		for (name in by_employer)
+		{
+			var employer = by_employer[name];
+			var properties = grunt.project_utils.getEmployer(name);
+
+			context['PROJECT_LIST'] += '<h2 id="' + name + '">' + properties.name + '</h2>\n';
+			context['PROJECT_LIST'] += writeProjectList(employer);
+		}
+
+		grunt.project_utils.compileTemplate(grunt, 'ordering', context, 'projects-by-employer');
+
 		// by platform
 
 		grunt.log.writeln('Ordering projects by platform.');
@@ -121,23 +158,23 @@ module.exports = function(grunt) {
 
 		grunt.project_utils.compileTemplate(grunt, 'ordering', context, 'projects-by-platform');
 
-		// by employer
+		// by technology
 
-		grunt.log.writeln('Ordering projects by employer.');
+		grunt.log.writeln('Ordering projects by technology.');
 
-		context['ORDER_TITLE'] = 'Ordered by employer';
-		context['NAVIGATION'] = writeNavigation('employer');
+		context['ORDER_TITLE'] = 'Ordered by technology';
+		context['NAVIGATION'] = writeNavigation('technology');
 		context['PROJECT_LIST'] = '';
 
-		for (name in by_employer)
+		for (name in by_technology)
 		{
-			var employer = by_employer[name];
-			var properties = grunt.project_utils.getEmployer(name);
+			var technology = by_technology[name];
+			var properties = grunt.project_utils.getTechnology(name);
 
 			context['PROJECT_LIST'] += '<h2 id="' + name + '">' + properties.name + '</h2>\n';
-			context['PROJECT_LIST'] += writeProjectList(employer);
+			context['PROJECT_LIST'] += writeProjectList(technology);
 		}
 
-		grunt.project_utils.compileTemplate(grunt, 'ordering', context, 'projects-by-employer');
+		grunt.project_utils.compileTemplate(grunt, 'ordering', context, 'projects-by-technology');
 	});
 }
