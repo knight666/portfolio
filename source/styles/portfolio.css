@@ -67,6 +67,10 @@
 	height: 100%;
 	vertical-align: middle;
 	float: none;
+	background-color: #FFF;
+	border: 1px solid #337AB7;
+	border-radius: 4px;
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
 }
 .project-video-load {
 	position: absolute;
@@ -83,6 +87,10 @@
 	float: none;
 	margin: auto;
 	border: 0px none;
+}
+.project-video-load h2 {
+	padding: 25% 0px;
+	margin: 0px;
 }
 
 .project-video {
