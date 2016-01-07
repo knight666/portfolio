@@ -66,8 +66,6 @@
 }
 
 .project-video {
-	min-width: 240px;
-	min-height: 144px;
 }
 
 /* Social */
@@ -113,12 +111,19 @@ a.social-skype:hover {
 
 /* Badges */
 
-.badge-xbox-one {
+.badge-platform {
+	background-color: #000000;
+}
+.badge-xbone {
 	background-color: #137D10;
 }
-.badge-playstation-4 {
+.badge-ps4 {
 	background-color: #063279;
 }
 .badge-steam {
 	background-color: #000000;
+}
+
+.badge-technology {
+	background-color: #9392A5;
 }

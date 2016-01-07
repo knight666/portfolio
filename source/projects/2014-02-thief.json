@@ -4,7 +4,8 @@
 		"description": "Thief.",
 		"released": "February 2014",
 		"employer": "nixxes",
-		"platforms": [ "steam" ]
+		"platforms": [ "steam" ],
+		"technologies": [ "c++", "as", "ue3" ]
 	},
 	"source": "thief.md"
 }

@@ -1,5 +1,5 @@
 module.exports = function(name) {
-	var employerProperties = {
+	var properties = {
 		'nixxes': {
 			'name': 'Nixxes Software BV',
 			'location': 'Utrecht, the Netherlands',
@@ -22,5 +22,11 @@ module.exports = function(name) {
 		},
 	}
 
-	return employerProperties[name];
+
+	if (!properties[name])
+	{
+		console.log('Failed to find employer with identifier "' + name + '".');
+	}
+
+	return properties[name];
 }

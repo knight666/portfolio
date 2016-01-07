@@ -8,7 +8,6 @@ module.exports = function(grunt) {
 			if (href.indexOf('yt://', 0) === 0)
 			{
 				href = 'https://www.youtube.com/embed/' + href.substring('yt://'.length) + '?rel=0&vq=highres';
-				console.log('href ' + href);
 
 				return '<div class="embed-responsive embed-responsive-16by9 project-video">' +
 							'<iframe class="embed-responsive-item" src="' + href + '" allowfullscreen=""></iframe>' +
@@ -76,7 +75,10 @@ module.exports = function(grunt) {
 			if (entry.brief.employer)
 			{
 				var properties = grunt.project_utils.getEmployer(entry.brief.employer);
-				context['PAGE_BRIEF_EMPLOYER'] = '<a href="../projects-by-employer.html#' + entry.brief.employer + '">' + properties.name + '</a>';
+				if (properties)
+				{
+					context['PAGE_BRIEF_EMPLOYER'] = '<a href="../projects-by-employer.html#' + entry.brief.employer + '">' + properties.name + '</a>';
+				}
 			}
 
 			if (entry.brief.platforms)
@@ -85,8 +87,23 @@ module.exports = function(grunt) {
 
 				entry.brief.platforms.forEach(function(item) {
 					var properties = grunt.project_utils.getPlatform(item);
+					if (properties)
+					{
+						context['PAGE_BRIEF_PLATFORMS'] += '<a href="../projects-by-platform.html#' + item + '" class=badge badge-platform badge-"' + item + '">' + properties.name + '</a>\n';
+					}
+				});
+			}
 
-					context['PAGE_BRIEF_PLATFORMS'] += '<a href="../projects-by-platform.html#' + item + '" class="' + properties.style + '">' + properties.name + '</a>\n';
+			if (entry.brief.technologies)
+			{
+				context['PAGE_BRIEF_TECHNOLOGIES'] = '';
+
+				entry.brief.technologies.forEach(function(item) {
+					var properties = grunt.project_utils.getTechnology(item);
+					if (properties)
+					{
+						context['PAGE_BRIEF_TECHNOLOGIES'] += '<a href="../projects-by-technology.html#' + item + '" class="badge badge-technology badge-' + item + '">' + properties.name + '</a>\n';
+					}
 				});
 			}
 
