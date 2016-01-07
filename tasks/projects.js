@@ -76,7 +76,7 @@ module.exports = function(grunt) {
 			if (entry.brief.employer)
 			{
 				var properties = grunt.project_utils.getEmployer(entry.brief.employer);
-				context['PAGE_BRIEF_EMPLOYER'] = '<a href="../by-employer.html#' + entry.brief.employer + '">' + properties.name + '</a>';
+				context['PAGE_BRIEF_EMPLOYER'] = '<a href="../projects-by-employer.html#' + entry.brief.employer + '">' + properties.name + '</a>';
 			}
 
 			if (entry.brief.platforms)
@@ -86,7 +86,7 @@ module.exports = function(grunt) {
 				entry.brief.platforms.forEach(function(item) {
 					var properties = grunt.project_utils.getPlatform(item);
 
-					context['PAGE_BRIEF_PLATFORMS'] += '<a href="../by-platform.html#' + item + '" class="' + properties.style + '">' + properties.name + '</a>\n';
+					context['PAGE_BRIEF_PLATFORMS'] += '<a href="../projects-by-platform.html#' + item + '" class="' + properties.style + '">' + properties.name + '</a>\n';
 				});
 			}
 
