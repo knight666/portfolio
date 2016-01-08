@@ -7,5 +7,9 @@
 		"platforms": [ "steam" ],
 		"technologies": [ "c++", "as", "ue3" ]
 	},
+	"trailer": {
+		"link": "yt://6FtOFv5oGEI",
+		"image": "previews/thief.jpg"
+	},
 	"source": "thief.md"
 }
