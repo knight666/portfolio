@@ -9,6 +9,32 @@
 	
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" >
 	<link rel="stylesheet" type="text/css" href="../css/portfolio.css" >
+
+	<script language="javascript">
+		window.onload = function() {
+			var targets = document.getElementsByName("project-video");
+			for (var i = 0; i < targets.length; ++i)
+			{
+				var target = targets[i];
+				var parent = target.parentElement;
+
+				var link = target.getAttribute("video");
+
+				if (link.indexOf('yt://', 0) === 0)
+				{
+					target.onclick = function() {
+						var video = document.createElement("iframe");
+						video.class = "embed-responsive-item";
+						video.src = "https://www.youtube.com/embed/" + link.substring('yt://'.length) + "?rel=0&vq=highres&autoplay=1";
+						video.allowfullscreen = "";
+
+						parent.removeChild(target);
+						parent.appendChild(video);
+					}
+				}
+			}
+		}
+	</script>
 </head>
 <body>
 	<ul class="breadcrumb">
@@ -21,6 +47,7 @@
 		<div class="page-header">
 			<h1><!-- @echo PAGE_TITLE --></h1>
 		</div>
+
 		<div class="row">
 			<div class="col-md-4 col-xs-12">
 				<div class="panel panel-primary project-brief">
