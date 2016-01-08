@@ -83,7 +83,22 @@
 				</div>
 			</div>
 			<div class="col-md-8 col-xs-12">
-				<div class="project-content"><!-- @echo PAGE_CONTENT --></div>
+				<div class="project-content">
+					<!-- @ifdef PAGE_TRAILER -->
+					<div id="#project-trailer" class="embed-responsive embed-responsive-16by9 project-video-load-container">
+						<div class="project-video-play-container">
+							<!-- @echo PAGE_TRAILER -->
+								<div class="project-video-highlight">
+									<h2 class="project-video-play">
+										<span class="glyphicon glyphicon-play" aria-hidden="true"></span>
+									</h2>
+								</div>
+							</a>
+						</div>
+					</div>
+					<!-- @endif -->
+					<!-- @echo PAGE_CONTENT -->
+				</div>
 			</div>
 		</div>
 	</div>
