@@ -10,6 +10,7 @@ module.exports = {
 		cwd: 'node_modules/bootstrap/dist/',
 		src: [
 			'css/*.min.css',
+			'fonts/*.*',
 			'js/*.min.js',
 		],
 		dest: '<%= OUTPUT_PATH %>/'
