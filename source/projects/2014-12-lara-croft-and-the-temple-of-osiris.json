@@ -4,7 +4,8 @@
 		"description": "_Lara Croft and the Temple of Osiris_ is a four player co-op action adventure.",
 		"released": "December 2014",
 		"employer": "nixxes",
-		"platforms": [ "steam", "ps4" ]
+		"platforms": [ "steam", "ps4" ],
+		"technologies": [ "cdc", "scaleform", "c++", "as" ]
 	},
 	"source": "lc2.md"
 }
