@@ -4,33 +4,6 @@ module.exports = function(grunt) {
 	grunt.registerTask('projects', function () {
 		var renderer = new marked.Renderer();
 
-		renderer.video_count = 0;
-
-		renderer.link = function(href, title, text) {
-			if (href.indexOf('yt://', 0) === 0)
-			{
-				renderer.video_count++;
-
-				style = text ? ' style="background-image: url(\'../images/' + text + '\'); background-position: center; background-repeat: no-repeat; background-size: 100%;"' : '';
-
-				return '<div id="#video-' + renderer.video_count + '" class="embed-responsive embed-responsive-16by9 project-video-load-container">' +
-							'<div class="project-video-play-container">' +
-								'<a href="#video-' + renderer.video_count + '" name="project-video" class="project-video-play-link" video="' + href + '"' + style + '>' +
-									'<div class="project-video-highlight">' +
-										'<h2 class="project-video-play">' +
-											'<span class="glyphicon glyphicon-play" aria-hidden="true"></span>' +
-										'</h2>' +
-									'</div>' +
-								'</a>' +
-							'</div>' +
-						'</div>';
-			}
-			else
-			{
-				return marked.Renderer.prototype.link.call(this, href, title, text);
-			}
-		}
-
 		renderer.image = function(href, title, text) {
 			title = title.replace(/&quot;/g, '"');
 			var properties = JSON.parse(title);
@@ -55,6 +28,8 @@ module.exports = function(grunt) {
 			smartLists: true,
 			smartypants: false
 		});
+
+		var video_count = 0;
 
 		grunt.file.expand(grunt.template.process('<%= SOURCE_PATH %>/projects/*.json')).forEach(function(fullPath) {
 			grunt.log.writeln('Processing "' + fullPath + '".');
@@ -118,6 +93,25 @@ module.exports = function(grunt) {
 					}
 				});
 			}
+
+			// trailer
+
+			if (entry.trailer)
+			{
+				if (entry.trailer.link.indexOf('yt://', 0) === 0)
+				{
+					var style = '';
+
+					if (entry.trailer.image)
+					{
+						style = ' style="background-image: url(\'../images/' + entry.trailer.image + '\'); background-position: center; background-repeat: no-repeat; background-size: 100%;"';
+					}
+
+					context['PAGE_TRAILER'] = '<a href="#project-trailer" name="project-video" class="project-video-play-link" video="' + entry.trailer.link + '"' + style + '>';
+				}
+			}
+
+			// compile template
 
 			var filename = fullPath.match(/([^ \/]+?)\.json$/)[1];
 			grunt.project_utils.compileTemplate(grunt, 'project', context, 'projects/' + filename);
