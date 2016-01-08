@@ -14,13 +14,15 @@ module.exports = function(grunt) {
 				style = text ? ' style="background-image: url(\'../images/' + text + '\'); background-position: center; background-repeat: no-repeat;"' : '';
 
 				return '<div id="#video-' + renderer.video_count + '" class="embed-responsive embed-responsive-16by9 project-video-load-container">' +
-							'<a href="#video-' + renderer.video_count + '" name="project-video" class="project-video-load" video="' + href + '"' + style + '>' +
-								'<div class="project-video-play-container">' +
-									'<h2 class="project-video-play">' +
-										'<span class="glyphicon glyphicon-play" aria-hidden="true"></span>' +
-									'</h2>' +
-								'</div>' +
-							'</a>' +
+							'<div class="project-video-play-container">' +
+								'<a href="#video-' + renderer.video_count + '" name="project-video" class="project-video-play-link" video="' + href + '"' + style + '>' +
+									'<div class="project-video-highlight">' +
+										'<h2 class="project-video-play">' +
+											'<span class="glyphicon glyphicon-play" aria-hidden="true"></span>' +
+										'</h2>' +
+									'</div>' +
+								'</a>' +
+							'</div>' +
 						'</div>';
 			}
 			else
