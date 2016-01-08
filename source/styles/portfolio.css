@@ -90,7 +90,7 @@
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	color: #337AB7;
+	color: #000000;
 	background-color: #000000;
 	text-align: center;
 	vertical-align: middle;
@@ -100,7 +100,7 @@
 }
 
 .project-video-play-link:hover {
-	color: #000000;
+	color: #337AB7;
 }
 
 .project-video-highlight {
@@ -108,12 +108,12 @@
 	height: 100%;
 	vertical-align: middle;
 	float: none;
-	background-color: rgba(255, 255, 255, 0.25);
+	background-color: rgba(255, 255, 255, 0.0);
 	padding: 25% 0px;
 }
 
 .project-video-play-link:hover > .project-video-highlight {
-	background-color: rgba(255, 255, 255, 0.0);
+	background-color: rgba(255, 255, 255, 0.25);
 }
 
 .project-video-play {

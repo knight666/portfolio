@@ -11,7 +11,7 @@ module.exports = function(grunt) {
 			{
 				renderer.video_count++;
 
-				style = text ? ' style="background-image: url(\'../images/' + text + '\'); background-position: center; background-repeat: no-repeat;"' : '';
+				style = text ? ' style="background-image: url(\'../images/' + text + '\'); background-position: center; background-repeat: no-repeat; background-size: 100%;"' : '';
 
 				return '<div id="#video-' + renderer.video_count + '" class="embed-responsive embed-responsive-16by9 project-video-load-container">' +
 							'<div class="project-video-play-container">' +
