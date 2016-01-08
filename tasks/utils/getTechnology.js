@@ -18,6 +18,9 @@ module.exports = function(name) {
 		'cdc': {
 			'name': 'Foundation Engine',
 		},
+		'scaleform': {
+			'name': 'Autodesk Scaleform',
+		},
 	}
 
 	if (!properties[name])
