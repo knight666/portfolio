@@ -1,5 +1,3 @@
-[previews/lara-croft-and-the-temple-of-osiris.jpg](yt://a4iiWCaI32g)
-
 _Lara Croft and the Temple of Osiris_ is a game made by [Crystal Dynamics](http://www.crystaldynamics.com) and was released for Xbox One, PlayStation 4 and Steam. _Crystal Dynamics_ built the game for Xbox One, while the team at _Nixxes_ converted it to the PlayStation 4 and Steam platforms. In my role as a systems programmer, I ensured the game worked with mouse and keyboard input, redesigned the user interface for mouse interaction and fixed bugs related to input, UI and the underlying platform.
 
 ### Four players on a single PC ###
