@@ -1,4 +1,4 @@
-_Lara Croft and the Temple of Osiris_ is a game made by [Crystal Dynamics](http://www.crystaldynamics.com) and was released for Xbox One, PlayStation 4 and Steam. _Crystal Dynamics_ built the game for Xbox One, while the team at _Nixxes_ converted it to the PlayStation 4 and Steam platforms. In my role as a systems programmer, I ensured the game worked with mouse and keyboard input, redesigned the user interface for mouse interaction and fixed bugs related to input, UI and the underlying platform.
+_Lara Croft and the Temple of Osiris_ is a game made by [Crystal Dynamics](http://www.crystaldynamics.com) and was released for Xbox One, PlayStation 4 and Steam. _Nixxes_ was contracted to convert the game for the PlayStation 4 and Steam platforms. In my role as a systems programmer, I ensured the game worked with mouse and keyboard input, redesigned the user interface for mouse interaction and fixed bugs related to input, UI and the underlying platform.
 
 ### Four players on a single PC ###
 
@@ -31,9 +31,27 @@ Adding the context bar turned out to be such a productivity booster that we reus
 
 ### Redesigning the options screens ###
 
+![Time for tickles!][1]
+
 Although _Lara Croft and the Temple of Osiris_ had a perfectly functional settings screen on Xbox One, I ended up designing a whole now settings screen, specfically for PC. This is because PC users famously want to tweak many more settings for their games. They want to be able to turn on every graphical bell and whistle, because they want to show off their new rig to their friends. The existing settings screen was insufficient for the needs of these users, because it did not support mouse interaction of any kind.
 
-By using and extending existing Scaleform classes for common UI controls like buttons, checkboxes and sliders, I was able to create a settings subscreen. These subscreens could then be filled with controls for every category of settings. This saved us a lot of time, because controls could be copied and moved between subscreens with ease.
+By using and extending existing Scaleform classes for common UI controls like buttons, checkboxes and sliders, I was able to create a settings subscreen that could hold a flexible number of controls. This saved us a lot of time, because options could be copied and moved between subscreens with ease.
+
+### Chatting during the match ###
+
+![Time for tickles!][2]
+
+Another option unique to the PC version of the game is the ability to type messages to other players when playing online. Even though the back-end functionality for being able to send text messages over a network was already present, the front-end hadn't yet been designed. I was tasked with coming up with a suitable design for the widget, which need to be unintrusive, yet immediately present itself with a single key press.
+
+![Time for tickles!][1]
+
+What I ended up designing was a transparent control in the top-right corner, ever present. Its textfield would fill up with messages from other players, while the keyboard and mouse player could press "Enter" and start typing their own message straight away. As soon as the control is activated, its background becomes opaque and an input text field appears at the bottom. This signifies a change in functionality for the control and invites the user to start typing their own message.
+
+### Voice chat widget ###
+
+![Time for tickles!][2]
+
+On the PlayStation 4 version of the game, I was tasked with displaying the state of voice chat in the game. Specifically, which players were talking right now and if their microphone was being muted. This is very important information to players in online matches, because rude players can ruin an otherwise perfect match. This is why players had to be able to bring up the widget at any time, even during loading screens. Any of the players in the game could press the right stick on their DualShock 4 controller to bring up the menu and it would dissappear automatically after a few seconds.
 
 [1]: p2N1h.jpg "{ "orientation": "left" }"
 [2]: p2N1h.jpg "{ "orientation": "right" }"
