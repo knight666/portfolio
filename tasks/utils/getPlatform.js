@@ -1,5 +1,11 @@
 module.exports = function(name) {
 	var properties = {
+		'windows': {
+			'name': 'Windows',
+		},
+		'mac': {
+			'name': 'Mac OS X',
+		},
 		'steam': {
 			'name': 'Steam',
 		},
