@@ -53,7 +53,6 @@ module.exports = function(grunt) {
 		'ordering',
 		'copy:images',
 		'copy:bootstrap',
-		'copy:jquery',
 		'copy:styles',
 	];
 
