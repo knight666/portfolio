@@ -1,0 +1,9 @@
+{
+	"title": "FinQ 4.0",
+	"brief": {
+		"description": "Security software",
+		"employer": "flexposure",
+		"platforms": [ "windows", "mac" ],
+		"technologies": [ "c++" ]
+	}
+}
