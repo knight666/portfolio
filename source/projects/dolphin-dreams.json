@@ -1,0 +1,15 @@
+{
+	"title": "Dolphin Dreams",
+	"brief": {
+		"description": "Dolphin Dreams.",
+		"released": "September 2012",
+		"employer": "digc",
+		"platforms": [ "windows" ],
+		"technologies": [ "c++", "horde3d", "opengl2" ]
+	},
+	"trailer": {
+		"link": "vimeo://43960732",
+		"image": "dolphindreams.jpg"
+	},
+	"source": "dolphin-dreams.md"
+}

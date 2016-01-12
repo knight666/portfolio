@@ -1,0 +1,15 @@
+{
+	"title": "Relativity",
+	"brief": {
+		"description": "Relativity",
+		"employer": "igad",
+		"role": "Team Lead",
+		"platforms": [ "windows" ],
+		"technologies": [ "c++", "opengl2" ]
+	},
+	"trailer": {
+		"link": "yt://64vjOvDIamg",
+		"image": "relativity.jpg"
+	},
+	"source": "relativity.md"
+}
