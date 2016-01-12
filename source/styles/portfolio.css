@@ -41,17 +41,34 @@
 	float: left;
 }
 
-.image-box-left {
-	max-width: 200px;
-	display: inline;
-	float: left !important;
-	margin-right: 20px;
+/* Thumbnails */
+
+.thumbnail-box-sm {
+	display: block;
+	width: 100%;
+	padding: 0px 25%;
+	text-align: center;
 }
-.image-box-right {
-	max-width: 200px;
-	display: inline;
-	float: right !important;
-	margin-left: 20px;
+
+.thumbnail-sm {
+	margin: 0px auto;
+}
+
+@media (min-width: 512px) {
+	.thumbnail-box-md {
+		display: inline;
+		width: auto;
+		max-width: 200px;
+		padding: 0px;
+	}
+	.thumbnail-box-left {
+		float: left !important;
+		margin-right: 20px;
+	}
+	.thumbnail-box-right {
+		float: right !important;
+		margin-left: 20px;
+	}
 }
 
 /* Project */
