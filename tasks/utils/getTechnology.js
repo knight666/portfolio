@@ -18,8 +18,23 @@ module.exports = function(name) {
 		'cdc': {
 			'name': 'Foundation Engine',
 		},
+		'g2': {
+			'name': 'Dawn Engine',
+		},
 		'scaleform': {
 			'name': 'Autodesk Scaleform',
+		},
+		'horde3d': {
+			'name': 'Horde3D',
+		},
+		'opengl2': {
+			'name': 'OpenGL 2.0+',
+		},
+		'opengl3': {
+			'name': 'OpenGL 3.0+',
+		},
+		'opengl4': {
+			'name': 'OpenGL 4.0+',
 		},
 	}
 

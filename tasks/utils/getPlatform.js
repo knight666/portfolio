@@ -8,12 +8,18 @@ module.exports = function(name) {
 		},
 		'ps4': {
 			'name': 'PlayStation 4',
-		}
+		},
+		'windows': {
+			'name': 'Windows',
+		},
+		'mac': {
+			'name': 'Mac OS X',
+		},
 	}
 
 	if (!properties[name])
 	{
-		console.log('Failed to find platform with identifier "' + name + '".');
+		console.error('Failed to find platform with identifier "' + name + '".');
 	}
 
 	return properties[name];

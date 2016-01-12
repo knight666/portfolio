@@ -1,0 +1,14 @@
+{
+	"title": "Procedural Generation",
+	"brief": {
+		"description": "Procedural Generation",
+		"employer": "igad",
+		"platforms": [ "windows" ],
+		"technologies": [ "c++", "opengl2" ]
+	},
+	"trailer": {
+		"link": "yt://1",
+		"image": "procedural.jpg"
+	},
+	"source": "procedural.md"
+}

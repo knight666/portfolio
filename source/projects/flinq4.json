@@ -1,0 +1,15 @@
+{
+	"title": "FlinQ 4.0",
+	"brief": {
+		"description": "FlinQ 4.0",
+		"employer": "flexposure",
+		"role": "Junior Developer",
+		"platforms": [ "windows", "mac" ],
+		"technologies": [ "c++", "opengl3" ]
+	},
+	"trailer": {
+		"link": "yt://1",
+		"image": "flinq4.jpg"
+	},
+	"source": "flinq4.md"
+}
