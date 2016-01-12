@@ -1,6 +1,6 @@
 _Lara Croft and the Temple of Osiris_ is a video game title made by [Crystal Dynamics](http://www.crystaldynamics.com) and was released in December 2014 for Xbox One, PlayStation 4 and Steam. It is the sequel to the critically acclaimed _Lara Croft and the Guardian of Light_ title, released in 2010. [_Nixxes_](../projects-by-employer.html#nixxes) was contracted to convert the game to the PlayStation 4 and Steam/Windows platforms. In my role as a systems programmer, I ensured the game was playable with mouse and keyboard, redesigned the user interface for mouse interaction and fixed bugs related to input, UI and the underlying platform.
 
-### Four players on a single PC ###
+### Managed player input methods ###
 
 ![Main menu of the PC version.][1]
 
@@ -19,7 +19,7 @@ Because there were so many options for the player(s) behind the screen, we had t
 
 After first sketching out this widget on paper, I was put in charge of putting it into the game. _Lara Croft and the Temple of Osiris_ uses the [Autodesk Scaleform](../projects-by-technology.html#scaleform) framework to display Flash movies for every UI element on the screen. I created a new Flash movie for the widget and linked it to the game by writing a new widget class in C++.
 
-### Hot-swapping the context bar ###
+### Hot-swappable context bar ###
 
 On many of the screens in _Lara Croft and the Temple of Osiris_, button prompts are displayed when playing with a gamepad. These button prompts indicate to the user what interactions are possible and which buttons they are bound to. When playing with mouse and keyboard, the button prompts are automatically transformed to clickable buttons. This was only possible because I created a new widget, which I called the context bar.
 
@@ -29,7 +29,7 @@ The items on the context bar have a number of properties, including a localizati
 
 Adding the context bar turned out to be such a productivity booster that we reused its implementation for other _Crystal Dynamics_ titles.
 
-### Redesigning the options screens ###
+### Redesigned options screen ###
 
 ![The graphics settings screen in the PC version of _Lara Croft and the Temple of Osiris_.][4]
 
@@ -37,7 +37,7 @@ Although _Lara Croft and the Temple of Osiris_ had a perfectly functional settin
 
 By using and extending existing Scaleform classes for common UI controls like buttons, checkboxes and sliders, I was able to create a settings subscreen that could hold a flexible number of settings. This saved us a lot of time, because options could be moved between subscreens with ease.
 
-### Chatting during the match ###
+### Online text chat ###
 
 ![The text chat widget in action.][5]
 
@@ -45,7 +45,7 @@ Another option unique to the PC version of the game is the ability to type messa
 
 What I ended up designing was a transparent control in the top-right corner, ever present. Its textfield would fill up with messages from other players, while the keyboard and mouse player could press "Enter" and start typing their own message straight away. As soon as the control is activated, its background becomes opaque and an input text field appears at the bottom. This signifies a change in functionality for the control and invites the user to start typing their own message.
 
-### Voice chat widget ###
+### Voice chat on PlayStation 4 ###
 
 ![The voice chat widget can be displayed at any time.][6]
 
