@@ -4,7 +4,7 @@ _Lara Croft and the Temple of Osiris_ is a video game title made by [Crystal Dyn
 
 One of the major challenges of this project was the fact that that it supports both local and online co-op play with up to four players. Players can use either the mouse and keyboard or an Xinput-compatible gamepad to control their character. However, we also had to ensure the keyboard and mouse player could pick up a gamepad at any time and continue playing that way. On top of _that_, local co-op can be enhanced with additional players over the Internet. In order to support all of these use cases, we ended up completely overhauling the way local player selection works on PC in _Lara Croft and the Temple of Osiris_.
 
-![Time for tickles!][2]
+![Main menu on PC][4]
 
 The first constraint we posed was that only the first player could switch between mouse and keyboard and gamepad input. Next, we decided that players could also be forced into a specific configuration. For example, if two gamepads are plugged in, two player configurations are possible:
 
@@ -15,7 +15,7 @@ The first constraint we posed was that only the first player could switch betwee
 
 Because there were so many options for the player(s) behind the screen, we had to make sure the ability to select the amount of players was as clearly communicated as possible. After a number of iterations, we settled on adding a local player selector to the party widget, which allows the main player to select between one and four players.
 
-![Time for tickles!][1]
+![Concept for the new local player selector][3]
 
 After first sketching out this widget on paper, I was put in charge of putting it into the game. _Lara Croft and the Temple of Osiris_ uses the [Autodesk Scaleform](../projects-by-technology.html#scaleform) framework to display Flash movies for every UI element on the screen, so I created a new movie for the widget and linked it to the game by writing a new widget class in C++.
 
@@ -55,3 +55,5 @@ On the PlayStation 4 version of the game, I was tasked with displaying the state
 
 [1]: p2N1h.jpg "{ "orientation": "left" }"
 [2]: p2N1h.jpg "{ "orientation": "right" }"
+[3]: LC2_PlayerSelectorConcept.png "{ "orientation": "left" }"
+[4]: LC2_MainMenu.png "{ "orientation": "right" }"
