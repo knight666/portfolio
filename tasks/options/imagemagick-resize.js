@@ -1,6 +1,6 @@
 module.exports = {
 	thumbnails: {
-		from: '<%= IMAGES_PATH %>/',
+		from: '<%= SCREENSHOTS_PATH %>/',
 		to: '<%= THUMBNAILS_PATH %>/',
 		files: '*.*',
 		props: {

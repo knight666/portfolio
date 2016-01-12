@@ -1,9 +1,9 @@
 module.exports = {
-	images: {
+	media: {
 		expand: true,
-		cwd: '<%= IMAGES_PATH %>/',
+		cwd: '<%= MEDIA_PATH %>/',
 		src: '**/*.*',
-		dest: '<%= OUTPUT_PATH %>/images/'
+		dest: '<%= OUTPUT_PATH %>/<%= MEDIA_PATH %>/'
 	},
 	bootstrap: {
 		expand: true,

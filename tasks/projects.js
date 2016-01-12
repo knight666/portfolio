@@ -11,8 +11,8 @@ module.exports = function(grunt) {
 			var orientation = properties.orientation || 'left';
 
 			return '<div class="image-box-' + orientation + '">' +
-						'<a href="../images/' + href + '" class="thumbnail">' +
-							'<img src="../images/thumbnails/' + href + '" alt="' + text + '" />' +
+						'<a href="../media/screenshots/' + href + '" class="thumbnail">' +
+							'<img src="../media/screenshots/thumbnails/' + href + '" alt="' + text + '" />' +
 						'</a>' +
 					'</div>';
 		}
@@ -104,7 +104,7 @@ module.exports = function(grunt) {
 
 					if (entry.trailer.image)
 					{
-						style = ' style="background-image: url(\'../images/' + entry.trailer.image + '\'); background-position: center; background-repeat: no-repeat; background-size: 100%;"';
+						style = ' style="background-image: url(\'../media/previews/' + entry.trailer.image + '\'); background-position: center; background-repeat: no-repeat; background-size: 100%;"';
 					}
 
 					context['PAGE_TRAILER'] = '<a href="#project-trailer" name="project-video" class="project-video-play-link" video="' + entry.trailer.link + '"' + style + '>';
