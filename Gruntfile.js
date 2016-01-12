@@ -11,8 +11,9 @@ module.exports = function(grunt) {
 		TARGET: grunt.option('build') || process.env.GRUNT_ENV || 'debug',
 		SOURCE_PATH: 'source',
 		TEMPLATES_PATH: '<%= SOURCE_PATH %>/templates',
-		IMAGES_PATH: 'images',
-		THUMBNAILS_PATH: '<%= IMAGES_PATH %>/thumbnails',
+		MEDIA_PATH: 'media',
+		SCREENSHOTS_PATH: '<%= MEDIA_PATH %>/screenshots',
+		THUMBNAILS_PATH: '<%= SCREENSHOTS_PATH %>/thumbnails',
 		INTERMEDIATE_PATH: 'intermediate',
 		STYLES_PATH: 'styles',
 		OUTPUT_PATH: 'build',
@@ -51,7 +52,6 @@ module.exports = function(grunt) {
 		'index',
 		'projects',
 		'ordering',
-		'copy:images',
 		'copy:bootstrap',
 		'copy:styles',
 	];
@@ -63,7 +63,7 @@ module.exports = function(grunt) {
 		defaultTasks.push('imagemagick-resize:thumbnails');
 	}
 
-	defaultTasks.push('copy:images');
+	defaultTasks.push('copy:media');
 
 	// deploy to server
 	
