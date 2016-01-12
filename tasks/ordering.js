@@ -100,7 +100,19 @@ module.exports = function(grunt) {
 			var result = '<ul class="list-group">\n';
 
 			list.forEach(function(project) {
-				result += '\t<li class="list-group-item"><a href="projects/' + project['filename'] + '">' + project['title'] + '</a></li>\n';
+				result +=
+					'<li class="list-group-item">' +
+						'<a href="projects/' + project['filename'] + '">' +
+							'<div class="text-profile-container">' +
+								'<div class="img-profile">' +
+									'<img src=images/profile.jpg />' +
+								'</div>' +
+								'<div class="text-profile">' +
+									project['title'] +
+								'</div>' +
+							'</div>' +
+						'</a>' +
+					'</li>\n';
 			});
 
 			result += '</ul>\n';
