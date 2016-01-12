@@ -13,6 +13,9 @@ module.exports = function(grunt) {
 			return '<div class="image-box-' + orientation + '">' +
 						'<a href="../media/screenshots/' + href + '" class="thumbnail">' +
 							'<img src="../media/screenshots/thumbnails/' + href + '" alt="' + text + '" />' +
+							'<div class="caption">' +
+	    						text +
+	    					'</div>' +
 						'</a>' +
 					'</div>';
 		}
