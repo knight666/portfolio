@@ -1,4 +1,4 @@
-_Thief_ is a video game title produced by [Eidos Montréal](http://www.eidosmontreal.com) and was released in February 2014 for Steam, Xbox One and PlayStation 4. [Nixxes](../projects-by-employer.html#nixxes) was contracted to convert the title from Xbox One to Steam/Windows. As a Systems Programmer, I was responsible for making the user interface friendly for players using mouse and keyboard, redesigning the user interface for mouse interaction and fixed bugs related to UI, input and the underlying platform.
+_Thief_ is a video game title produced by [Eidos Montréal](http://www.eidosmontreal.com) and was released in February 2014 for Steam, Xbox One and PlayStation 4. [Nixxes](../projects-by-employer.html#nixxes) was contracted to convert the title from Xbox One to Steam/Windows. As a Systems Programmer, I was responsible for adding support for mouse and keyboard input, changing the user interface to be more mouse-friendly and for fixing bugs related to UI, input and the underlying platform.
 
 ### Keyboard and mouse prompts ###
 
@@ -8,18 +8,21 @@ Players can play the game using either mouse and keyboard or an Xinput-compatibl
 
 This system for handling game input was so intuitive to me that I started using it in my personal projects from then on. I've also written an article about the subject on my blog: [Turning input handling on its head with action mapping](http://?).
 
-### Inventory management ###
+### Map navigation ###
 
 ![Time for tickles!][2]
 
-Nam et sem nec augue pellentesque feugiat. Nam aliquam arcu ac efficitur aliquam. In suscipit ligula purus, non porta elit rutrum eu. Integer in ligula eget lectus suscipit porttitor eu non eros. Aenean eget ullamcorper urna, et egestas est. Nunc a mollis dui, id bibendum justo. Ut pulvinar diam eget orci placerat pulvinar. Pellentesque nisi odio, malesuada a mollis sit amet, faucibus vitae odio. Suspendisse sit amet felis suscipit, fringilla mi tincidunt, blandit magna. Etiam aliquam sit amet dolor vitae euismod. In nec bibendum ante, eget molestie est. Mauris ipsum dolor, iaculis rhoncus scelerisque nec, fringilla sed orci. Donec id arcu tempus, mollis augue eget, euismod justo. Quisque purus dolor, efficitur quis mollis sit amet, molestie a tortor.
+The in-game map can be used to figure out where you are in the world and where you're supposed to be going. Navigating it with a gamepad is quite different from navigating it with a mouse. I was responsible for making the map screen as easy to navigate as possible when using a mouse.
 
-### Map navigation ###
+When playing with a mouse and keyboard, most players intuitively guess how best to navigate the in-game map screen: by clicking and dragging. In _Thief_, players could use the mouse to accomplish the following in the in-game map screen:
 
-![Time for tickles!][3]
+* Navigation - By clicking and dragging with the left mouse button, players can drag the map screen from under them. Using a bit of clever projection math, the drag position remains fixed on the map screen, even when zoomed in or rotated.
 
-Nam et sem nec augue pellentesque feugiat. Nam aliquam arcu ac efficitur aliquam. In suscipit ligula purus, non porta elit rutrum eu. Integer in ligula eget lectus suscipit porttitor eu non eros. Aenean eget ullamcorper urna, et egestas est. Nunc a mollis dui, id bibendum justo. Ut pulvinar diam eget orci placerat pulvinar. Pellentesque nisi odio, malesuada a mollis sit amet, faucibus vitae odio. Suspendisse sit amet felis suscipit, fringilla mi tincidunt, blandit magna. Etiam aliquam sit amet dolor vitae euismod. In nec bibendum ante, eget molestie est. Mauris ipsum dolor, iaculis rhoncus scelerisque nec, fringilla sed orci. Donec id arcu tempus, mollis augue eget, euismod justo. Quisque purus dolor, efficitur quis mollis sit amet, molestie a tortor.
+* Zooming - Using the scrollwheel, players can zoom in and out of the map.
+
+* Rotating - By clicking and dragging with the _right_ mouse button, players can rotate the map to a new orientation.
+
+This was quite different from the gamepad navigation, where you move the map with the left stick, zoom with the left and right triggers and rotate with the right stick.
 
 [1]: p2N1h.jpg "{ "orientation": "left" }"
 [2]: p2N1h.jpg "{ "orientation": "right" }"
-[3]: p2N1h.jpg "{ "orientation": "left" }"
