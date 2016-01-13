@@ -28,13 +28,34 @@ module.exports = function(name) {
 			'name': 'Horde3D',
 		},
 		'opengl2': {
-			'name': 'OpenGL 2.0+',
+			'name': 'OpenGL 2.x',
 		},
 		'opengl3': {
-			'name': 'OpenGL 3.0+',
+			'name': 'OpenGL 3.x',
 		},
 		'opengl4': {
-			'name': 'OpenGL 4.0+',
+			'name': 'OpenGL 4.x',
+		},
+		'js': {
+			'name': 'JavaScript',
+		},
+		'css2': {
+			'name': 'CSS 3'
+		},
+		'css3': {
+			'name': 'CSS 3'
+		},
+		'nodejs': {
+			'name': 'NodeJS',
+		},
+		'php4': {
+			'name': 'PHP 4',
+		},
+		'html4': {
+			'name': 'HTML 4',
+		},
+		'html5': {
+			'name': 'HTML 5',
 		},
 	}
 

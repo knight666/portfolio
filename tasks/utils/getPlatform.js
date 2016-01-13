@@ -12,9 +12,15 @@ module.exports = function(name) {
 		'windows': {
 			'name': 'Windows',
 		},
+		'linux': {
+			'name': 'Linux',
+		},
 		'mac': {
 			'name': 'Mac OS X',
 		},
+		'web': {
+			'name': 'Website'
+		}
 	}
 
 	if (!properties[name])

@@ -101,16 +101,27 @@ module.exports = function(grunt) {
 
 			if (entry.trailer)
 			{
-				if (entry.trailer.link.indexOf('yt://', 0) === 0)
+				var style = '';
+
+				if (entry.trailer.image)
 				{
-					var style = '';
+					style = ' style="background-image: url(\'../media/previews/' + entry.trailer.image + '\'); background-position: center; background-repeat: no-repeat; background-size: 100%;"';
+				}
 
-					if (entry.trailer.image)
-					{
-						style = ' style="background-image: url(\'../media/previews/' + entry.trailer.image + '\'); background-position: center; background-repeat: no-repeat; background-size: 100%;"';
-					}
-
-					context['PAGE_TRAILER'] = '<a href="#project-trailer" name="project-video" class="project-video-play-link" video="' + entry.trailer.link + '"' + style + '>';
+				if (entry.trailer.link)
+				{
+					context['PAGE_TRAILER'] =
+						'<a href="#project-trailer" name="project-video" class="project-video-play-link" video="' + entry.trailer.link + '"' + style + '>' +
+							'<div class="project-video-highlight">' +
+								'<h2 class="project-video-play">' +
+									'<span class="glyphicon glyphicon-play" aria-hidden="true"></span>' +
+								'</h2>' +
+							'</div>' +
+						'</a>';
+				}
+				else if (entry.trailer.image)
+				{
+					context['PAGE_TRAILER'] = '<div class="project-video-play-link" ' + style + '></div>';
 				}
 			}
 
