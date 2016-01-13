@@ -11,7 +11,6 @@ module.exports = {
 		src: [
 			'css/*.min.css',
 			'fonts/*.*',
-			'js/*.min.js',
 		],
 		dest: '<%= OUTPUT_PATH %>/'
 	},
