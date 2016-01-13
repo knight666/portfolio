@@ -11,7 +11,7 @@ module.exports = function(grunt) {
 			var orientation = properties.orientation || 'left';
 
 			return '<div class="thumbnail-box-' + orientation + ' thumbnail-box-md thumbnail-box-sm">' +
-						'<a href="../media/screenshots/' + href + '" class="thumbnail thumbnail-sm">' +
+						'<a href="../media/screenshots/' + href + '" class="thumbnail thumbnail-sm" target="_blank">' +
 							'<img src="../media/screenshots/thumbnails/' + href + '" alt="' + text + '" />' +
 							'<div class="caption">' +
 								marked(text) +
@@ -79,7 +79,7 @@ module.exports = function(grunt) {
 					var properties = grunt.project_utils.getPlatform(item);
 					if (properties)
 					{
-						context['PAGE_BRIEF_PLATFORMS'] += '<a href="../projects-by-platform.html#' + item + '" class=badge badge-platform badge-"' + item + '">' + properties.name + '</a>\n';
+						context['PAGE_BRIEF_PLATFORMS'] += '<a href="../projects-by-platform.html#' + item + '" class=badge badge-platform badge-' + item + '">' + properties.name + '</a>\n';
 					}
 				});
 			}
