@@ -1,0 +1,12 @@
+{
+	"title": "Portfolio",
+	"brief": {
+		"description": "Portfolio",
+		"platforms": [ "web" ],
+		"technologies": [ "html5", "js", "css3", "nodejs" ]
+	},
+	"trailer": {
+		"image": "portfolio.jpg"
+	},
+	"source": "portfolio.md"
+}

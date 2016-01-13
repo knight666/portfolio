@@ -34,6 +34,9 @@ module.exports = function(name) {
 			'service-start': '2005-01',
 			'service-end': '2012-01',
 		},
+		'opensource': {
+			'name': 'Open Source',
+		},
 	}
 
 
