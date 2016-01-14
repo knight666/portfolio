@@ -1,4 +1,4 @@
-The _FlinQ 4.0_ product was developed by [FlexPosure BV](http://www.flexposure.nl) as a security management application. I was brought in to work on their 3D front-end client, to 
+The _FlinQ 4.0_ product was developed by [FlexPosure BV](http://www.flexposure.nl) as a security management application. I was brought in to work on and maintain the product's front-end client, fix bugs related to 3D rendering and UI and implement and maintain device drivers.
 
 ### Product description ###
 
@@ -10,21 +10,23 @@ The _FlinQ 4.0_ product combines these security solutions into a single server-c
 
 Users were very enthusiastic about the product, because it was the first of its kind to show these types of security events in a 3D representation of the location. Competing products would only show events on a 2D building layout, making large locations much more difficult to manage.
 
-### Client-side location editor ###
-
-![Time for tickles!][1]
-
-Nam et sem nec augue pellentesque feugiat. Nam aliquam arcu ac efficitur aliquam. In suscipit ligula purus, non porta elit rutrum eu. Integer in ligula eget lectus suscipit porttitor eu non eros. Aenean eget ullamcorper urna, et egestas est. Nunc a mollis dui, id bibendum justo. Ut pulvinar diam eget orci placerat pulvinar. Pellentesque nisi odio, malesuada a mollis sit amet, faucibus vitae odio. Suspendisse sit amet felis suscipit, fringilla mi tincidunt, blandit magna. Etiam aliquam sit amet dolor vitae euismod. In nec bibendum ante, eget molestie est. Mauris ipsum dolor, iaculis rhoncus scelerisque nec, fringilla sed orci. Donec id arcu tempus, mollis augue eget, euismod justo. Quisque purus dolor, efficitur quis mollis sit amet, molestie a tortor.
-
 ### Device drivers ###
 
 ![Time for tickles!][2]
 
-Nam in blandit enim, non tristique nibh. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam quis gravida massa. Proin ac tempus lectus. Curabitur a rhoncus turpis. Integer a molestie leo. Quisque et dui mollis, interdum ex id, posuere augue.
+Every product supported by _FlinQ 4.0_ required its own device drivers. These drivers were written in C# and interfaced with the devices using their documented APIs. After processing the messages, the drivers would output standardized messages of their own, for processing by the server.
+
+Because the drivers were separated from the server logic, it was very easy to add support for new devices. The application had drivers for devices ranging from cameras, card access readers to fire alarms. I personally wrote a driver for the _ProRAE Guardian_ device, which responds to alarms from gas leaks and other hazardous materials.
+
+### Client-side location editor ###
+
+![Time for tickles!][3]
+
+Nam et sem nec augue pellentesque feugiat. Nam aliquam arcu ac efficitur aliquam. In suscipit ligula purus, non porta elit rutrum eu. Integer in ligula eget lectus suscipit porttitor eu non eros. Aenean eget ullamcorper urna, et egestas est. Nunc a mollis dui, id bibendum justo. Ut pulvinar diam eget orci placerat pulvinar. Pellentesque nisi odio, malesuada a mollis sit amet, faucibus vitae odio. Suspendisse sit amet felis suscipit, fringilla mi tincidunt, blandit magna. Etiam aliquam sit amet dolor vitae euismod. In nec bibendum ante, eget molestie est. Mauris ipsum dolor, iaculis rhoncus scelerisque nec, fringilla sed orci. Donec id arcu tempus, mollis augue eget, euismod justo. Quisque purus dolor, efficitur quis mollis sit amet, molestie a tortor.
 
 ### Adding UI elements ###
 
-![Time for tickles!][3]
+![Time for tickles!][4]
 
 Nam et sem nec augue pellentesque feugiat. Nam aliquam arcu ac efficitur aliquam. In suscipit ligula purus, non porta elit rutrum eu. Integer in ligula eget lectus suscipit porttitor eu non eros. Aenean eget ullamcorper urna, et egestas est. Nunc a mollis dui, id bibendum justo. Ut pulvinar diam eget orci placerat pulvinar. Pellentesque nisi odio, malesuada a mollis sit amet, faucibus vitae odio. Suspendisse sit amet felis suscipit, fringilla mi tincidunt, blandit magna. Etiam aliquam sit amet dolor vitae euismod. In nec bibendum ante, eget molestie est. Mauris ipsum dolor, iaculis rhoncus scelerisque nec, fringilla sed orci. Donec id arcu tempus, mollis augue eget, euismod justo. Quisque purus dolor, efficitur quis mollis sit amet, molestie a tortor.
 
@@ -34,4 +36,5 @@ Nullam lacinia maximus nisi, ut sollicitudin elit ornare vel. Fusce tristique sa
 
 [1]: p2N1h.jpg "{ "orientation": "left" }"
 [2]: p2N1h.jpg "{ "orientation": "right" }"
-[2]: p2N1h.jpg "{ "orientation": "left" }"
+[3]: p2N1h.jpg "{ "orientation": "left" }"
+[4]: p2N1h.jpg "{ "orientation": "right" }"
