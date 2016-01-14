@@ -5,7 +5,7 @@
 		"employer": "flexposure",
 		"role": "Junior Developer",
 		"platforms": [ "windows", "mac" ],
-		"technologies": [ "c++", "opengl3" ]
+		"technologies": [ "c++", "csharp", "opengl3" ]
 	},
 	"trailer": {
 		"link": "yt://1",
