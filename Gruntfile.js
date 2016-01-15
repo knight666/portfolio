@@ -45,7 +45,7 @@ module.exports = function(grunt) {
 	grunt.loadTasks('tasks');
 
 	// build
-	
+
 	var defaultTasks = [
 		'env:' + grunt.config('TARGET'),
 		'clean:build',
@@ -54,23 +54,19 @@ module.exports = function(grunt) {
 		'ordering',
 		'copy:bootstrap',
 		'copy:styles',
+		'copy:media',
 	];
 
-	// build content
-
-	if (grunt.option('content'))
-	{
-		defaultTasks.push('imagemagick-resize:thumbnails');
-	}
-
-	defaultTasks.push('copy:media');
-
 	// deploy to server
-	
+
 	if (grunt.option('deploy'))
 	{
 		defaultTasks.push('ftp-deploy:build');
 	}
 
 	grunt.registerTask('default', defaultTasks);
+
+	grunt.registerTask('content', [
+		'imagemagick-resize:thumbnails'
+	]);
 }
