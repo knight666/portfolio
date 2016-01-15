@@ -1,7 +1,7 @@
 {
 	"title": "FlinQ 4.0",
 	"brief": {
-		"description": "FlinQ 4.0",
+		"description": "Security management package that combines reports from multiple sources into a single and intuitive 3D interface.",
 		"employer": "flexposure",
 		"role": "Junior Developer",
 		"platforms": [ "windows", "mac" ],
