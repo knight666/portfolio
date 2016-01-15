@@ -22,7 +22,11 @@ Because the drivers were separated from the server logic, it was very easy to ad
 
 ![Time for tickles!][3]
 
-Nam et sem nec augue pellentesque feugiat. Nam aliquam arcu ac efficitur aliquam. In suscipit ligula purus, non porta elit rutrum eu. Integer in ligula eget lectus suscipit porttitor eu non eros. Aenean eget ullamcorper urna, et egestas est. Nunc a mollis dui, id bibendum justo. Ut pulvinar diam eget orci placerat pulvinar. Pellentesque nisi odio, malesuada a mollis sit amet, faucibus vitae odio. Suspendisse sit amet felis suscipit, fringilla mi tincidunt, blandit magna. Etiam aliquam sit amet dolor vitae euismod. In nec bibendum ante, eget molestie est. Mauris ipsum dolor, iaculis rhoncus scelerisque nec, fringilla sed orci. Donec id arcu tempus, mollis augue eget, euismod justo. Quisque purus dolor, efficitur quis mollis sit amet, molestie a tortor.
+The client application would render the location in 3D, but it didn't work off of an existing plan. The floor plans first had to be converted to a 3D presentation by using the location editor. Users with the appropriate rights could move buildings, move floors in buildings and edit the floor plan by drawing and moving walls on floors.
+
+My work focused mainly on the floor editor, where I added support for moving walls around, snapping wall points to a grid and making the interface more user-friendly.
+
+The floor plans were synchronized between clients by the server, which meant that changes made on one client would instantly show up on other clients.
 
 ### Adding UI elements ###
 
