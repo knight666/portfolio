@@ -1,20 +1,28 @@
-Lorem ipsum dolor sit amet, [consectetur](http://google.com) adipiscing elit. Etiam massa metus, volutpat convallis suscipit nec, aliquam ac sapien. Integer quis semper felis. Nullam sed maximus elit. Nunc vitae fermentum diam. Mauris quis mi a lacus commodo maximus. Vestibulum aliquet justo urna, id feugiat orci accumsan in. Ut rutrum feugiat ultrices. Vivamus consequat imperdiet dignissim. Nullam quis gravida orci, vel aliquet libero. Sed sagittis congue eros fringilla mollis. Integer mollis lorem ex, vitae posuere tellus elementum nec. In vestibulum faucibus cursus. Morbi viverra mi id risus tincidunt facilisis. Duis nec vestibulum quam, ac sodales sem. Morbi orci erat, molestie ut condimentum id, feugiat lacinia tellus. Nunc nec tortor vel velit interdum maximus. Morbi lectus nisl, luctus id lacinia quis, vestibulum sit amet sem. Donec pulvinar, turpis quis placerat faucibus, massa nisl facilisis erat, non tincidunt est nisl in neque. Nam sed bibendum nisl. Maecenas interdum a purus at fermentum. Duis nec erat eu justo posuere facilisis. Pellentesque neque erat, mattis eu lacinia a, dignissim non leo. Duis eu tellus a dolor vestibulum ultricies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia elit leo, quis posuere nisi tempus a. Phasellus sed sapien in eros tincidunt dictum sed sed sem.
+_Thief_ is a video game title produced by [Eidos Montréal](http://www.eidosmontreal.com) and was released in February 2014 for Steam, Xbox One and PlayStation 4. [Nixxes](../projects-by-employer.html#nixxes) was contracted to convert the title from Xbox One to Steam/Windows. As a Systems Programmer, I was responsible for adding support for mouse and keyboard input, changing the user interface to be more mouse-friendly and for fixing bugs related to UI, input and the underlying platform.
 
-### Lorum ipsum ###
+### Keyboard and mouse prompts ###
 
 ![Time for tickles!][1]
 
-Nam in blandit enim, non tristique nibh. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam quis gravida massa. Proin ac tempus lectus. Curabitur a rhoncus turpis. Integer a molestie leo. Quisque et dui mollis, interdum ex id, posuere augue.
+Players can play the game using either mouse and keyboard or an Xinput-compatible gamepad. When they do, the game must update all button prompts currently visible, for example the prompts in a tutorial message. Luckily, _Thief_ sported a very intuitive input system. All player interactions were grouped in what _Eidos_ called "actions", which were bound to inputs in their editor. Instead of using button prompts in their tutorial directly, they used the action names. This allowed us to translate these actions to mouse and keyboard prompts when the player is using that input method.
 
-### Lorum ipsum ###
+This system for handling game input was so intuitive to me that I started using it in my personal projects from then on. I've also written an article about the subject on my blog: [Turning input handling on its head with action mapping](http://?).
+
+### Map navigation ###
 
 ![Time for tickles!][2]
 
-Nam et sem nec augue pellentesque feugiat. Nam aliquam arcu ac efficitur aliquam. In suscipit ligula purus, non porta elit rutrum eu. Integer in ligula eget lectus suscipit porttitor eu non eros. Aenean eget ullamcorper urna, et egestas est. Nunc a mollis dui, id bibendum justo. Ut pulvinar diam eget orci placerat pulvinar. Pellentesque nisi odio, malesuada a mollis sit amet, faucibus vitae odio. Suspendisse sit amet felis suscipit, fringilla mi tincidunt, blandit magna. Etiam aliquam sit amet dolor vitae euismod. In nec bibendum ante, eget molestie est. Mauris ipsum dolor, iaculis rhoncus scelerisque nec, fringilla sed orci. Donec id arcu tempus, mollis augue eget, euismod justo. Quisque purus dolor, efficitur quis mollis sit amet, molestie a tortor.
+The in-game map can be used to figure out where you are in the world and where you're supposed to be going. Navigating it with a gamepad is quite different from navigating it with a mouse. I was responsible for making the map screen as easy to navigate as possible when using a mouse.
 
-### Lorum ipsum ###
+When playing with a mouse and keyboard, most players intuitively guess how best to navigate the in-game map screen: by clicking and dragging. In _Thief_, players could use the mouse to accomplish the following in the in-game map screen:
 
-Nullam lacinia maximus nisi, ut sollicitudin elit ornare vel. Fusce tristique sapien dui, a consequat nisl aliquet vitae. In hac habitasse platea dictumst. Ut eget ultricies nulla. Maecenas auctor molestie sapien et luctus. Proin libero nunc, lobortis sed sapien et, laoreet consequat quam. Maecenas sapien quam, vulputate sit amet orci vel, fermentum luctus felis. Morbi imperdiet fringilla ante non convallis. Morbi ligula justo, commodo et nisi at, pharetra molestie ipsum. Pellentesque vel blandit tortor.
+* Navigation - By clicking and dragging with the left mouse button, players can drag the map screen from under them. Using a bit of clever projection math, the drag position remains fixed on the map screen, even when zoomed in or rotated.
+
+* Zooming - Using the scrollwheel, players can zoom in and out of the map.
+
+* Rotating - By clicking and dragging with the _right_ mouse button, players can rotate the map to a new orientation.
+
+This was quite different from the gamepad navigation, where you move the map with the left stick, zoom with the left and right triggers and rotate with the right stick.
 
 [1]: p2N1h.jpg "{ "orientation": "left" }"
 [2]: p2N1h.jpg "{ "orientation": "right" }"
