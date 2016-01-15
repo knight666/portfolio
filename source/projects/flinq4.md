@@ -1,4 +1,4 @@
-The _FlinQ 4.0_ product was developed by [FlexPosure BV](http://www.flexposure.nl) as a security management application. I was brought in to work on and maintain the product's front-end client, fix bugs related to 3D rendering and UI and implement and maintain device drivers.
+The _FlinQ 4.0_ product was developed by [FlexPosure BV](http://www.flexposure.nl) as a security management application. I was brought in to work on and maintain the product's front-end client, fixing issues related to 3D rendering and UI and implement and maintain device drivers.
 
 ### Product description ###
 
@@ -6,7 +6,11 @@ The _FlinQ 4.0_ product was developed by [FlexPosure BV](http://www.flexposure.n
 
 _FlinQ 4.0_ was designed to interface with the client's existing security infrastructure. For example, a client may have cameras by Bosch, door sensors by Philips and card readers by Honeywell. These products come with their own software or even hardware to manage them. This makes it difficult for security to, for example, link camera events to door sensor events.
 
-The _FlinQ 4.0_ product combines these security solutions into a single server-client architecture. It collects data from the different products using their documented APIs, processes them into a single timeline and sends them as events to its client applications. These clients render the events on a timeline and show them in a 3D representation of the physical location. Users could pull up events from the timeline and see them in 3D space. For example, a camera event would show up in their timeline, the user clicks on the event and the application shows them the event on the camera. The application camera would first focus on the building, then on the floor in the building and finally the security camera itself. After selecting the security camera, users could play back the footage or rotate the camera using PTZ (Pan, Tilt, Zoom) controls.
+The _FlinQ 4.0_ product combines these security solutions into a single server-client architecture. It collects data from the different products using their documented APIs, processes them into a timeline and sends them as events to its client applications. These clients render the events on a timeline and show them in a 3D representation of the physical location.
+
+Users could pull up events from the timeline and see them in 3D space. For example, if a camera event shows up in their timeline, the user clicks on the event and the application shows them the event on the camera in the 3D world. The application would first focus on the building, then on the floor in the building and finally the security camera itself. After selecting the security camera, users could play back the footage or rotate the camera using PTZ (Pan, Tilt, Zoom) controls.
+
+Besides mouse and keyboard controls, the application also supported touch screen gestures. Users could tap on an icon to display a device, zoom the view with a pinch gesture and rotate with a finger rotation.
 
 Users were very enthusiastic about the product, because it was the first of its kind to show these types of security events in a 3D representation of the location. Competing products would only show events on a 2D building layout, making large locations much more difficult to manage.
 
@@ -28,11 +32,13 @@ My work focused mainly on the floor editor, where I added support for moving wal
 
 The floor plans were synchronized between clients by the server, which meant that changes made on one client would instantly show up on other clients.
 
-### Adding UI elements ###
+### Rendering optimizations ###
 
 ![Time for tickles!][4]
 
-Nam et sem nec augue pellentesque feugiat. Nam aliquam arcu ac efficitur aliquam. In suscipit ligula purus, non porta elit rutrum eu. Integer in ligula eget lectus suscipit porttitor eu non eros. Aenean eget ullamcorper urna, et egestas est. Nunc a mollis dui, id bibendum justo. Ut pulvinar diam eget orci placerat pulvinar. Pellentesque nisi odio, malesuada a mollis sit amet, faucibus vitae odio. Suspendisse sit amet felis suscipit, fringilla mi tincidunt, blandit magna. Etiam aliquam sit amet dolor vitae euismod. In nec bibendum ante, eget molestie est. Mauris ipsum dolor, iaculis rhoncus scelerisque nec, fringilla sed orci. Donec id arcu tempus, mollis augue eget, euismod justo. Quisque purus dolor, efficitur quis mollis sit amet, molestie a tortor.
+Optimization became a concern as the project went on. One of our largest clients, ARAS Security, had to manage a location much larger than we anticipated. Even though the 3D rendering was not textured, we still had to minimize the amount of draw calls in order to get a performante framerate. On the server side as well, we had to make many optimizations to maximize the amount of messages the database could process.
+
+One of the other areas I focused on was refactoring parts of the user interface rendering code. All of the user interface was custom-built, based on OpenGL draw calls. This made it easy to make performance enhancements, because we owned most of the code and didn't have to wait on support from third parties. For example, I wrote a new text renderer for the client application, which resulted in a 5x speed up when rendering text.
 
 ### Test-driven design ###
 
