@@ -42,7 +42,13 @@ One of the other areas I focused on was refactoring parts of the user interface 
 
 ### Test-driven design ###
 
-Nullam lacinia maximus nisi, ut sollicitudin elit ornare vel. Fusce tristique sapien dui, a consequat nisl aliquet vitae. In hac habitasse platea dictumst. Ut eget ultricies nulla. Maecenas auctor molestie sapien et luctus. Proin libero nunc, lobortis sed sapien et, laoreet consequat quam. Maecenas sapien quam, vulputate sit amet orci vel, fermentum luctus felis. Morbi imperdiet fringilla ante non convallis. Morbi ligula justo, commodo et nisi at, pharetra molestie ipsum. Pellentesque vel blandit tortor.
+Working at FlexPosure BV was the first time I encountered [test-driven design](http://?) (TDD) and I've been hooked ever since.
+
+Because of the sensitive nature of the application, certain requirements had to be met about the stability and security of the inner workings. The team used TDD extensively and wrote unit tests for every section of the code. The automated test suites would be run every time a change was submitted to the code repository and a failing test meant that the change was rejected.
+
+This system worked very well to keep the bug count low, which was critical for the project to succeed.
+
+I've since went on to use TDD in my own projects, for example in the open source [utf8rewind](utf8rewind.html).
 
 [1]: p2N1h.jpg "{ "orientation": "left" }"
 [2]: p2N1h.jpg "{ "orientation": "right" }"
