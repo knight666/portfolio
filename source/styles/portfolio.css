@@ -147,6 +147,10 @@
 	margin: -12px auto 0px auto;
 }
 
+.project-video-play > .glyphicon {
+	left: 2px;
+}
+
 .project-video {
 }
 
