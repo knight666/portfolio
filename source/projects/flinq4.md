@@ -2,7 +2,7 @@ The _FlinQ 4.0_ product was developed by [FlexPosure BV](http://www.flexposure.n
 
 ### Product description ###
 
-![Time for tickles!][1]
+![Overview of the client application][1]
 
 _FlinQ 4.0_ was designed to interface with the client's existing security infrastructure. For example, a client may have cameras by Bosch, door sensors by Philips and card readers by Honeywell. These products come with their own software or even hardware to manage them. This makes it difficult for security to, for example, link camera events to door sensor events.
 
@@ -16,7 +16,7 @@ Users were very enthusiastic about the product, because it was the first of its 
 
 ### Device drivers ###
 
-![Time for tickles!][2]
+![Editing device properties in the editor][2]
 
 Every product supported by _FlinQ 4.0_ required its own device drivers. These drivers were written in C# and interfaced with the devices using their documented APIs. After processing the messages, the drivers would output standardized messages of their own, for processing by the server.
 
@@ -24,7 +24,7 @@ Because the drivers were separated from the server logic, it was very easy to ad
 
 ### Client-side location editor ###
 
-![Time for tickles!][3]
+![Editing walls in the location editor][3]
 
 The client application would render the location in 3D, but it didn't work off of an existing plan. The floor plans first had to be converted to a 3D presentation by using the location editor. Users with the appropriate rights could move buildings, move floors in buildings and edit the floor plan by drawing and moving walls on floors.
 
@@ -33,8 +33,6 @@ My work focused mainly on the floor editor, where I added support for moving wal
 The floor plans were synchronized between clients by the server, which meant that changes made on one client would instantly show up on other clients.
 
 ### Rendering optimizations ###
-
-![Time for tickles!][4]
 
 Optimization became a concern as the project went on. One of our largest clients, ARAS Security, had to manage a location much larger than we anticipated. Even though the 3D rendering was not textured, we still had to minimize the amount of draw calls in order to get a performante framerate. On the server side as well, we had to make many optimizations to maximize the amount of messages the database could process.
 
@@ -50,7 +48,6 @@ This system worked very well to keep the bug count low, which was critical for t
 
 I've since went on to use TDD in my own projects, for example in the open source [utf8rewind](utf8rewind.html).
 
-[1]: p2N1h.jpg "{ "orientation": "left" }"
-[2]: p2N1h.jpg "{ "orientation": "right" }"
-[3]: p2N1h.jpg "{ "orientation": "left" }"
-[4]: p2N1h.jpg "{ "orientation": "right" }"
+[1]: FQ40_Overview.png "{ "orientation": "left" }"
+[2]: FQ40_DeviceProperties.png "{ "orientation": "right" }"
+[3]: FQ40_FloorEditor.png "{ "orientation": "left" }"
