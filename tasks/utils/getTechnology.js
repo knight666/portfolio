@@ -6,6 +6,9 @@ module.exports = function(name) {
 		'c++': {
 			'name': 'C++',
 		},
+		'csharp': {
+			'name': 'C#',
+		},
 		'as': {
 			'name': 'ActionScript',
 		},
