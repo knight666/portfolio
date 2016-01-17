@@ -12,7 +12,10 @@ module.exports = function(grunt) {
 				'title': entry['title']
 			};
 
-			context['PROJECT_LIST'] += '<li class="list-group-item"><a href="projects/' + project['filename'] + '">' + project['title'] + '</a></li>\n';
+			if (!entry.hidden)
+			{
+				context['PROJECT_LIST'] += '<li class="list-group-item"><a href="projects/' + project['filename'] + '">' + project['title'] + '</a></li>\n';
+			}
 		});
 
 		grunt.project_utils.compileTemplate(grunt, 'index', context);

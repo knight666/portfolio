@@ -127,8 +127,11 @@ module.exports = function(grunt) {
 
 			// compile template
 
-			var filename = fullPath.match(/([^ \/]+?)\.json$/)[1];
-			grunt.project_utils.compileTemplate(grunt, 'project', context, 'projects/' + filename);
+			if (!entry.hidden)
+			{
+				var filename = fullPath.match(/([^ \/]+?)\.json$/)[1];
+				grunt.project_utils.compileTemplate(grunt, 'project', context, 'projects/' + filename);
+			}
 		});
 	});
 };
