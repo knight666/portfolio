@@ -38,9 +38,9 @@ Optimization became a concern as the project went on. One of our largest clients
 
 One of the other areas I focused on was refactoring parts of the user interface rendering code. All of the user interface was custom-built, based on OpenGL draw calls. This made it easy to make performance enhancements, because we owned most of the code and didn't have to wait on support from third parties. For example, I wrote a new text renderer for the client application, which resulted in a 5x speed up when rendering text.
 
-### Test-driven design ###
+### Test-driven development ###
 
-Working at FlexPosure BV was the first time I encountered [test-driven design](http://?) (TDD) and I've been hooked ever since.
+Working at FlexPosure BV was the first time I encountered [test-driven development](https://en.wikipedia.org/wiki/Test-driven_development) (TDD) and I've been hooked ever since.
 
 Because of the sensitive nature of the application, certain requirements had to be met about the stability and security of the inner workings. The team used TDD extensively and wrote unit tests for every section of the code. The automated test suites would be run every time a change was submitted to the code repository and a failing test meant that the change was rejected.
 
