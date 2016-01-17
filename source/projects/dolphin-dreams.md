@@ -1,10 +1,12 @@
-Lorem ipsum dolor sit amet, [consectetur](http://google.com) adipiscing elit. Etiam massa metus, volutpat convallis suscipit nec, aliquam ac sapien. Integer quis semper felis. Nullam sed maximus elit. Nunc vitae fermentum diam. Mauris quis mi a lacus commodo maximus. Vestibulum aliquet justo urna, id feugiat orci accumsan in. Ut rutrum feugiat ultrices. Vivamus consequat imperdiet dignissim. Nullam quis gravida orci, vel aliquet libero. Sed sagittis congue eros fringilla mollis. Integer mollis lorem ex, vitae posuere tellus elementum nec. In vestibulum faucibus cursus. Morbi viverra mi id risus tincidunt facilisis. Duis nec vestibulum quam, ac sodales sem. Morbi orci erat, molestie ut condimentum id, feugiat lacinia tellus. Nunc nec tortor vel velit interdum maximus. Morbi lectus nisl, luctus id lacinia quis, vestibulum sit amet sem. Donec pulvinar, turpis quis placerat faucibus, massa nisl facilisis erat, non tincidunt est nisl in neque. Nam sed bibendum nisl. Maecenas interdum a purus at fermentum. Duis nec erat eu justo posuere facilisis. Pellentesque neque erat, mattis eu lacinia a, dignissim non leo. Duis eu tellus a dolor vestibulum ultricies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia elit leo, quis posuere nisi tempus a. Phasellus sed sapien in eros tincidunt dictum sed sed sem.
+Dolhpin Dreams is a serious game project produced for the [SAM Foundation](http://www.stichtingsam.nl/). It is a training tool designed to help mentally challenged children with severe autism or Down's syndrome. While interning at the Dutch Indie Games Company, I improved the ability to interact with the virtual dolphin via touch screen controls and improved the performance of the renderer.
 
-### Lorum ipsum ###
+### Background ###
 
-![Time for tickles!][1]
+![The virtual dolphin in his aquarium][1]
 
-Nam in blandit enim, non tristique nibh. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam quis gravida massa. Proin ac tempus lectus. Curabitur a rhoncus turpis. Integer a molestie leo. Quisque et dui mollis, interdum ex id, posuere augue.
+The SAM foundation provides dolphin therapy for children with severe mental disabilities. The children are able to develop their speech and social skills by communicating with a creature that only responds to commands given with direct eye contact. Although these sessions are massively beneficial to the patients, they are unfortunately very expensive. There is only location in the Netherlands that provides the opportunity to interact with dolphins and the therapy itself requires the assistance of trainers, paramedics and therapeutic staff.
+
+The foundation contacted NHTV with the idea to create a virtual environment for dolphin therapy. It would allow patients to continue their training at home, without the need for an actual dolphin to be present.
 
 ### Lorum ipsum ###
 
