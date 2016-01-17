@@ -46,7 +46,7 @@ Because of the sensitive nature of the application, certain requirements had to 
 
 This system worked very well to keep the bug count low, which was critical for the project to succeed.
 
-I've since went on to use TDD in my own projects, for example in the open source [utf8rewind](utf8rewind.html).
+I've since went on to use TDD in my own projects, for example in the open source [utf8rewind](http://bitbucket.org/knight666/utf8rewind).
 
 [1]: FQ40_Overview.png "{ "orientation": "left" }"
 [2]: FQ40_DeviceProperties.png "{ "orientation": "right" }"
