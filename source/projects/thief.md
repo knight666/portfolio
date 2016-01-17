@@ -1,4 +1,4 @@
-_Thief_ is a video game title produced by [Eidos Montréal](http://www.eidosmontreal.com) and was released in February 2014 for Steam, Xbox One and PlayStation 4. [Nixxes](../projects-by-employer.html#nixxes) was contracted to convert the title from Xbox One to Steam/Windows. As a Systems Programmer, I was responsible for adding support for mouse and keyboard input, changing the user interface to be more mouse-friendly and for fixing bugs related to UI, input and the underlying platform.
+_Thief_ is a video game title produced by [Eidos Montréal](http://www.eidosmontreal.com) and was released in February 2014 for Steam, Xbox One and PlayStation 4. _Nixxes_ was contracted to convert the title from Xbox One to Steam/Windows. As a Systems Programmer, I was responsible for adding support for mouse and keyboard input, changing the user interface to be more mouse-friendly and for fixing bugs related to UI, input and the underlying platform.
 
 ### Keyboard and mouse prompts ###
 
@@ -6,7 +6,7 @@ _Thief_ is a video game title produced by [Eidos Montréal](http://www.eidosmont
 
 Players can play the game using either mouse and keyboard or an Xinput-compatible gamepad. When they do, the game must update all button prompts currently visible, for example the prompts in a tutorial message. Luckily, _Thief_ sported a very intuitive input system. All player interactions were grouped in what _Eidos_ called "actions", which were bound to inputs in their editor. Instead of using button prompts in their tutorial directly, they used the action names. This allowed us to translate these actions to mouse and keyboard prompts when the player is using that input method.
 
-This system for handling game input was so intuitive to me that I started using it in my personal projects from then on. I've also written an article about the subject on my blog: [Turning input handling on its head with action mapping](http://?).
+This system for handling game input was so intuitive to me that I started using it in my personal projects from then on. I've also written an article about the subject on my blog: [How to flip input handling on its head with action mapping](http://knight666.com/blog/action-mapping/).
 
 ### Map navigation ###
 
