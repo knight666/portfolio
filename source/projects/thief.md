@@ -2,7 +2,7 @@ _Thief_ is a video game title produced by [Eidos Montréal](http://www.eidosmont
 
 ### Keyboard and mouse prompts ###
 
-![Time for tickles!][1]
+![Keyboard prompts are displayed when using mouse and keyboard.][1]
 
 Players can play the game using either mouse and keyboard or an Xinput-compatible gamepad. When they do, the game must update all button prompts currently visible, for example the prompts in a tutorial message. Luckily, _Thief_ sported a very intuitive input system. All player interactions were grouped in what _Eidos_ called "actions", which were bound to inputs in their editor. Instead of using button prompts in their tutorial directly, they used the action names. This allowed us to translate these actions to mouse and keyboard prompts when the player is using that input method.
 
@@ -10,7 +10,7 @@ This system for handling game input was so intuitive to me that I started using 
 
 ### Map navigation ###
 
-![Time for tickles!][2]
+![In-game map navigation using the mouse][2]
 
 The in-game map can be used to figure out where you are in the world and where you're supposed to be going. Navigating it with a gamepad is quite different from navigating it with a mouse. I was responsible for making the map screen as easy to navigate as possible when using a mouse.
 
@@ -24,5 +24,5 @@ When playing with a mouse and keyboard, most players intuitively guess how best 
 
 This was quite different from the gamepad navigation, where you move the map with the left stick, zoom with the left and right triggers and rotate with the right stick.
 
-[1]: p2N1h.jpg "{ "orientation": "left" }"
-[2]: p2N1h.jpg "{ "orientation": "right" }"
+[1]: TH4_ButtonPrompts.jpg "{ "orientation": "left" }"
+[2]: TH4_Map.jpg "{ "orientation": "right" }"
