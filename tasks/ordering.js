@@ -16,41 +16,44 @@ module.exports = function(grunt) {
 				'technologies': entry.brief.technologies || [],
 			};
 
-			by_date.push(project);
-
-			if (project.employer != '')
+			if (!entry.hidden)
 			{
-				if (by_employer[project.employer])
+				by_date.push(project);
+
+				if (project.employer != '')
 				{
-					by_employer[project.employer].push(project);
+					if (by_employer[project.employer])
+					{
+						by_employer[project.employer].push(project);
+					}
+					else
+					{
+						by_employer[project.employer] = [ project ];
+					}
 				}
-				else
-				{
-					by_employer[project.employer] = [ project ];
-				}
+
+				project.platforms.forEach(function(platform) {
+					if (by_platform[platform])
+					{
+						by_platform[platform].push(project);
+					}
+					else
+					{
+						by_platform[platform] = [ project ];
+					}
+				});
+
+				project.technologies.forEach(function(technology) {
+					if (by_technology[technology])
+					{
+						by_technology[technology].push(project);
+					}
+					else
+					{
+						by_technology[technology] = [ project ];
+					}
+				});
 			}
-
-			project.platforms.forEach(function(platform) {
-				if (by_platform[platform])
-				{
-					by_platform[platform].push(project);
-				}
-				else
-				{
-					by_platform[platform] = [ project ];
-				}
-			});
-
-			project.technologies.forEach(function(technology) {
-				if (by_technology[technology])
-				{
-					by_technology[technology].push(project);
-				}
-				else
-				{
-					by_technology[technology] = [ project ];
-				}
-			});
 		});
 
 		var context = {

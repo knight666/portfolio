@@ -8,5 +8,6 @@
 	"trailer": {
 		"image": "portfolio.jpg"
 	},
-	"source": "portfolio.md"
+	"source": "portfolio.md",
+	"hidden": true
 }

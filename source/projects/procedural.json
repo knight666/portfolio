@@ -10,5 +10,6 @@
 		"link": "yt://1",
 		"image": "procedural.jpg"
 	},
-	"source": "procedural.md"
+	"source": "procedural.md",
+	"hidden": true
 }

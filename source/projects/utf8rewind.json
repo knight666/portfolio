@@ -9,5 +9,6 @@
 	"trailer": {
 		"image": "utf8rewind.jpg"
 	},
-	"source": "utf8rewind.md"
+	"source": "utf8rewind.md",
+	"hidden": true
 }
