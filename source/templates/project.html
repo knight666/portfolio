@@ -32,6 +32,18 @@
 						parent.appendChild(video);
 					}
 				}
+				else if (link.indexOf('vimeo://', 0) === 0)
+				{
+					target.onclick = function() {
+						var video = document.createElement("iframe");
+						video.class = "embed-responsive-item";
+						video.src = "http://player.vimeo.com/video/" + link.substring('vimeo://'.length);
+						video.allowfullscreen = "";
+
+						parent.removeChild(target);
+						parent.appendChild(video);
+					}
+				}
 			}
 		}
 	</script>
