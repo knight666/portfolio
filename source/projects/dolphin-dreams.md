@@ -2,7 +2,7 @@ Dolhpin Dreams is a serious game project produced for the [SAM Foundation](http:
 
 ### Background ###
 
-![The virtual dolphin in his aquarium.][1]
+![The virtual dolphin in the middle of a looping.][1]
 
 The SAM foundation provides dolphin therapy for children with severe mental disabilities. The children are able to develop their speech and social skills by communicating with a creature that only responds to commands given with direct eye contact. Although these sessions are massively beneficial to the patients, they are unfortunately very expensive. There is only one location in the Netherlands that provides the opportunity to interact with dolphins and the therapy itself requires the assistance of trainers, paramedics and therapeutic staff.
 
@@ -28,5 +28,5 @@ I ended up implementing a new gesture system that provided more reliable trackin
 
 One of the other areas I looked into was the slow loading of the program on start-up. I wrote a tool to automatically compress the textures, reducing the start-up time significantly.
 
-[1]: p2N1h.jpg "{ "orientation": "left" }"
-[2]: p2N1h.jpg "{ "orientation": "right" }"
+[1]: DD_Looping.png "{ "orientation": "left" }"
+[2]: DD_DebugLines.png "{ "orientation": "right" }"
