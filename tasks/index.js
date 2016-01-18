@@ -9,12 +9,24 @@ module.exports = function(grunt) {
 
 			var project = {
 				'filename': fullPath.match(/([^ \/]+?)\.json$/)[1] + '.html',
-				'title': entry['title']
+				'title': entry.title
 			};
 
 			if (!entry.hidden)
 			{
-				context['PROJECT_LIST'] += '<li class="list-group-item"><a href="projects/' + project['filename'] + '">' + project['title'] + '</a></li>\n';
+				var style = '';
+
+				if (entry.trailer.image)
+				{
+					style = ' style="background-image: url(\'../media/previews/' + entry.trailer.image + '\'); background-position: center; background-repeat: no-repeat; background-size: 100%;"';
+				}
+
+				context['PROJECT_LIST'] +=
+					'<li class="list-group-item index-project"' + style + '>' +
+						'<a href="projects/' + project['filename'] + '" class="index-project-link">' +
+							project['title'] +
+						'</a>'
+					'</li>\n';
 			}
 		});
 
