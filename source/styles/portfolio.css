@@ -53,6 +53,7 @@
 }
 .index-project-link:hover {
 	color: #FFFFFF;
+	text-decoration: none;
 }
 .index-project-link:active {
 	color: #FFFFFF;
@@ -61,13 +62,13 @@
 	color: #FFFFFF;
 }
 
-.index-project-link > span {
+.index-project-link-title {
 	background-color: #575255;
 	font-size: 26px;
 	padding: 4px;
 }
 
-.index-project-link-title {
+.index-project-link-description {
 	color: #181717;
 	background-color: rgba(136, 187, 230, 0.77);
 	width: 100%;
