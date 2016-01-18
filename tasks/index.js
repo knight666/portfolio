@@ -4,6 +4,8 @@ module.exports = function(grunt) {
 			'PROJECT_LIST': ''
 		};
 
+		var index = 0;
+
 		grunt.file.expand(grunt.template.process('<%= SOURCE_PATH %>/projects/*.json')).forEach(function(fullPath) {
 			var entry = grunt.file.readJSON(fullPath);
 
@@ -23,10 +25,16 @@ module.exports = function(grunt) {
 
 				context['PROJECT_LIST'] +=
 					'<li class="list-group-item index-project"' + style + '>' +
-						'<a href="#" class="index-project-link">' +
-							'<span>' + project['title'] + '</span>' +
-						'</a>'
+						'<a href="#project-show-' + index + '" class="index-project-link index-project-link-show" id="project-show-' + index + '">' +
+							'SHOW ' + project['title'] +
+						'</a>' +
+						'<a href="#project-hide-' + index + '" class="index-project-link index-project-link-hide" id="project-hide-' + index + '">' +
+							'HIDE ' + project['title'] +
+						'</a>' +
+						'<div class="index-project-link-title"></div>' +
 					'</li>\n';
+
+				index++;
 			}
 		});
 
