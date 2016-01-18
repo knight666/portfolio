@@ -51,12 +51,19 @@
 	height: 100%;
 	min-height: 100px;
 	color: #FFFFFF;
+	transition: all .2s ease-in-out;
 }
 .index-project-link:hover {
 	color: #FFFFFF;
 }
-.index-project-link:visited {
+.index-project-link:active {
 	color: #FFFFFF;
+	min-height: 300px;
+	transition: all .2s ease-in-out;
+}
+.index-project-link:focus {
+	color: #FFFFFF;
+	min-height: 300px;
 }
 
 .index-project-link > span {
