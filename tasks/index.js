@@ -28,7 +28,9 @@ module.exports = function(grunt) {
 						'<a href="#project' + index + '" class="index-project-link" id="project' + index + '">' +
 							'<span>' + project['title'] + '</span>' +
 						'</a>' +
-						'<div class="index-project-link-title"></div>' +
+						'<div class="index-project-link-title">' +
+							entry.brief.description +
+						'</div>' +
 					'</li>\n';
 
 				index++;
