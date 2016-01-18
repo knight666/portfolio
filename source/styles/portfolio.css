@@ -68,13 +68,12 @@
 }
 
 .index-project-link-title {
-	min-height: 0px;
-	transition: all .2s ease-in-out;
-}
-
-.index-project-link:target ~ .index-project-link-title {
-	min-height: 300px;
-	transition: all .2s ease-in-out;
+	color: #FFFFFF;
+	background-color: rgba(125, 108, 108, 0.5);
+	width: 100%;
+	margin-top: 10px;
+	padding: 4px;
+	font-size: 1.2em;
 }
 
 /* Thumbnails */
