@@ -41,6 +41,22 @@
 	float: left;
 }
 
+.index-project {
+	min-height: 100px;
+	padding: 10px;
+}
+
+.index-project-link {
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	color: #FFFFFF;
+}
+.index-project-link:hover {
+	color: #FFFFFF;
+}
+
 /* Thumbnails */
 
 .thumbnail-box-sm {
