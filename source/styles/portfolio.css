@@ -42,7 +42,6 @@
 }
 
 .index-project {
-	min-height: 100px;
 	padding: 10px;
 }
 
@@ -50,11 +49,20 @@
 	display: block;
 	width: 100%;
 	height: 100%;
-	position: absolute;
+	min-height: 100px;
 	color: #FFFFFF;
 }
 .index-project-link:hover {
 	color: #FFFFFF;
+}
+.index-project-link:visited {
+	color: #FFFFFF;
+}
+
+.index-project-link > span {
+	background-color: #575255;
+	font-size: 26px;
+	padding: 4px;
 }
 
 /* Thumbnails */
