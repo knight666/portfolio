@@ -1,7 +1,7 @@
 {
-	"title": "Procedural Generation",
+	"title": "Procedural Design",
 	"brief": {
-		"description": "Procedural Generation",
+		"description": "Procedural Design",
 		"employer": "igad",
 		"platforms": [ "windows" ],
 		"technologies": [ "c++", "opengl2" ]
@@ -10,6 +10,5 @@
 		"link": "yt://1",
 		"image": "procedural.jpg"
 	},
-	"source": "procedural.md",
-	"hidden": true
+	"source": "procedural.md"
 }
