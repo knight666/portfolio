@@ -24,7 +24,7 @@ module.exports = function(grunt) {
 				context['PROJECT_LIST'] +=
 					'<li class="list-group-item index-project"' + style + '>' +
 						'<a href="projects/' + project['filename'] + '" class="index-project-link">' +
-							project['title'] +
+							'<span>' + project['title'] + '</span>' +
 						'</a>'
 					'</li>\n';
 			}
