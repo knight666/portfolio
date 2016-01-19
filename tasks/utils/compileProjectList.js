@@ -1,4 +1,7 @@
-module.exports = function(grunt, list, addDescription) {
+module.exports = function(grunt, list, options) {
+	var description = options.description;
+	var featured = options.featured || false;
+
 	var result = '<ul class="list-group">\n';
 
 	list.forEach(function(project) {
@@ -12,13 +15,13 @@ module.exports = function(grunt, list, addDescription) {
 			}
 
 			result +=
-				'<li class="list-group-item index-project"' + style + '>' +
+				'<li class="list-group-item index-project' + (featured ? ' index-project-featured' : '') + '"' + style + '>' +
 					'<a href="projects/' + project.filename + '" class="index-project-link">' +
 						'<span class="index-project-link-title">' +
 							project.title +
 						'</span>';
 
-			if (addDescription)
+			if (description)
 			{
 				result +=
 						'<div class="index-project-link-description">' +

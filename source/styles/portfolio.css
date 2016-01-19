@@ -45,6 +45,14 @@
 	padding: 10px;
 }
 
+.index-project-featured {
+	float: left;
+	width: 500px;
+	height: 200px;
+	padding: 10px;
+	margin: 2px;
+}
+
 .index-project-link {
 	display: block;
 	width: 100%;
