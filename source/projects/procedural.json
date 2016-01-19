@@ -1,7 +1,7 @@
 {
 	"title": "Procedural Design",
 	"brief": {
-		"description": "Procedural Design",
+		"description": "School assignment about procedurally generated content.",
 		"employer": "igad",
 		"platforms": [ "windows" ],
 		"technologies": [ "c++", "opengl2" ]
