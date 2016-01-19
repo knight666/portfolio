@@ -17,7 +17,7 @@ module.exports = function(grunt) {
 			}
 		});
 
-		context['PROJECT_LIST'] = grunt.project_utils.compileProjectList(grunt, featured);
+		context['PROJECT_LIST'] = grunt.project_utils.compileProjectList(grunt, featured, true);
 
 		grunt.project_utils.compileTemplate(grunt, 'index', context);
 	});

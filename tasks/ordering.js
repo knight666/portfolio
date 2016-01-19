@@ -104,7 +104,7 @@ module.exports = function(grunt) {
 		context['NAVIGATION'] = writeNavigation('date');
 
 		context['PROJECT_LIST'] = '<h2>Projects</h2>\n';
-		context['PROJECT_LIST'] += grunt.project_utils.compileProjectList(grunt, by_date);
+		context['PROJECT_LIST'] += grunt.project_utils.compileProjectList(grunt, by_date, false);
 
 		grunt.project_utils.compileTemplate(grunt, 'ordering', context, 'projects-by-date');
 
@@ -122,7 +122,7 @@ module.exports = function(grunt) {
 			var properties = grunt.project_utils.getEmployer(name);
 
 			context['PROJECT_LIST'] += '<h2 id="' + name + '">' + properties.name + '</h2>\n';
-			context['PROJECT_LIST'] += grunt.project_utils.compileProjectList(grunt, employer);
+			context['PROJECT_LIST'] += grunt.project_utils.compileProjectList(grunt, employer, false);
 		}
 
 		grunt.project_utils.compileTemplate(grunt, 'ordering', context, 'projects-by-employer');
@@ -141,7 +141,7 @@ module.exports = function(grunt) {
 			var properties = grunt.project_utils.getPlatform(name);
 
 			context['PROJECT_LIST'] += '<h2 id="' + name + '">' + properties.name + '</h2>\n';
-			context['PROJECT_LIST'] += grunt.project_utils.compileProjectList(grunt, platform);
+			context['PROJECT_LIST'] += grunt.project_utils.compileProjectList(grunt, platform, false);
 		}
 
 		grunt.project_utils.compileTemplate(grunt, 'ordering', context, 'projects-by-platform');
@@ -160,7 +160,7 @@ module.exports = function(grunt) {
 			var properties = grunt.project_utils.getTechnology(name);
 
 			context['PROJECT_LIST'] += '<h2 id="' + name + '">' + properties.name + '</h2>\n';
-			context['PROJECT_LIST'] += grunt.project_utils.compileProjectList(grunt, technology);
+			context['PROJECT_LIST'] += grunt.project_utils.compileProjectList(grunt, technology, false);
 		}
 
 		grunt.project_utils.compileTemplate(grunt, 'ordering', context, 'projects-by-technology');
