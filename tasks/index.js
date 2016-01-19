@@ -11,13 +11,13 @@ module.exports = function(grunt) {
 
 			entry.filename = fullPath.match(/([^ \/]+?)\.json$/)[1] + '.html';
 
-			if (!entry.hidden)
+			if (entry.featured)
 			{
-				featured.push(entry);
+				featured[entry.featured] = entry;
 			}
 		});
 
-		context['PROJECT_LIST'] = grunt.project_utils.compileProjectList(grunt, featured, true);
+		context['PROJECT_LIST'] = grunt.project_utils.compileProjectList(grunt, featured, { 'description': true, 'featured': true });
 
 		grunt.project_utils.compileTemplate(grunt, 'index', context);
 	});
