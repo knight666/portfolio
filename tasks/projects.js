@@ -10,7 +10,7 @@ module.exports = function(grunt) {
 
 			var orientation = properties.orientation || 'left';
 
-			return '<div class="thumbnail-box-' + orientation + ' thumbnail-box-md thumbnail-box-sm">' +
+			return '<div class="thumbnail-box-' + orientation + ' thumbnail-box-md thumbnail-box-md">' +
 						'<a href="../media/screenshots/' + href + '" class="thumbnail thumbnail-sm" target="_blank">' +
 							'<img src="../media/screenshots/thumbnails/' + href + '" alt="' + text + '" />' +
 							'<div class="caption">' +

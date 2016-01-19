@@ -15,7 +15,7 @@ module.exports = function(grunt, list, options) {
 			}
 
 			result +=
-				'<li class="list-group-item index-project' + (featured ? ' index-project-featured' : '') + '"' + style + '>' +
+				'<li class="list-group-item index-project' + (featured ? ' index-project-featured index-project-featured-md' : '') + '"' + style + '>' +
 					'<a href="projects/' + project.filename + '" class="index-project-link">' +
 						'<span class="index-project-link-title">' +
 							project.title +
