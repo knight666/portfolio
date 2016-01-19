@@ -11,7 +11,14 @@ module.exports = function(grunt, list, options) {
 
 			if (project.trailer.image)
 			{
-				style = ' style="background-image: url(\'./media/previews/' + project.trailer.image + '\'); background-position: center; background-repeat: no-repeat; background-size: 100%;"';
+				style = ' style="background-image: url(\'./media/previews/' + project.trailer.image + '\'); background-position: center; background-repeat: no-repeat;';
+
+				if (!featured)
+				{
+					style += ' background-size: 100%;';
+				}
+
+				style += '"';
 			}
 
 			result +=
