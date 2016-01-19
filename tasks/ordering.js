@@ -54,7 +54,7 @@ module.exports = function(grunt) {
 		});
 
 		var context = {
-			'ORDER_TITLE': '',
+			'SUBTITLE': '',
 			'NAVIGATION': '',
 			'PROJECT_LIST': '',
 		};
@@ -100,7 +100,7 @@ module.exports = function(grunt) {
 
 		grunt.log.writeln('Ordering projects by date.');
 
-		context['ORDER_TITLE'] = 'Ordered by date';
+		context['SUBTITLE'] = 'Ordered by date';
 		context['NAVIGATION'] = writeNavigation('date');
 
 		context['PROJECT_LIST'] = '<h2>Projects</h2>\n';
@@ -112,7 +112,7 @@ module.exports = function(grunt) {
 
 		grunt.log.writeln('Ordering projects by employer.');
 
-		context['ORDER_TITLE'] = 'Ordered by employer';
+		context['SUBTITLE'] = 'Ordered by employer';
 		context['NAVIGATION'] = writeNavigation('employer');
 		context['PROJECT_LIST'] = '';
 
@@ -131,7 +131,7 @@ module.exports = function(grunt) {
 
 		grunt.log.writeln('Ordering projects by platform.');
 
-		context['ORDER_TITLE'] = 'Ordered by platform';
+		context['SUBTITLE'] = 'Ordered by platform';
 		context['NAVIGATION'] = writeNavigation('platform');
 		context['PROJECT_LIST'] = '';
 
@@ -150,7 +150,7 @@ module.exports = function(grunt) {
 
 		grunt.log.writeln('Ordering projects by technology.');
 
-		context['ORDER_TITLE'] = 'Ordered by technology';
+		context['SUBTITLE'] = 'Ordered by technology';
 		context['NAVIGATION'] = writeNavigation('technology');
 		context['PROJECT_LIST'] = '';
 

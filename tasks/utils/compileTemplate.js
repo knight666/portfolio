@@ -7,6 +7,9 @@ module.exports = function(grunt, template, context, outputName) {
 		srcDir: grunt.template.process('<%= TEMPLATES_PATH %>/')
 	}
 
+	context.SUBTITLE = context.SUBTITLE || '';
+	context.RELATIVE_PATH = context.RELATIVE_PATH || '';
+
 	var loaded = grunt.template.process('<%= TEMPLATES_PATH %>/' + template + '.html');
 	var processed = pp.preprocess(grunt.file.read(loaded), context, options);
 	grunt.file.write(grunt.template.process('<%= OUTPUT_PATH %>/' + (outputName || template) + '.html'), processed);
