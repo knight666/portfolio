@@ -40,6 +40,8 @@ module.exports = function(grunt) {
 			var entry = grunt.file.readJSON(fullPath);
 
 			var context = {
+				'SUBTITLE': entry.title,
+				'RELATIVE_PATH': '../',
 				'PAGE_TITLE': entry.title,
 				'PAGE_DESCRIPTION': '',
 				'PAGE_CONTENT': '',
