@@ -10,9 +10,15 @@ In the shader for the landscape, the slope is used to determine if the vertex is
 
 ### Spherical mapping ###
 
-![Time for tickles!][2]
+![Sphere generated from a radius value.][2]
 
-Nam et sem nec augue pellentesque feugiat. Nam aliquam arcu ac efficitur aliquam. In suscipit ligula purus, non porta elit rutrum eu. Integer in ligula eget lectus suscipit porttitor eu non eros. Aenean eget ullamcorper urna, et egestas est. Nunc a mollis dui, id bibendum justo. Ut pulvinar diam eget orci placerat pulvinar. Pellentesque nisi odio, malesuada a mollis sit amet, faucibus vitae odio. Suspendisse sit amet felis suscipit, fringilla mi tincidunt, blandit magna. Etiam aliquam sit amet dolor vitae euismod. In nec bibendum ante, eget molestie est. Mauris ipsum dolor, iaculis rhoncus scelerisque nec, fringilla sed orci. Donec id arcu tempus, mollis augue eget, euismod justo. Quisque purus dolor, efficitur quis mollis sit amet, molestie a tortor.
+The vertices for the sphere are determined by drawing circles on a perpendicular circle, taking samples using sine and cosine. Texture coordinates are a bit trickier. The first problem is that a two-dimensional texture on a three-dimensional encounters a point where the texture must "wrap around". Earth has a similar problem: after dividing it in approximately 24 time zones, you end up with a line near New Zealand where local time between adjacent time zones differs an entire day, the so-called "date line".
+
+We can solve the problem with the "date line" by checking whether the next texture coordinate is smaller than the current. If so, we clamp the coordinates to the end of the texture.
+
+Another problem, also related to texturing, has to do with the north and south poles. As you get closer to the poles, the texture becomes more and more distorted. This is unavoidable when mapping a 2D plane to a 3D surface, but can be worked around by subdividing the poles in a slightly different manner.
+
+The brick texture used on the sphere model was generated using a combination of Perlin noise and distance calculations. Just like the rock and grass textures, it can be repeated without discernable edges.
 
 ### Procedural animation ###
 
@@ -21,5 +27,5 @@ Nam et sem nec augue pellentesque feugiat. Nam aliquam arcu ac efficitur aliquam
 Nullam lacinia maximus nisi, ut sollicitudin elit ornare vel. Fusce tristique sapien dui, a consequat nisl aliquet vitae. In hac habitasse platea dictumst. Ut eget ultricies nulla. Maecenas auctor molestie sapien et luctus. Proin libero nunc, lobortis sed sapien et, laoreet consequat quam. Maecenas sapien quam, vulputate sit amet orci vel, fermentum luctus felis. Morbi imperdiet fringilla ante non convallis. Morbi ligula justo, commodo et nisi at, pharetra molestie ipsum. Pellentesque vel blandit tortor.
 
 [1]: PD_Looping.png "{ "orientation": "left" }"
-[2]: p2N1h.jpg "{ "orientation": "right" }"
+[2]: PD_Sphere.png "{ "orientation": "right" }"
 [3]: p2N1h.jpg "{ "orientation": "left" }"
