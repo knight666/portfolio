@@ -4,19 +4,20 @@ module.exports = function(grunt) {
 			'PROJECT_LIST': ''
 		};
 
+		var featured = [];
+
 		grunt.file.expand(grunt.template.process('<%= SOURCE_PATH %>/projects/*.json')).forEach(function(fullPath) {
 			var entry = grunt.file.readJSON(fullPath);
 
-			var project = {
-				'filename': fullPath.match(/([^ \/]+?)\.json$/)[1] + '.html',
-				'title': entry['title']
-			};
+			entry.filename = fullPath.match(/([^ \/]+?)\.json$/)[1] + '.html';
 
-			if (!entry.hidden)
+			if (entry.featured)
 			{
-				context['PROJECT_LIST'] += '<li class="list-group-item"><a href="projects/' + project['filename'] + '">' + project['title'] + '</a></li>\n';
+				featured[entry.featured] = entry;
 			}
 		});
+
+		context['PROJECT_LIST'] = grunt.project_utils.compileProjectList(grunt, featured, { 'description': true, 'featured': true });
 
 		grunt.project_utils.compileTemplate(grunt, 'index', context);
 	});
