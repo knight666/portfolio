@@ -1,14 +1,20 @@
-Lorem ipsum dolor sit amet, [consectetur](http://google.com) adipiscing elit. Etiam massa metus, volutpat convallis suscipit nec, aliquam ac sapien. Integer quis semper felis. Nullam sed maximus elit. Nunc vitae fermentum diam. Mauris quis mi a lacus commodo maximus. Vestibulum aliquet justo urna, id feugiat orci accumsan in. Ut rutrum feugiat ultrices. Vivamus consequat imperdiet dignissim. Nullam quis gravida orci, vel aliquet libero. Sed sagittis congue eros fringilla mollis. Integer mollis lorem ex, vitae posuere tellus elementum nec. In vestibulum faucibus cursus. Morbi viverra mi id risus tincidunt facilisis. Duis nec vestibulum quam, ac sodales sem. Morbi orci erat, molestie ut condimentum id, feugiat lacinia tellus. Nunc nec tortor vel velit interdum maximus. Morbi lectus nisl, luctus id lacinia quis, vestibulum sit amet sem. Donec pulvinar, turpis quis placerat faucibus, massa nisl facilisis erat, non tincidunt est nisl in neque. Nam sed bibendum nisl. Maecenas interdum a purus at fermentum. Duis nec erat eu justo posuere facilisis. Pellentesque neque erat, mattis eu lacinia a, dignissim non leo. Duis eu tellus a dolor vestibulum ultricies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur lacinia elit leo, quis posuere nisi tempus a. Phasellus sed sapien in eros tincidunt dictum sed sed sem.
+Relativity is a real-time strategy game in which time itself is a resource being fought over. It was designed and built during GameLab, a course part of _International Game Architecture and Design_. During its two year development, I was _Team Lead_, but also designed and implemented the particle system, the sound system and a number of tools. The project was never released to the public.
 
-### Lorum ipsum ###
+### Background & story ###
 
 ![Time for tickles!][1]
 
 Nam in blandit enim, non tristique nibh. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam quis gravida massa. Proin ac tempus lectus. Curabitur a rhoncus turpis. Integer a molestie leo. Quisque et dui mollis, interdum ex id, posuere augue.
 
-### Lorum ipsum ###
+### Leading from the front ###
 
 ![Time for tickles!][2]
+
+Nam in blandit enim, non tristique nibh. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam quis gravida massa. Proin ac tempus lectus. Curabitur a rhoncus turpis. Integer a molestie leo. Quisque et dui mollis, interdum ex id, posuere augue.
+
+### Particle system ###
+
+![Time for tickles!][3]
 
 Nam et sem nec augue pellentesque feugiat. Nam aliquam arcu ac efficitur aliquam. In suscipit ligula purus, non porta elit rutrum eu. Integer in ligula eget lectus suscipit porttitor eu non eros. Aenean eget ullamcorper urna, et egestas est. Nunc a mollis dui, id bibendum justo. Ut pulvinar diam eget orci placerat pulvinar. Pellentesque nisi odio, malesuada a mollis sit amet, faucibus vitae odio. Suspendisse sit amet felis suscipit, fringilla mi tincidunt, blandit magna. Etiam aliquam sit amet dolor vitae euismod. In nec bibendum ante, eget molestie est. Mauris ipsum dolor, iaculis rhoncus scelerisque nec, fringilla sed orci. Donec id arcu tempus, mollis augue eget, euismod justo. Quisque purus dolor, efficitur quis mollis sit amet, molestie a tortor.
 
@@ -18,3 +24,4 @@ Nullam lacinia maximus nisi, ut sollicitudin elit ornare vel. Fusce tristique sa
 
 [1]: p2N1h.jpg "{ "orientation": "left" }"
 [2]: p2N1h.jpg "{ "orientation": "right" }"
+[3]: p2N1h.jpg "{ "orientation": "left" }"
