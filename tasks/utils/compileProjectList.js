@@ -2,7 +2,7 @@ module.exports = function(grunt, list, options) {
 	var description = options.description;
 	var featured = options.featured || false;
 
-	var result = '<ul class="list-group">\n';
+	var result = '<ul class="list-group index-project-list">\n';
 
 	list.forEach(function(project) {
 		if (!project.hidden)
