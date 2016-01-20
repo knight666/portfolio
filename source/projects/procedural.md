@@ -22,10 +22,12 @@ The brick texture used on the sphere model was generated using a combination of 
 
 ### Procedural animation ###
 
-![Time for tickles!][3]
+![Procedurally animated model][3]
 
-Nullam lacinia maximus nisi, ut sollicitudin elit ornare vel. Fusce tristique sapien dui, a consequat nisl aliquet vitae. In hac habitasse platea dictumst. Ut eget ultricies nulla. Maecenas auctor molestie sapien et luctus. Proin libero nunc, lobortis sed sapien et, laoreet consequat quam. Maecenas sapien quam, vulputate sit amet orci vel, fermentum luctus felis. Morbi imperdiet fringilla ante non convallis. Morbi ligula justo, commodo et nisi at, pharetra molestie ipsum. Pellentesque vel blandit tortor.
+One interesting element about this project that remains is the dancing figure in the center of the screen. The model is composed of several procedurally generated geometric meshes: spheres, cylinders and cones. However, the animation itself is procedural as well.
+
+The meshes are organised in a hierarchy, where each mesh is a child of another. For example, the head mesh is a child of the neck mesh, which is a child of the body mesh. When the meshes are rotated or translated in their local space, their children move along. This relationship is the basis of the animation: when the upper leg mesh is rotated, the lower leg rotates along with it. The animation is therefore a series of sine curves, applied to rotations on specific meshes.
 
 [1]: PD_Looping.png "{ "orientation": "left" }"
 [2]: PD_Sphere.png "{ "orientation": "right" }"
-[3]: p2N1h.jpg "{ "orientation": "left" }"
+[3]: PD_Animated.png "{ "orientation": "left" }"
