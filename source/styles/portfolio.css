@@ -43,6 +43,7 @@
 
 .index-project-list {
 	display: inline-block;
+	width: 100%;
 }
 
 .index-project {
