@@ -2,9 +2,11 @@ Procedural Design was a course taught at _International Game Architecture and De
 
 ### Landscape ###
 
-![The landscape uses multiple types of noise to generates its peaks and valleys.][1]
+![Landscape generated using Perlin noise.][1]
 
 The landscape is generated using Perlin noise. First, a two-dimensional grid is generated, with equal spacing between vertices. Next, each data point on a two-dimensional Perlin texture is used as the basis for the vertical offset of each vertex. The effect is a randomly-generated but varied landscape with peaks and valleys.
+
+Normals for each vertex are determined by using the cross product on two edges of the resulting triangle. This normal is stored in each vertex and averaged with the normals of adjacent triangles. This produces a smoother lighting result, because every vertex will have a different normal, depending on the adjacent vertices.
 
 In the shader for the landscape, the slope is used to determine if the vertex is part of a grass valley, a rocky slope or a snowy hilltop. Two textures are combined in the shader: one for rock and another for grass. These textures are generated as well, using Worley noise as their basis, with Perlin noise for randomization. Although they are not high quality, the textures can be tiled without discernible seams.
 
