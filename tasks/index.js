@@ -4,17 +4,12 @@ module.exports = function(grunt) {
 			'PROJECT_LIST': ''
 		};
 
+		var settings = grunt.file.readJSON(grunt.template.process('<%= SOURCE_PATH %>/index.json'));
+		var projects_path = grunt.template.process('<%= SOURCE_PATH %>/projects');
 		var featured = [];
 
-		grunt.file.expand(grunt.template.process('<%= SOURCE_PATH %>/projects/*.json')).forEach(function(fullPath) {
-			var entry = grunt.file.readJSON(fullPath);
-
-			entry.filename = fullPath.match(/([^ \/]+?)\.json$/)[1] + '.html';
-
-			if (entry.featured)
-			{
-				featured[entry.featured] = entry;
-			}
+		settings.featured.forEach(function(path) {
+			featured.push(grunt.file.readJSON(projects_path + '/' + path))
 		});
 
 		context['PROJECT_LIST'] = grunt.project_utils.compileProjectList(grunt, featured, { 'description': true, 'featured': true });
