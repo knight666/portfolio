@@ -22,16 +22,16 @@ module.exports = function(grunt, list, options) {
 			}
 
 			result +=
-				'<li class="list-group-item index-project' + (featured ? ' index-project-featured index-project-featured-md' : '') + '"' + style + '>' +
+				'<li class="list-group-item index-project' + (featured ? ' index-project-featured index-project-featured-md index-project-featured-lg' : '') + '"' + style + '>' +
 					'<a href="projects/' + project.filename + '" class="index-project-link">' +
-						'<span class="index-project-link-title">' +
+						'<span class="index-project-link-title index-project-link-title-md">' +
 							project.title +
 						'</span>';
 
 			if (description)
 			{
 				result +=
-						'<div class="index-project-link-description">' +
+						'<div class="index-project-link-description index-project-link-description-md">' +
 							project.brief.description +
 						'</div>';
 			}
