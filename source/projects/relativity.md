@@ -14,7 +14,11 @@ Even the map itself is in fact one large pool of Time: the map visibly shows whe
 
 ![Time for tickles!][2]
 
-Nam in blandit enim, non tristique nibh. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam quis gravida massa. Proin ac tempus lectus. Curabitur a rhoncus turpis. Integer a molestie leo. Quisque et dui mollis, interdum ex id, posuere augue.
+_Relativity_ was started by two students over a summer holiday, after an idea for a networked real-time strategy game that utilized time as a resource. Although I was not directly involved with the creation of the prototype, I saw potential in the project right away and helped them refine their pitch for the GameLab commission. Even though only one project was supposed to get past the commission, they were so impressed with the pitch that they greenlit _Relativity_ as well.
+
+The prototype was built on a simple game framework that rendered 2D graphics using OpenGL. This framework was extended over the lifetime of the project into a custom engine that included 3D rendering with a multi-pass lighting model, networking using the WinSock library, a custom audio engine built on OpenAL and a custom-built UI. Because the team built all of the features themselves, we were intimately familiar with what the engine was capable of.
+
+As _Team Lead_, I was responsible for ensuring the project went along smoothly. The structure of IGAD was such that we were granted the usage of school resources (computers, teachers, etc) for one day of the week to fully devote to the project, while the rest of the week was used for classes. On every GameLab day, I would prepare a list of issues to discuss in the morning meet-up and meet with the teachers to report on the project's progress. It was my responsibility to ensure that tasks were distributed between the project members, that stalls in the pipeline were taken care of and that we kept on track to meet our milestones.
 
 ### Particle system ###
 
