@@ -1,14 +1,13 @@
 {
 	"title": "utf8rewind",
 	"brief": {
-		"description": "utf8rewind",
+		"description": "Open source library for extending C with functions for processing UTF-8 encoded text.",
 		"employer": "opensource",
 		"platforms": [ "windows", "linux", "mac" ],
 		"technologies": [ "c" ]
 	},
 	"trailer": {
-		"image": "utf8rewind.jpg"
+		"image": "utf8rewind.png"
 	},
-	"source": "utf8rewind.md",
-	"hidden": true
+	"source": "utf8rewind.md"
 }
