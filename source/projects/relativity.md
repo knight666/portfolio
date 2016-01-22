@@ -12,17 +12,17 @@ Even the map itself is in fact one large pool of Time: the map visibly shows whe
 
 ### Leading from the front ###
 
-![Time for tickles!][2]
+![A battle in progress.][2]
 
 _Relativity_ was started by two students over a summer holiday, after an idea for a networked real-time strategy game that utilized time as a resource. Although I was not directly involved with the creation of the prototype, I saw potential in the project right away and helped them refine their pitch for the GameLab commission. Even though only one project was supposed to get past the commission, they were so impressed with the pitch that they greenlit _Relativity_ as well.
 
-The prototype was built on a simple game framework that rendered 2D graphics using OpenGL. This framework was extended over the lifetime of the project into a custom engine that included 3D rendering with a multi-pass lighting model, networking using the WinSock library, a custom audio engine built on OpenAL and a custom-built UI. Because the team built all of the features themselves, we were intimately familiar with what the engine was capable of.
+The prototype was built on a simple game framework that rendered 2D graphics using OpenGL. This framework was extended over the lifetime of the project into a custom engine that included 3D rendering with a multi-pass lighting model, networking using the WinSock library, a custom audio engine built on OpenAL and a custom-built UI. Because the team built all of the features themselves, we were intimately familiar with what the engine could and could not do.
 
 As team lead, I was responsible for ensuring the project went along smoothly. The structure of IGAD was such that we were granted the usage of school resources (computers, teachers, etc) for one day of the week to fully devote to the project, while the rest of the week was used for classes. On every GameLab day, I would prepare a list of issues to discuss in the morning meet-up and meet with the teachers to report on the project's progress. It was my responsibility to ensure that tasks were distributed between the project members, that stalls in the pipeline were taken care of and that we kept on track to meet our milestones.
 
 ### Particle system ###
 
-![The particle editor in full glory.][3]
+![The Particle Editor in its full glory.][3]
 
 Besides my role as team lead, I was also responsible for a number of subsystems. Most notably, I built the particle system and the audio system. The particle system was based on emitters, either infinite or on a timeline, that spawned particles. The particles had properties at the start and at the end of their lifetime, like size, rotation, texturing, color, etc. These properties were smoothed over the lifetime of the particle, resulting in varied and interesting effects.
 
@@ -31,5 +31,5 @@ The particle system used a custom .ini for all of its effects. Designers could c
 The Particle Editor was a visual tool for editing the properties in the .ini file. Each property was given a slider, a checkbox or a custom control and designers could change a property, save it to .ini and reload it in the game. I was continually amazed with what the artists were able to produce with a particle system with such limited properties.
 
 [1]: Relativity_InGame.png "{ "orientation": "left" }"
-[2]: p2N1h.jpg "{ "orientation": "right" }"
-[3]: p2N1h.jpg "{ "orientation": "left" }"
+[2]: Relativity_Battle.png "{ "orientation": "right" }"
+[3]: Relativity_ParticleEditor.png "{ "orientation": "left" }"
