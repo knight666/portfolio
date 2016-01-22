@@ -60,6 +60,9 @@ module.exports = function(name) {
 		'html5': {
 			'name': 'HTML 5',
 		},
+		'qt': {
+			'name': 'Qt Toolkit'
+		}
 	}
 
 	if (!properties[name])
