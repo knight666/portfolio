@@ -18,17 +18,17 @@ _Relativity_ was started by two students over a summer holiday, after an idea fo
 
 The prototype was built on a simple game framework that rendered 2D graphics using OpenGL. This framework was extended over the lifetime of the project into a custom engine that included 3D rendering with a multi-pass lighting model, networking using the WinSock library, a custom audio engine built on OpenAL and a custom-built UI. Because the team built all of the features themselves, we were intimately familiar with what the engine was capable of.
 
-As _Team Lead_, I was responsible for ensuring the project went along smoothly. The structure of IGAD was such that we were granted the usage of school resources (computers, teachers, etc) for one day of the week to fully devote to the project, while the rest of the week was used for classes. On every GameLab day, I would prepare a list of issues to discuss in the morning meet-up and meet with the teachers to report on the project's progress. It was my responsibility to ensure that tasks were distributed between the project members, that stalls in the pipeline were taken care of and that we kept on track to meet our milestones.
+As team lead, I was responsible for ensuring the project went along smoothly. The structure of IGAD was such that we were granted the usage of school resources (computers, teachers, etc) for one day of the week to fully devote to the project, while the rest of the week was used for classes. On every GameLab day, I would prepare a list of issues to discuss in the morning meet-up and meet with the teachers to report on the project's progress. It was my responsibility to ensure that tasks were distributed between the project members, that stalls in the pipeline were taken care of and that we kept on track to meet our milestones.
 
 ### Particle system ###
 
-![Time for tickles!][3]
+![The particle editor in full glory.][3]
 
-Nam et sem nec augue pellentesque feugiat. Nam aliquam arcu ac efficitur aliquam. In suscipit ligula purus, non porta elit rutrum eu. Integer in ligula eget lectus suscipit porttitor eu non eros. Aenean eget ullamcorper urna, et egestas est. Nunc a mollis dui, id bibendum justo. Ut pulvinar diam eget orci placerat pulvinar. Pellentesque nisi odio, malesuada a mollis sit amet, faucibus vitae odio. Suspendisse sit amet felis suscipit, fringilla mi tincidunt, blandit magna. Etiam aliquam sit amet dolor vitae euismod. In nec bibendum ante, eget molestie est. Mauris ipsum dolor, iaculis rhoncus scelerisque nec, fringilla sed orci. Donec id arcu tempus, mollis augue eget, euismod justo. Quisque purus dolor, efficitur quis mollis sit amet, molestie a tortor.
+Besides my role as team lead, I was also responsible for a number of subsystems. Most notably, I built the particle system and the audio system. The particle system was based on emitters, either infinite or on a timeline, that spawned particles. The particles had properties at the start and at the end of their lifetime, like size, rotation, texturing, color, etc. These properties were smoothed over the lifetime of the particle, resulting in varied and interesting effects.
 
-### Lorum ipsum ###
+The particle system used a custom .ini for all of its effects. Designers could change properties in this file and reload them in the game with the single press of a button. Artists would use special materials on the models to attach emitters. The workflow wasn't perfect though, and artists soon asked for a tool to edit properties visuaully.Based on these requests, I built a Particle Editor using the Qt framework.
 
-Nullam lacinia maximus nisi, ut sollicitudin elit ornare vel. Fusce tristique sapien dui, a consequat nisl aliquet vitae. In hac habitasse platea dictumst. Ut eget ultricies nulla. Maecenas auctor molestie sapien et luctus. Proin libero nunc, lobortis sed sapien et, laoreet consequat quam. Maecenas sapien quam, vulputate sit amet orci vel, fermentum luctus felis. Morbi imperdiet fringilla ante non convallis. Morbi ligula justo, commodo et nisi at, pharetra molestie ipsum. Pellentesque vel blandit tortor.
+The Particle Editor was a visual tool for editing the properties in the .ini file. Each property was given a slider, a checkbox or a custom control and designers could change a property, save it to .ini and reload it in the game. I was continually amazed with what the artists were able to produce with a particle system with such limited properties.
 
 [1]: Relativity_InGame.png "{ "orientation": "left" }"
 [2]: p2N1h.jpg "{ "orientation": "right" }"

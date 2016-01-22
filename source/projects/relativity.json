@@ -5,7 +5,7 @@
 		"employer": "igad",
 		"role": "Team Lead",
 		"platforms": [ "windows" ],
-		"technologies": [ "c++", "opengl2" ]
+		"technologies": [ "c++", "opengl2", "qt" ]
 	},
 	"trailer": {
 		"link": "yt://64vjOvDIamg",
