@@ -1,0 +1,15 @@
+{
+	"title": "Rise of the Tomb Raider",
+	"brief": {
+		"description": "ROTR",
+		"released": "2016-01-26",
+		"employer": "nixxes",
+		"platforms": [ "windows", "steam" ],
+		"technologies": [ "c++", "as", "scaleform", "cdc" ]
+	},
+	"trailer": {
+		"link": "yt://?",
+		"image": "rise-of-the-tomb-raider.jpg"
+	},
+	"source": "rise-of-the-tomb-raider.md"
+}
