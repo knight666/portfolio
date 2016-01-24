@@ -2,7 +2,7 @@
 	"title": "Dolphin Dreams",
 	"brief": {
 		"description": "Serious game project designed to aid children with severe mental disabilities.",
-		"released": "September 2012",
+		"released": "2012-09-01",
 		"employer": "digc",
 		"platforms": [ "windows" ],
 		"technologies": [ "c++", "horde3d", "opengl2" ]
