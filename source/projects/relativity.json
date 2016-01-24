@@ -2,6 +2,7 @@
 	"title": "Relativity",
 	"brief": {
 		"description": "Networked real-time strategy game in which multiple factions fight over control of time itself.",
+		"released": "2010-08-01",
 		"employer": "igad",
 		"role": "Team Lead",
 		"platforms": [ "windows" ],

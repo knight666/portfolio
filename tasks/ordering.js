@@ -103,8 +103,12 @@ module.exports = function(grunt) {
 		context['SUBTITLE'] = 'Ordered by date';
 		context['NAVIGATION'] = writeNavigation('date');
 
+		var sorted_date = by_date.sort(function(left, right) {
+			return left.brief.released < right.brief.released;
+		})
+
 		context['PROJECT_LIST'] = '<h2>Projects</h2>\n';
-		context['PROJECT_LIST'] += grunt.project_utils.compileProjectList(grunt, by_date, { 'description': false });
+		context['PROJECT_LIST'] += grunt.project_utils.compileProjectList(grunt, sorted_date, { 'description': false });
 
 		grunt.project_utils.compileTemplate(grunt, 'ordering', context, 'projects-by-date');
 
