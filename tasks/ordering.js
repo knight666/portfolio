@@ -125,7 +125,9 @@ module.exports = function(grunt) {
 		});
 
 		sorted_employer.forEach(function(name) {
-			var employer = by_employer[name];
+			var employer = by_employer[name].sort(function(left, right) {
+				return left.brief.released < right.brief.released;
+			});
 			var properties = grunt.project_utils.getEmployer(name);
 
 			context['PROJECT_LIST'] += '<h2 id="' + name + '">' + properties.name + '</h2>\n';
@@ -147,7 +149,9 @@ module.exports = function(grunt) {
 		});
 
 		sorted_platform.forEach(function(name) {
-			var platform = by_platform[name];
+			var platform = by_platform[name].sort(function(left, right) {
+				return left.brief.released < right.brief.released;
+			});
 			var properties = grunt.project_utils.getPlatform(name);
 
 			context['PROJECT_LIST'] += '<h2 id="' + name + '">' + properties.name + '</h2>\n';
@@ -169,7 +173,9 @@ module.exports = function(grunt) {
 		});
 
 		sorted_technology.forEach(function(name) {
-			var technology = by_technology[name];
+			var technology = by_technology[name].sort(function(left, right) {
+				return left.brief.released < right.brief.released;
+			});
 			var properties = grunt.project_utils.getTechnology(name);
 
 			context['PROJECT_LIST'] += '<h2 id="' + name + '">' + properties.name + '</h2>\n';
