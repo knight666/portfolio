@@ -2,7 +2,7 @@
 	"title": "Lara Croft and the Temple of Osiris",
 	"brief": {
 		"description": "Four player co-op action adventure, in which players solve puzzles together and stop Set from destroying ancient Egypt.",
-		"released": "December 2014",
+		"released": "2014-12-01",
 		"employer": "nixxes",
 		"platforms": [ "steam", "windows", "ps4" ],
 		"technologies": [ "cdc", "scaleform", "c++", "as" ]

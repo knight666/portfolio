@@ -61,7 +61,23 @@ module.exports = function(grunt) {
 
 			if (entry.brief.released)
 			{
-				context['PAGE_BRIEF_RELEASED'] = entry.brief.released;
+				var date_matches = entry.brief.released.match(/([0-9]{4})\-([0-9]{2})\-([0-9]{2})/);
+				var months = [
+					'January',
+					'February',
+					'March',
+					'April',
+					'May',
+					'June',
+					'July',
+					'August',
+					'September',
+					'October',
+					'November',
+					'December'
+				];
+
+				context['PAGE_BRIEF_RELEASED'] = months[Number(date_matches[2]) - 1] + ' ' + String(date_matches[1]);
 			}
 
 			if (entry.brief.employer)
