@@ -2,6 +2,7 @@
 	"title": "FlinQ 4.0",
 	"brief": {
 		"description": "Security management package that combines reports from multiple sources into a single and intuitive 3D interface.",
+		"released": "2013-09-01",
 		"employer": "flexposure",
 		"role": "Junior Developer",
 		"platforms": [ "windows", "mac" ],
