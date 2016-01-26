@@ -6,13 +6,13 @@ _Rise of the Tomb Raider_ is the sequal to _Tomb Raider (2013)_ and was develope
 
 On our previous collaboration with Crystal Dynamics, I implemented a context bar widget for [Lara Croft and the Temple of Osiris](lara-croft-and-the-temple-of-osiris.html). Because _Rise of the Tomb Raider_ is built on the same codebase, I was able to bring the widget over wholesale. The widget allows for the adding of gamepad button prompts that are automatically transformed to clickable buttons when playing with mouse and keyboard.
 
-For this project, I improved the look and feel of the widget, making it easy to integrate in existing menu screens.
+For this project, I improved the look and feel of the widget, making it easy to integrate in existing menu screens. The widget was used to add mouse interaction to all menu screens in _Rise of the Tomb Raider_.
 
 ### Razer Chroma effects ###
 
 ![Time for tickles!][2]
 
-We were contracted by Razer to add lighting effects for their keyboards, mice and mousepads using their Chroma SDK. The SDK allows one to control the color and intensity of each of the keys on the keyboard, the lights on the scrollwheel and the lights on the edge of the mousepad. I was responsible for designing and implementing these effects in the game.
+We were contracted by Razer to add lighting effects for their Chroma-enabled keyboards, mice and mousepads by using their Chroma SDK. The SDK allows one to control the color and intensity of each of the keys on the keyboard, the lights on the scrollwheel and the lights on the edge of the mousepad. I was responsible for designing and implementing these effects in the game.
 
 * Loading screen effect, where a yellow beam is scanned from left to right across the keyboard and the mouse and mousepad fade between yellow and black.
 
@@ -22,5 +22,12 @@ We were contracted by Razer to add lighting effects for their keyboards, mice an
 
 * Glowstick effect. While Lara has her glowstick out, the keyboard, mouse and mousepad display the glowstick color as the background color.
 
+### Not-yet-implemented, but planned ###
+
+![Time for tickles!][3]
+
+Nullam lacinia maximus nisi, ut sollicitudin elit ornare vel. Fusce tristique sapien dui, a consequat nisl aliquet vitae. In hac habitasse platea dictumst. Ut eget ultricies nulla. Maecenas auctor molestie sapien et luctus. Proin libero nunc, lobortis sed sapien et, laoreet consequat quam. Maecenas sapien quam, vulputate sit amet orci vel, fermentum luctus felis. Morbi imperdiet fringilla ante non convallis. Morbi ligula justo, commodo et nisi at, pharetra molestie ipsum. Pellentesque vel blandit tortor.
+
 [1]: p2N1h.jpg "{ "orientation": "left" }"
 [2]: p2N1h.jpg "{ "orientation": "right" }"
+[3]: p2N1h.jpg "{ "orientation": "left" }"
