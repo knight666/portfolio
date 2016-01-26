@@ -1,10 +1,12 @@
-_Rise of the Tomb Raider_ is the sequal to _Tomb Raider (2013)_ and was developed by [Crystal Dynamics](http://www.crystaldynamics.com) for Xbox One. Nixxes was contracted to convert the title to PC and in my role as a Systems Programmer I ensured the user interface could be used with mouse and keyboard and fixed bugs related to UI and input. I also implemented Razer Chroma effects for the title.
+_Rise of the Tomb Raider_ is the sequal to _Tomb Raider (2013)_ and was developed by [Crystal Dynamics](http://www.crystaldynamics.com) for Xbox One. Nixxes was contracted to convert the title to PC and in my role as a Systems Programmer I ensured the user interface worked well with mouse and keyboard and fixed bugs related to UI and input. I also implemented Razer Chroma effects for the title.
 
-### Lorum ipsum ###
+### Improved context bar ###
 
 ![Time for tickles!][1]
 
-Nam in blandit enim, non tristique nibh. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam quis gravida massa. Proin ac tempus lectus. Curabitur a rhoncus turpis. Integer a molestie leo. Quisque et dui mollis, interdum ex id, posuere augue.
+On our previous collaboration with Crystal Dynamics, I implemented a context bar widget for [Lara Croft and the Temple of Osiris](lara-croft-and-the-temple-of-osiris.html). Because _Rise of the Tomb Raider_ is built on the same codebase, I was able to bring the widget over wholesale. The widget allows for the adding of gamepad button prompts that are automatically transformed to clickable buttons when playing with mouse and keyboard.
+
+For this project, I improved the look and feel of the widget, making it easy to integrate in existing menu states.
 
 ### Lorum ipsum ###
 
