@@ -81,10 +81,13 @@
 	color: #FFFFFF;
 }
 
+.index-project-link:hover > .index-project-link-title {
+	background-color: rgb(94, 94, 94);
+}
 .index-project-link-title {
-	background-color: #575255;
+	background-color: rgba(30, 27, 29, 0.53);
 	font-size: 1.2em;
-	padding: 4px;
+	padding: 4px 10px;
 }
 
 .index-project-link-description {
