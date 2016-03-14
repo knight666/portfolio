@@ -1,4 +1,4 @@
-_Rise of the Tomb Raider_ is the sequal to _Tomb Raider (2013)_ and was developed by [Crystal Dynamics](http://www.crystaldynamics.com) for Xbox One. Nixxes was contracted to convert the title to PC and in my role as a Systems Programmer I ensured the user interface worked well with mouse and keyboard and fixed bugs related to UI and input. I also implemented Razer Chroma effects for the title.
+_Rise of the Tomb Raider_ is the sequal to _Tomb Raider (2013)_ and was developed by [Crystal Dynamics](http://www.crystaldynamics.com) for Xbox One, while Nixxes was contracted to convert the title to PC. In my role as a Systems Programmer I ensured the user interface worked well with mouse and keyboard and fixed bugs related to UI and input. I also implemented Razer Chroma effects for the title.
 
 ### Menus ###
 
@@ -22,7 +22,7 @@ For this project, I improved the look and feel of the widget, making it easier t
 
 ![Time for tickles!][3]
 
-We were contracted by Razer to add lighting effects for their Chroma-enabled keyboards, mice and mousepads by using their Chroma SDK. The SDK allows one to control the color and intensity of each of the keys on the keyboard, the lights on a mouse's scrollwheel and the lights on the edge of their mousepad. I was responsible for designing and implementing these effects in the game.
+We were contracted by Razer to add lighting effects for their Chroma-enabled keyboards, mice and mousepads by using their Chroma SDK. The SDK allows one to control the color and intensity of each of the keys on supported keyboards, the lights on a mouse's scrollwheel and the lights on the edge of a supported mousepad. I was responsible for designing and implementing these effects in the game.
 
 * **Loading screen** - A yellow beam is scanned from left to right across the keyboard and the mouse and mousepad fade between yellow and black.
 
