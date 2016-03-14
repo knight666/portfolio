@@ -20,7 +20,10 @@ module.exports = function(name) {
 		},
 		'web': {
 			'name': 'Website'
-		}
+		},
+		'uwp': {
+			'name': 'Universal Windows Platform'
+		},
 	}
 
 	if (!properties[name])
