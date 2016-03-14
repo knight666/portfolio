@@ -54,7 +54,6 @@
 	float: left;
 	width: 100%;
 	height: 200px;
-	padding: 10px;
 	margin: 2px;
 	border-radius: 4px;
 	background-size: auto;
@@ -93,8 +92,8 @@
 }
 
 .index-project-link-description {
-	color: #181717;
-	background-color: rgba(136, 187, 230, 0.77);
+	color: #322117;
+	background-color: rgba(218, 218, 218, 0.8);
 	width: 100%;
 	margin-top: 10px;
 	padding: 4px;
