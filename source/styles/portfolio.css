@@ -100,11 +100,10 @@
 	font-size: 1.0em;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 500px) {
 	.index-project-link-title-md {
 		font-size: 1.9em;
 	}
-
 	.index-project-link-description-md {
 		font-size: 1.2em;
 	}
