@@ -12,21 +12,15 @@ For this project, I improved the look and feel of the widget, making it easy to 
 
 ![Time for tickles!][2]
 
-We were contracted by Razer to add lighting effects for their Chroma-enabled keyboards, mice and mousepads by using their Chroma SDK. The SDK allows one to control the color and intensity of each of the keys on the keyboard, the lights on the scrollwheel and the lights on the edge of the mousepad. I was responsible for designing and implementing these effects in the game.
+We were contracted by Razer to add lighting effects for their Chroma-enabled keyboards, mice and mousepads by using their Chroma SDK. The SDK allows one to control the color and intensity of each of the keys on the keyboard, the lights on a mouse's scrollwheel and the lights on the edge of their mousepad. I was responsible for designing and implementing these effects in the game.
 
-* Loading screen effect, where a yellow beam is scanned from left to right across the keyboard and the mouse and mousepad fade between yellow and black.
+* **Loading screen** - A yellow beam is scanned from left to right across the keyboard and the mouse and mousepad fade between yellow and black.
 
-* In-game effect. While in the game, actions bound to the keyboard light up in yellow and white when pressed.
+* **In-game** - While in the game, actions bound to the keyboard light up in yellow and white when pressed.
 
-* Key bindings effect. While in the key bindings screen, the actions already bound to keys light up, while the others remain dark. When rebinding, bound keys flash red while unbound keys light up.
+* **Key bindings** - While in the key bindings screen, the actions already bound to keys light up, while unbound keys remain dark. When rebinding, bound keys flash red while unbound keys light up.
 
-* Glowstick effect. While Lara has her glowstick out, the keyboard, mouse and mousepad display the glowstick color as the background color.
-
-### Not-yet-implemented, but planned ###
-
-![Time for tickles!][3]
-
-Nullam lacinia maximus nisi, ut sollicitudin elit ornare vel. Fusce tristique sapien dui, a consequat nisl aliquet vitae. In hac habitasse platea dictumst. Ut eget ultricies nulla. Maecenas auctor molestie sapien et luctus. Proin libero nunc, lobortis sed sapien et, laoreet consequat quam. Maecenas sapien quam, vulputate sit amet orci vel, fermentum luctus felis. Morbi imperdiet fringilla ante non convallis. Morbi ligula justo, commodo et nisi at, pharetra molestie ipsum. Pellentesque vel blandit tortor.
+* **Glowstick** - While Lara has her glowstick out, the keyboard, mouse and mousepad display the glowstick color as the background color.
 
 [1]: p2N1h.jpg "{ "orientation": "left" }"
 [2]: p2N1h.jpg "{ "orientation": "right" }"
