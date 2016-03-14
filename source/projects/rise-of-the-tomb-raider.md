@@ -2,7 +2,7 @@ _Rise of the Tomb Raider_ is the sequal to _Tomb Raider (2013)_ and was develope
 
 ### Menus ###
 
-![Time for tickles!][1]
+![Expeditions mode took a lot of work to get right when using a mouse.][1]
 
 My main body of work for this project constituted of getting the numerous menus to work with mouse and keyboard input. Luckily, most of the hard work had already been done for [the previous project](lara-croft-and-the-temple-of-osiris.html) built with this engine, but there were a lot more menu screens this time around.
 
@@ -12,7 +12,7 @@ On top of that, a lot of the menu screens had been tilted with a 3D effect, caus
 
 ### Improved context bar ###
 
-![Time for tickles!][2]
+![The gamepad prompts change to clickable buttons automatically and vice versa.][2]
 
 On our previous collaboration with Crystal Dynamics, I implemented a context bar widget for [Lara Croft and the Temple of Osiris](lara-croft-and-the-temple-of-osiris.html). Because _Rise of the Tomb Raider_ is built on the same codebase, I was able to bring the widget over wholesale. The widget allows for the adding of gamepad button prompts that are automatically transformed to clickable buttons when playing with mouse and keyboard.
 
@@ -20,7 +20,7 @@ For this project, I improved the look and feel of the widget, making it easier t
 
 ### Razer Chroma effects ###
 
-![Time for tickles!][3]
+![Effects in action on a Razer BlackWidow Chroma keyboard.][3]
 
 We were contracted by Razer to add lighting effects for their Chroma-enabled keyboards, mice and mousepads by using their Chroma SDK. The SDK allows one to control the color and intensity of each of the keys on supported keyboards, the lights on a mouse's scrollwheel and the lights on the edge of a supported mousepad. I was responsible for designing and implementing these effects in the game.
 
