@@ -1,10 +1,10 @@
 {
 	"title": "Rise of the Tomb Raider",
 	"brief": {
-		"description": "ROTR",
+		"description": "Single player action adventure, continuing the adventures of Lara Croft.",
 		"released": "2016-01-26",
 		"employer": "nixxes",
-		"platforms": [ "windows", "steam" ],
+		"platforms": [ "windows", "steam", "uwp" ],
 		"technologies": [ "c++", "as", "scaleform", "cdc" ]
 	},
 	"trailer": {
