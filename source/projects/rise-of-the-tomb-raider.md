@@ -1,4 +1,4 @@
-_Rise of the Tomb Raider_ is the sequal to _Tomb Raider (2013)_ and was developed by [Crystal Dynamics](http://www.crystaldynamics.com) for Xbox One, while Nixxes was contracted to convert the title to PC. In my role as a Systems Programmer I ensured the user interface worked well with mouse and keyboard and fixed bugs related to UI and input. I also implemented Razer Chroma effects for the title.
+_Rise of the Tomb Raider_ is the sequel to _Tomb Raider (2013)_ and was developed by [Crystal Dynamics](http://www.crystaldynamics.com) for Xbox One, while Nixxes was contracted to convert the title to PC. In my role as a Systems Programmer I ensured the user interface worked well with mouse and keyboard and fixed bugs related to UI and input. I also implemented Razer Chroma effects for the title.
 
 ### Menus ###
 
