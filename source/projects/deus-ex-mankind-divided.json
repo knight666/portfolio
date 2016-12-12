@@ -1,0 +1,15 @@
+{
+	"title": "Deus Ex: Mankind Divided",
+	"brief": {
+		"description": "Single player stealth action adventure, continuing the story of Adam Jensen.",
+		"released": "2016-08-23",
+		"employer": "nixxes",
+		"platforms": [ "steam", "windows" ],
+		"technologies": [ "g2", "scaleform", "c++", "as" ]
+	},
+	"trailer": {
+		"link": "yt://CfV01sTqB68",
+		"image": "lara-croft-and-the-temple-of-osiris.jpg"
+	},
+	"source": "deus-ex-mankind-divided.md"
+}
