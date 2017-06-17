@@ -8,15 +8,19 @@ One of the main features I worked on for the Steam version of the game was a wea
 
 In the end, I am very satisified with the result. I am confident that this element improves the experience for players playing with mouse and keyboard.
 
-### Button prompts ###
+### Keybindings screen ###
+
+![Rebinding keys since 2013.][2]
+
+A staple of any Nixxes conversion is the additional options in the settings screen. One screen that is unique to the PC version is the keybindings screen, which is where users are able to bind actions in the game to different inputs on the mouse or keyboard.
+
+Because the proprietary NxApp technology at Nixxes works with scan codes instead of virtual keys, most users will not have to touch this screen. For example, the standard "WASD" input scheme for first person shooters will be converted to the corresponding layout on non-U.S. English keyboard layouts. However, some players have their own preferences, either personal or due to disabilities.
+
+What I've done for this project is to solve the problem of rebinding keys at the NxApp level. This technology is used for every Nixxes conversion to PC, so this will make conversions on future projects much easier.
 
 ### Weapon wheel ###
 
 ### Map screen ###
 
 [1]: DXMD_WeaponsBar.jpg "{ "orientation": "left" }"
-[2]: LC2_PlayerSelectorConcept.png "{ "orientation": "right" }"
-[3]: LC2_Contextbar.png "{ "orientation": "left" }"
-[4]: LC2_GraphicsSettings.png "{ "orientation": "right" }"
-[5]: LC2_TextChat.png "{ "orientation": "left" }"
-[6]: LC2_VoiceChat.png "{ "orientation": "right" }"
+[2]: DXMD_Keybindings.jpg "{ "orientation": "right" }"
