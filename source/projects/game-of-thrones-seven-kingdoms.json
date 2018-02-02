@@ -1,0 +1,13 @@
+{
+	"title": "Game of Thrones: Seven Kingdoms",
+	"brief": {
+		"description": "MMO",
+		"employer": "bigpoint",
+		"platforms": [ "windows" ],
+		"technologies": [ "c++", "ly" ]
+	},
+	"trailer": {
+		"image": "got.jpg"
+	},
+	"source": "game-of-thrones-seven-kingdoms.md"
+}

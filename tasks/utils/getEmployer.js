@@ -1,10 +1,17 @@
 module.exports = function(name) {
 	var properties = {
+		'bigpoint': {
+			'name': 'Bigpoint GmbH',
+			'location': 'Berlin, Germany',
+			'function': 'Senior UI Developer',
+			'service-start': '2016-06'
+		},
 		'nixxes': {
 			'name': 'Nixxes Software BV',
 			'location': 'Utrecht, the Netherlands',
 			'function': 'Systems Programmer',
 			'service-start': '2013-08',
+			'service-end': '2016-05',
 		},
 		'flexposure': {
 			'name': 'FlexPosure BV',
