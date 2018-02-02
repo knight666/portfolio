@@ -121,7 +121,13 @@ module.exports = function(grunt) {
 		context['PROJECT_LIST'] = '';
 
 		var sorted_employer = Object.keys(by_employer).sort(function(left, right) {
-			return by_employer[left].length < by_employer[right].length;
+			var propsLeft = grunt.project_utils.getEmployer(left);
+			var startLeft = Date.parse(propsLeft['service-start']);
+
+			var propsRight = grunt.project_utils.getEmployer(right);
+			var startRight = Date.parse(propsRight['service-start']);
+
+			return startLeft < startRight;
 		});
 
 		sorted_employer.forEach(function(name) {
