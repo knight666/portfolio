@@ -62,6 +62,9 @@ module.exports = function(name) {
 		},
 		'qt': {
 			'name': 'Qt Toolkit'
+		},
+		'ly': {
+			'name': 'Amazon Lumberyard'
 		}
 	}
 
