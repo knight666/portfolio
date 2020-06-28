@@ -7,7 +7,7 @@
     "url": "https://bitbucket.org/knight666/portfolio"
   },
   "devDependencies": {
-    "bootstrap": "~3.3.6",
+    "bootstrap": "~3.4.1",
     "jquery": "~2.1.4",
     "glob": "~6.0.3",
     "grunt": "~0.4.5",
