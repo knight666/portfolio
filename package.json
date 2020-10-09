@@ -1,6 +1,6 @@
 {
-  "name": "Portfolio",
-  "version": "0.1.0",
+  "name": "portfolio",
+  "version": "2.0.0",
   "buildnum": "1",
   "repository": {
     "type": "hg",
@@ -8,7 +8,6 @@
   },
   "devDependencies": {
     "bootstrap": "~3.3.6",
-    "jquery": ">=3.5.0",
     "glob": "~6.0.3",
     "grunt": ">=1.3.0",
     "grunt-build-number": ">=1.0.0",
@@ -23,10 +22,13 @@
     "grunt-marked": ">=0.1.3",
     "grunt-open": ">=0.2.4",
     "grunt-preprocess": ">=5.1.0",
+    "grunt-sass": "^3.1.0",
     "imagemagick": ">=0.1.3",
+    "jquery": ">=3.5.0",
     "marked": ">=1.2.0",
     "matchdep": ">=2.0.0",
     "node-imagemagick": ">=0.1.8",
+    "node-sass": "^4.14.1",
     "popper.js": ">=1.16.1",
     "preprocess": ">=3.2.0",
     "requirejs": ">=2.3.6"

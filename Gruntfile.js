@@ -13,6 +13,7 @@ module.exports = function(grunt) {
 		TEMPLATES_PATH: '<%= SOURCE_PATH %>/templates',
 		MEDIA_PATH: 'media',
 		SCREENSHOTS_PATH: '<%= MEDIA_PATH %>/screenshots',
+		SASS_PATH: '<%= SOURCE_PATH %>/styles',
 		THUMBNAILS_PATH: '<%= SCREENSHOTS_PATH %>/thumbnails',
 		INTERMEDIATE_PATH: 'intermediate',
 		STYLES_PATH: 'styles',
@@ -49,12 +50,12 @@ module.exports = function(grunt) {
 	var defaultTasks = [
 		'env:' + grunt.config('TARGET'),
 		'clean:build',
+		'sass:portfolio',
 		'index',
 		'projects',
 		'ordering',
 		'copy:bootstrap',
 		'copy:scripts',
-		'copy:styles',
 		'copy:media',
 	];
 
