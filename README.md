@@ -1,8 +1,17 @@
-## Commands
+This is the code for the Quinten Lansu's portfolio, hosted at [qlansu.nl](https://qlansu.nl).
 
-* `grunt` - Build site from input.
-* `grunt content` - Build thumbnails for screenshots.
+# Commands
 
-## Resizing
+* `grunt` - Build site from Markdown files.
+* `grunt --deploy` - Upload files to website.
 
-    magick "D:\Projects\Portfolio\media\screenshots\DXMD_WeaponsBar.jpg" -set option:filter:blur 0.8 -filter Lagrange -strip -resize 320 -interlace plane -quality 80 "D:\Projects\Portfolio\media\screenshots\Thumbnails\DXMD_WeaponsBar.jpg"
+# Deploying
+
+Create a file named `.ftppass` on the root with the following structure:
+
+    {
+        "website": {
+            "username": "username",
+            "password": "password"
+        }
+    }
