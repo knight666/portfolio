@@ -4,8 +4,10 @@ header {
     grid-template-areas: 
         ".   face  intro   .";
     grid-column-gap: 24px;
+    align-content: center;
     background: $clr-highlight-500;
     color: white;
+    height: 240px;
 
     .img-profile {
         grid-area: face;

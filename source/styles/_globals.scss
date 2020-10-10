@@ -4,13 +4,11 @@ $clr-highlight-500: hsl(248, 50, 55%);
 $clr-highlight-700: hsl(248, 50, 35%);
 $clr-highlight-900: hsl(248, 50, 15%);
 
-body {
-    font-family: 'PT Sans', sans-serif;
-}
-
 h1 {
     font-family: 'Roboto', sans-serif;
     font-size: 32px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+    color: $clr-highlight-500;
+    margin: 0;
 }
