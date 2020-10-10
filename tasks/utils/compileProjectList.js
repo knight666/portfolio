@@ -2,7 +2,7 @@ module.exports = function(grunt, list, options) {
 	var description = options.description;
 	var featured = options.featured || false;
 
-	var result = '<ul class="list-group index-project-list">\n';
+	var result = '<ul class="project-list">\n';
 
 	list.forEach(function(project) {
 		if (!project.hidden)
@@ -11,7 +11,7 @@ module.exports = function(grunt, list, options) {
 
 			if (project.trailer.image)
 			{
-				style = ' style="background-image: url(\'./media/previews/' + project.trailer.image + '\'); background-position: center; background-repeat: no-repeat;';
+				style = ' style="background-image: url(\'./media/previews/' + project.trailer.image + '\');';
 
 				if (!featured)
 				{
@@ -22,19 +22,11 @@ module.exports = function(grunt, list, options) {
 			}
 
 			result +=
-				'<li class="list-group-item index-project' + (featured ? ' index-project-featured index-project-featured-md index-project-featured-lg' : '') + '"' + style + '>' +
-					'<a href="projects/' + project.filename + '" class="index-project-link">' +
-						'<span class="index-project-link-title index-project-link-title-md">' +
+				'<li class="project-list__item"' + style + '>' +
+					'<a href="projects/' + project.filename + '">' +
+						'<h2>' +
 							project.title +
-						'</span>';
-
-			if (description)
-			{
-				result +=
-						'<div class="index-project-link-description index-project-link-description-md">' +
-							project.brief.description +
-						'</div>';
-			}
+						'</h2>';
 
 			result +=
 					'</a>' +
