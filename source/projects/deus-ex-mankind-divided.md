@@ -18,9 +18,5 @@ Because the proprietary NxApp technology at Nixxes works with scan codes instead
 
 What I've done for this project is to solve the problem of rebinding keys at the NxApp level. This technology is used for every Nixxes conversion to PC, so this will make conversions on future projects much easier.
 
-### Weapon wheel ###
-
-### Map screen ###
-
 [1]: DXMD_WeaponsBar.jpg "{ "orientation": "left" }"
 [2]: DXMD_Keybindings.jpg "{ "orientation": "right" }"

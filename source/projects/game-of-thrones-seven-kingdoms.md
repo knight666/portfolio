@@ -23,11 +23,3 @@ The List component is able to render items both horizontally and vertically. It 
 Another interesting one is the Circular Progress component. This component was used for rendering one-dimensional updates, like timers. Because LyShine adds draw commands to the renderer directly, I was able to output a custom vertex list that uses only a few textured polygons to render the control.
 
 Finally, the Draggable component was used to allow dragging and dropping of elements on the UI. When dragging, a copy is made of the item under the cursor and added to the canvas. Because of the component-based architecture, this allows any element on the canvas to become draggeable or droppable by simply adding the component.
-
-### Lua scripting groundwork ###
-
-
-
-### In-game cheat interface ###
-
-Nam et sem nec augue pellentesque feugiat. Nam aliquam arcu ac efficitur aliquam. In suscipit ligula purus, non porta elit rutrum eu. Integer in ligula eget lectus suscipit porttitor eu non eros. Aenean eget ullamcorper urna, et egestas est. Nunc a mollis dui, id bibendum justo. Ut pulvinar diam eget orci placerat pulvinar. Pellentesque nisi odio, malesuada a mollis sit amet, faucibus vitae odio. Suspendisse sit amet felis suscipit, fringilla mi tincidunt, blandit magna. Etiam aliquam sit amet dolor vitae euismod. In nec bibendum ante, eget molestie est. Mauris ipsum dolor, iaculis rhoncus scelerisque nec, fringilla sed orci. Donec id arcu tempus, mollis augue eget, euismod justo. Quisque purus dolor, efficitur quis mollis sit amet, molestie a tortor.
