@@ -1,8 +1,15 @@
 .at-a-glance {
+    display: grid;
+    grid-template-areas: 
+        "table    table      table"
+        ".        download   .    ";
+    grid-row-gap: 12px;
+    padding: 12px;
     margin: 0 4vw;
     border: 2px solid $clr-highlight-500;
 
     table {
+        grid-area: table;
         width: 100%;
         border-spacing: 0;
         border-collapse: collapse;
@@ -22,5 +29,9 @@
                 text-transform: uppercase;
             }
         }
+    }
+
+    .download {
+        grid-area: download;
     }
 }
