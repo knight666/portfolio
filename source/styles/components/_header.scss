@@ -1,0 +1,28 @@
+header {
+    display: grid;
+    grid-template-columns: 25vw min-content 1fr 25vw;
+    grid-template-areas: 
+        ".   face  intro   .";
+    grid-column-gap: 24px;
+    background: $clr-highlight-500;
+    color: white;
+
+    .img-profile {
+        grid-area: face;
+    }
+
+    .intro {
+        grid-area: intro;
+        font-size: 32px;
+
+        // undoing bootstrap!
+        p {
+            margin: 0;
+            line-height: initial;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+    }
+}
