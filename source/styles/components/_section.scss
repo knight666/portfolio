@@ -1,16 +1,8 @@
 section {
     display: grid;
-    grid-template-columns: 25vw 1fr 1fr 25vw;
-    grid-template-areas: 
-        ".   text  header   .";
+    grid-template-columns: 25vw 1fr 25vw;
 
-    .header {
-        grid-area: header;
-        display: flex;
-        justify-content: center;
-    }
-
-    .text {
-        grid-area: text;
+    > * {
+        grid-column: 2;
     }
 }
