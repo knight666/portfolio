@@ -1,4 +1,5 @@
-var marked = require('marked');
+const marked = require('marked');
+const sanitizeHtml = require('sanitize-html');
 
 module.exports = function(grunt) {
 	grunt.registerTask('projects', function () {
@@ -14,7 +15,7 @@ module.exports = function(grunt) {
 						'<a href="../media/screenshots/' + href + '" class="thumbnail thumbnail-sm" target="_blank">' +
 							'<img src="../media/screenshots/thumbnails/' + href + '" alt="' + text + '" />' +
 							'<div class="caption">' +
-								marked(text) +
+								sanitizeHtml(marked(text)) +
 							'</div>' +
 						'</a>' +
 					'</div>';
@@ -27,7 +28,6 @@ module.exports = function(grunt) {
 			highlight: false,
 			tables: true,
 			pedantic: false,
-			sanitize: true,
 			smartLists: true,
 			smartypants: false
 		});
@@ -52,12 +52,12 @@ module.exports = function(grunt) {
 			if (entry.source)
 			{
 				current_dir = fullPath.substring(0, fullPath.lastIndexOf('/') + 1);
-				context['PAGE_CONTENT'] = marked(grunt.file.read(current_dir + entry.source));
+				context['PAGE_CONTENT'] = sanitizeHtml(marked(grunt.file.read(current_dir + entry.source)));
 			}
 
 			// build brief
 
-			context['PAGE_DESCRIPTION'] = marked(entry.brief.description);
+			context['PAGE_DESCRIPTION'] = sanitizeHtml(marked(entry.brief.description));
 
 			if (entry.brief.released)
 			{
