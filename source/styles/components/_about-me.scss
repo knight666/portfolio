@@ -12,3 +12,14 @@
         grid-area: text;
     }
 }
+
+@include size-medium {
+    .about-me {
+        grid-template-columns: 20vw 1fr 20vw;
+        grid-template-rows: min-content 1fr;
+        grid-template-areas: 
+            ".  header  ."
+            ".  text    .";
+        grid-row-gap: $body-gap;
+    }
+}

@@ -1,5 +1,5 @@
 body {
     display: grid;
-    grid-row-gap: 55px;
+    grid-row-gap: $body-gap;
     font-family: 'PT Sans', sans-serif;
 }

@@ -4,23 +4,32 @@ $clr-highlight-500: hsl(248, 50, 55%);
 $clr-highlight-700: hsl(248, 50, 35%);
 $clr-highlight-900: hsl(248, 50, 15%);
 
+$body-gap: 55px;
+
 $text-size-xs: 12px;
 $text-size-s: 14px;
 $text-size-m: 18px;
 $text-size-l: 24px;
 $text-size-xl: 32px;
 
-$media-width-phone: 960px;
-$media-width-desktop: 1280px;
+$media-width-small: 480px;
+$media-width-medium: 960px;
+$media-width-large: 1280px;
 
-@mixin size-phone {
-    @media (max-width: #{$media-width-phone}) {
+@mixin size-small {
+    @media (max-width: #{$media-width-small}) {
         @content;
     }
 }
 
-@mixin size-desktop {
-    @media (min-width: #{$media-width-desktop}) {
+@mixin size-medium {
+    @media (max-width: #{$media-width-medium}) {
+        @content;
+    }
+}
+
+@mixin size-large {
+    @media (max-width: #{$media-width-large}) {
         @content;
     }
 }
@@ -33,4 +42,10 @@ h1 {
     text-align: center;
     color: $clr-highlight-500;
     margin: 0;
+}
+
+@include size-small {
+    h1 {
+        font-size: $text-size-l;
+    }
 }

@@ -6,3 +6,10 @@ section {
         grid-column: 2;
     }
 }
+
+@include size-medium {
+    section {
+        grid-template-columns: 1fr;
+        padding: 12px;
+    }
+}
