@@ -5,7 +5,7 @@ header {
     grid-template-areas: 
         "face  intro";
     grid-column-gap: 24px;
-    align-content: center;
+    align-items: center;
     background: $clr-highlight-500;
     color: white;
     min-height: 240px;
@@ -51,11 +51,29 @@ header {
 
 @include size-medium {
     header {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr min-content;
+        grid-template-areas: 
+            "face  "
+            "intro ";
+        grid-row-gap: 24px;
+        justify-items: center;
         min-height: auto;
-        padding: 12px 12vw;
+        padding: 12px 0;
 
         .intro {
             font-size: $text-size-l;
+        }
+    }
+}
+
+@include size-large {
+    header {
+        min-height: auto;
+        padding: 12px 24vw;
+
+        .intro {
+            font-size: 28px;
         }
     }
 }
