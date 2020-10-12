@@ -16,7 +16,7 @@
         padding-top: 315px / 560px * 100%;
         border-radius: 4px;
         background-size: 100%;
-        transition: background-size 0.2s;
+        transition: background-size 0.4s;
 
         a {
             position: absolute;
@@ -28,7 +28,7 @@
             align-items: flex-end;
 
             &:hover {
-                background-color: rgba(255, 255, 255, 0.5);
+                background-color: rgba($clr-highlight-100, 0.2);
                 text-decoration: none;
             }
         }
@@ -45,7 +45,7 @@
         }
 
         &:hover {
-            background-size: 150%;
+            background-size: 120%;
         }
     }
 }
