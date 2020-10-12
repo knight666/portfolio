@@ -16,5 +16,5 @@ Nam et sem nec augue pellentesque feugiat. Nam aliquam arcu ac efficitur aliquam
 
 Nullam lacinia maximus nisi, ut sollicitudin elit ornare vel. Fusce tristique sapien dui, a consequat nisl aliquet vitae. In hac habitasse platea dictumst. Ut eget ultricies nulla. Maecenas auctor molestie sapien et luctus. Proin libero nunc, lobortis sed sapien et, laoreet consequat quam. Maecenas sapien quam, vulputate sit amet orci vel, fermentum luctus felis. Morbi imperdiet fringilla ante non convallis. Morbi ligula justo, commodo et nisi at, pharetra molestie ipsum. Pellentesque vel blandit tortor.
 
-[1]: p2N1h.jpg "{ "orientation": "left" }"
-[2]: p2N1h.jpg "{ "orientation": "right" }"
+[1]: p2N1h.jpg "{ &quot;orientation&quot;: &quot;left&quot; }"
+[2]: p2N1h.jpg "{ &quot;orientation&quot;: &quot;right&quot; }"

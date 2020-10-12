@@ -32,6 +32,6 @@ We were contracted by Razer to add lighting effects for their Chroma-enabled key
 
 * **Glowstick** - While Lara has her glowstick out, the keyboard, mouse and mousepad display the glowstick color as the background color.
 
-[1]: ROTR_RemnantResistance.png "{ "orientation": "left" }"
-[2]: ROTR_Options.png "{ "orientation": "right" }"
-[3]: ROTR_Razer.png "{ "orientation": "left" }"
+[1]: ROTR_RemnantResistance.png "{ &quot;orientation&quot;: &quot;left&quot; }"
+[2]: ROTR_Options.png "{ &quot;orientation&quot;: &quot;right&quot; }"
+[3]: ROTR_Razer.png "{ &quot;orientation&quot;: &quot;left&quot; }"

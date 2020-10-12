@@ -24,5 +24,5 @@ When playing with a mouse and keyboard, most players intuitively guess how best 
 
 This was quite different from the gamepad navigation, where you move the map with the left stick, zoom with the left and right triggers and rotate with the right stick.
 
-[1]: TH4_ButtonPrompts.jpg "{ "orientation": "left" }"
-[2]: TH4_Map.jpg "{ "orientation": "right" }"
+[1]: TH4_ButtonPrompts.jpg "{ &quot;orientation&quot;: &quot;left&quot; }"
+[2]: TH4_Map.jpg "{ &quot;orientation&quot;: &quot;right&quot; }"

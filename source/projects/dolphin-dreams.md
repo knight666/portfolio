@@ -28,5 +28,5 @@ I ended up implementing a new gesture system that provided more reliable trackin
 
 One of the other areas I looked into was the slow loading of the program on start-up. I wrote a tool to automatically compress the textures, reducing the start-up time significantly.
 
-[1]: DD_Looping.png "{ "orientation": "left" }"
-[2]: DD_DebugLines.png "{ "orientation": "right" }"
+[1]: DD_Looping.png "{ &quot;orientation&quot;: &quot;left&quot; }"
+[2]: DD_DebugLines.png "{ &quot;orientation&quot;: &quot;right&quot; }"

@@ -30,6 +30,6 @@ One interesting element about this project that remains is the dancing figure in
 
 The meshes are organised in a hierarchy, where each mesh is a child of another. For example, the head mesh is a child of the neck mesh, which is a child of the body mesh. When the meshes are rotated or translated in their local space, their children move along. This relationship is the basis of the animation: when the upper leg mesh is rotated, the lower leg rotates along with it. The animation is therefore a series of sine curves, applied to rotations on specific meshes.
 
-[1]: PD_Looping.png "{ "orientation": "left" }"
-[2]: PD_Sphere.png "{ "orientation": "right" }"
-[3]: PD_Animated.png "{ "orientation": "left" }"
+[1]: PD_Looping.png "{ &quot;orientation&quot;: &quot;left&quot; }"
+[2]: PD_Sphere.png "{ &quot;orientation&quot;: &quot;right&quot; }"
+[3]: PD_Animated.png "{ &quot;orientation&quot;: &quot;left&quot; }"

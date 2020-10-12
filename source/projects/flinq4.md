@@ -48,6 +48,6 @@ This system worked very well to keep the bug count low, which was critical for t
 
 I've since went on to use TDD in my own projects, for example in the open source [utf8rewind](http://bitbucket.org/knight666/utf8rewind).
 
-[1]: FQ40_Overview.png "{ "orientation": "left" }"
-[2]: FQ40_DeviceProperties.png "{ "orientation": "right" }"
-[3]: FQ40_FloorEditor.png "{ "orientation": "left" }"
+[1]: FQ40_Overview.png "{ &quot;orientation&quot;: &quot;left&quot; }"
+[2]: FQ40_DeviceProperties.png "{ &quot;orientation&quot;: &quot;right&quot; }"
+[3]: FQ40_FloorEditor.png "{ &quot;orientation&quot;: &quot;left&quot; }"

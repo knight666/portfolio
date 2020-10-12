@@ -51,9 +51,9 @@ What I ended up designing was a transparent control in the top-right corner, eve
 
 On the PlayStation 4 version of the game, I was tasked with displaying the state of voice chat in the game. Specifically, which players were talking right now and if their microphone was being muted. This is very important information to players in online matches, because rude players can ruin an otherwise perfect match. This is why players had to be able to bring up the widget at any time, even during loading screens. Any of the players in the game could press the right stick on their DualShock 4 controller to bring up the menu and it would dissappear automatically after a few seconds.
 
-[1]: LC2_MainMenu.png "{ "orientation": "left" }"
-[2]: LC2_PlayerSelectorConcept.png "{ "orientation": "right" }"
-[3]: LC2_Contextbar.png "{ "orientation": "left" }"
-[4]: LC2_GraphicsSettings.png "{ "orientation": "right" }"
-[5]: LC2_TextChat.png "{ "orientation": "left" }"
-[6]: LC2_VoiceChat.png "{ "orientation": "right" }"
+[1]: LC2_MainMenu.png "{ &quot;orientation&quot;: &quot;left&quot; }"
+[2]: LC2_PlayerSelectorConcept.png "{ &quot;orientation&quot;: &quot;right&quot; }"
+[3]: LC2_Contextbar.png "{ &quot;orientation&quot;: &quot;left&quot; }"
+[4]: LC2_GraphicsSettings.png "{ &quot;orientation&quot;: &quot;right&quot; }"
+[5]: LC2_TextChat.png "{ &quot;orientation&quot;: &quot;left&quot; }"
+[6]: LC2_VoiceChat.png "{ &quot;orientation&quot;: &quot;right&quot; }"

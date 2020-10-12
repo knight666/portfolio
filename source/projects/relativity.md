@@ -30,6 +30,6 @@ The particle system used a custom .ini for all of its effects. Designers could c
 
 The Particle Editor was a visual tool for editing the properties in the .ini file. Each property was given a slider, a checkbox or a custom control and designers could change a property, save it to .ini and reload it in the game. I was continually amazed with what the artists were able to produce with a particle system with such limited properties.
 
-[1]: Relativity_InGame.png "{ "orientation": "left" }"
-[2]: Relativity_Battle.png "{ "orientation": "right" }"
-[3]: Relativity_ParticleEditor.png "{ "orientation": "left" }"
+[1]: Relativity_InGame.png "{ &quot;orientation&quot;: &quot;left&quot; }"
+[2]: Relativity_Battle.png "{ &quot;orientation&quot;: &quot;right&quot; }"
+[3]: Relativity_ParticleEditor.png "{ &quot;orientation&quot;: &quot;left&quot; }"

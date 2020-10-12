@@ -3,26 +3,26 @@ const sanitizeHtml = require('sanitize-html');
 
 module.exports = function(grunt) {
 	grunt.registerTask('projects', function () {
-		var renderer = new marked.Renderer();
+		const renderer = {
+			image(href, title, text) {
+				title = title.replace(/&quot;/g, '"');
+				var properties = JSON.parse(title);
 
-		renderer.image = function(href, title, text) {
-			title = title.replace(/&quot;/g, '"');
-			var properties = JSON.parse(title);
+				var orientation = properties.orientation || 'left';
 
-			var orientation = properties.orientation || 'left';
-
-			return '<div class="thumbnail-box-' + orientation + ' thumbnail-box-md thumbnail-box-md">' +
-						'<a href="../media/screenshots/' + href + '" class="thumbnail thumbnail-sm" target="_blank">' +
-							'<img src="../media/screenshots/thumbnails/' + href + '" alt="' + text + '" />' +
-							'<div class="caption">' +
-								sanitizeHtml(marked(text)) +
-							'</div>' +
-						'</a>' +
-					'</div>';
-		}
+				return '<div class="thumbnail-box-' + orientation + ' thumbnail-box-md thumbnail-box-md">' +
+							'<a href="../media/screenshots/' + href + '" class="thumbnail thumbnail-sm" target="_blank">' +
+								'<img src="../media/screenshots/thumbnails/' + href + '" alt="' + text + '" />' +
+								'<div class="caption">' +
+									marked(text) +
+								'</div>' +
+							'</a>' +
+						'</div>';
+			}
+		};
+		marked.use({ renderer });
 
 		marked.setOptions({
-			renderer: renderer,
 			breaks: false,
 			gfm: true,
 			highlight: false,
@@ -52,12 +52,12 @@ module.exports = function(grunt) {
 			if (entry.source)
 			{
 				current_dir = fullPath.substring(0, fullPath.lastIndexOf('/') + 1);
-				context['PAGE_CONTENT'] = sanitizeHtml(marked(grunt.file.read(current_dir + entry.source)));
+				context['PAGE_CONTENT'] = marked(grunt.file.read(current_dir + entry.source));
 			}
 
 			// build brief
 
-			context['PAGE_DESCRIPTION'] = sanitizeHtml(marked(entry.brief.description));
+			context['PAGE_DESCRIPTION'] = marked(entry.brief.description);
 
 			if (entry.brief.released)
 			{
