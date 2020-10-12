@@ -17,7 +17,7 @@
     }
 }
 
-@include size-medium {
+@include size-small {
     .download {
         font-size: $text-size-s;
     }

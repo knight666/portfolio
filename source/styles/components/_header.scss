@@ -1,15 +1,15 @@
 header {
     display: grid;
-    grid-template-columns: 20vw min-content 1fr 20vw;
+    grid-template-columns: min-content 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
-        ".   face  intro   .";
+        "face  intro";
     grid-column-gap: 24px;
     align-content: center;
     background: $clr-highlight-500;
     color: white;
     min-height: 240px;
-    padding: 12px;
+    padding: 12px 24vw;
 
     .img-profile {
         grid-area: face;
@@ -33,14 +33,6 @@ header {
 
 @include size-small {
     header {
-        .intro {
-            font-size: $text-size-l;
-        }
-    }
-}
-
-@include size-medium {
-    header {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr min-content;
         grid-template-areas: 
@@ -49,5 +41,21 @@ header {
         grid-row-gap: 24px;
         justify-items: center;
         min-height: auto;
+        padding: 12px 0;
+
+        .intro {
+            font-size: $text-size-l;
+        }
+    }
+}
+
+@include size-medium {
+    header {
+        min-height: auto;
+        padding: 12px 12vw;
+
+        .intro {
+            font-size: $text-size-l;
+        }
     }
 }

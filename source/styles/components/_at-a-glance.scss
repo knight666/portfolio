@@ -51,3 +51,9 @@
         margin: 0 6vw;
     }
 }
+
+@include size-large {
+    .at-a-glance {
+        margin: 0 6vw;
+    }
+}

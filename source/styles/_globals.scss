@@ -17,19 +17,19 @@ $media-width-medium: 960px;
 $media-width-large: 1280px;
 
 @mixin size-small {
-    @media (max-width: #{$media-width-small}) {
+    @media (max-width: #{$media-width-small - 1px}) {
         @content;
     }
 }
 
 @mixin size-medium {
-    @media (max-width: #{$media-width-medium}) {
+    @media (min-width: #{$media-width-small}) and (max-width: #{$media-width-medium - 1px}) {
         @content;
     }
 }
 
 @mixin size-large {
-    @media (max-width: #{$media-width-large}) {
+    @media (min-width: #{$media-width-medium}) and (max-width: #{$media-width-large}) {
         @content;
     }
 }
