@@ -4,9 +4,30 @@ $clr-highlight-500: hsl(248, 50, 55%);
 $clr-highlight-700: hsl(248, 50, 35%);
 $clr-highlight-900: hsl(248, 50, 15%);
 
+$text-size-xs: 12px;
+$text-size-s: 14px;
+$text-size-m: 18px;
+$text-size-l: 24px;
+$text-size-xl: 32px;
+
+$media-width-phone: 960px;
+$media-width-desktop: 1280px;
+
+@mixin size-phone {
+    @media (max-width: #{$media-width-phone}) {
+        @content;
+    }
+}
+
+@mixin size-desktop {
+    @media (min-width: #{$media-width-desktop}) {
+        @content;
+    }
+}
+
 h1 {
     font-family: 'Roboto', sans-serif;
-    font-size: 32px;
+    font-size: $text-size-xl;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     text-align: center;

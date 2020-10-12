@@ -1,13 +1,15 @@
 header {
     display: grid;
-    grid-template-columns: 25vw min-content 1fr 25vw;
+    grid-template-columns: 20vw min-content 1fr 20vw;
+    grid-template-rows: auto;
     grid-template-areas: 
         ".   face  intro   .";
     grid-column-gap: 24px;
     align-content: center;
     background: $clr-highlight-500;
     color: white;
-    height: 240px;
+    min-height: 240px;
+    padding: 12px;
 
     .img-profile {
         grid-area: face;
@@ -15,7 +17,7 @@ header {
 
     .intro {
         grid-area: intro;
-        font-size: 32px;
+        font-size: $text-size-xl;
 
         // undoing bootstrap!
         p {
@@ -25,6 +27,23 @@ header {
 
         .bold {
             font-weight: bold;
+        }
+    }
+}
+
+@include size-phone {
+    header {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr min-content;
+        grid-template-areas: 
+            "face  "
+            "intro ";
+        grid-row-gap: 24px;
+        justify-items: center;
+        min-height: auto;
+
+        .intro {
+            font-size: $text-size-l;
         }
     }
 }
