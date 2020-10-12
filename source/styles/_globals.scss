@@ -14,7 +14,7 @@ $text-size-xl: 32px;
 
 $media-width-small: 560px;
 $media-width-medium: 960px;
-$media-width-large: 1280px;
+$media-width-large: 1920px;
 
 @mixin size-small {
     @media (max-width: #{$media-width-small - 1px}) {
