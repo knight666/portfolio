@@ -1,15 +1,9 @@
 section {
-    display: grid;
-    grid-template-columns: 25vw 1fr 25vw;
-
-    > * {
-        grid-column: 2;
-    }
+    padding: 0 12vw;
 }
 
-@include size-medium {
+@include size-small {
     section {
-        grid-template-columns: 1fr;
-        padding: 12px;
+        padding: 0 12px;
     }
 }

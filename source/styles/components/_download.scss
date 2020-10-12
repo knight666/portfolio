@@ -2,7 +2,7 @@
     background: $clr-highlight-500;
     color: white;
     font-family: 'Roboto', sans-serif;
-    font-size: 18px;
+    font-size: $text-size-m;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
@@ -14,5 +14,11 @@
         text-decoration: none;
         background: $clr-highlight-300;
         color: white;
+    }
+}
+
+@include size-medium {
+    .download {
+        font-size: $text-size-s;
     }
 }

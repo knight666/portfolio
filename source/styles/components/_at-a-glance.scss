@@ -5,7 +5,7 @@
         ".        download   .    ";
     grid-row-gap: 12px;
     padding: 12px;
-    margin: 0 4vw;
+    margin: 0 12vw;
     border: 2px solid $clr-highlight-500;
 
     table {
@@ -13,13 +13,13 @@
         width: 100%;
         border-spacing: 0;
         border-collapse: collapse;
+        font-size: $text-size-m;
 
         tr {
             display: grid;
             grid-template-columns: 1fr 2fr;
             grid-column-gap: 24px;
             align-content: center;
-            font-size: 18px;
             height: 32px;
 
             > td:first-child {
@@ -33,5 +33,21 @@
 
     .download {
         grid-area: download;
+    }
+}
+
+@include size-small {
+    .at-a-glance {
+        margin: 0;
+
+        table {
+            font-size: $text-size-s;
+        }
+    }
+}
+
+@include size-medium {
+    .at-a-glance {
+        margin: 0 6vw;
     }
 }

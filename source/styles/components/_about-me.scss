@@ -3,6 +3,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
         "text  header";
+    padding: 0;
 
     .header {
         grid-area: header;
@@ -15,11 +16,12 @@
 
 @include size-medium {
     .about-me {
-        grid-template-columns: 20vw 1fr 20vw;
+        grid-template-columns: 1fr;
         grid-template-rows: min-content 1fr;
         grid-template-areas: 
-            ".  header  ."
-            ".  text    .";
+            "header"
+            "text  ";
         grid-row-gap: $body-gap;
+        padding: 0 6vw;
     }
 }
