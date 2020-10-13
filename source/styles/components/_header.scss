@@ -15,7 +15,7 @@ header {
         grid-area: face;
     }
 
-    .intro {
+    .header__intro {
         grid-area: intro;
         font-size: $text-size-xl;
 
@@ -43,7 +43,7 @@ header {
         min-height: auto;
         padding: 12px 0;
 
-        .intro {
+        .header__intro {
             font-size: $text-size-l;
         }
     }
