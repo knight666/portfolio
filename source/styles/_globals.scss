@@ -29,7 +29,13 @@ $media-width-large: 1920px;
 }
 
 @mixin size-large {
-    @media (min-width: #{$media-width-medium}) and (max-width: #{$media-width-large}) {
+    @media (min-width: #{$media-width-medium}) and (max-width: #{$media-width-large - 1px}) {
+        @content;
+    }
+}
+
+@mixin size-huge {
+    @media (min-width: #{$media-width-large}) {
         @content;
     }
 }

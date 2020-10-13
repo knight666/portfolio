@@ -1,9 +1,12 @@
 .about-me {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content 1fr;
     grid-template-areas: 
-        "text  header";
-    padding: 0;
+        "header"
+        "text  ";
+    grid-row-gap: $body-gap;
+    padding: 0 6vw;
 
     .header {
         grid-area: header;
@@ -14,26 +17,12 @@
     }
 }
 
-@include size-small {
+@include size-huge {
     .about-me {
-        grid-template-columns: 1fr;
-        grid-template-rows: min-content 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
         grid-template-areas: 
-            "header"
-            "text  ";
-        grid-row-gap: $body-gap;
-        padding: 0 6vw;
-    }
-}
-
-@include size-medium {
-    .about-me {
-        grid-template-columns: 1fr;
-        grid-template-rows: min-content 1fr;
-        grid-template-areas: 
-            "header"
-            "text  ";
-        grid-row-gap: $body-gap;
-        padding: 0 6vw;
+            "text  header";
+        padding: 0;
     }
 }
