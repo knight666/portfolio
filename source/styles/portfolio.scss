@@ -3,18 +3,13 @@
 @import "components/body.scss";
 @import "components/header.scss";
 @import "components/section.scss";
+@import "components/footer.scss";
 
 @import "components/download.scss";
 @import "components/about-me.scss";
 @import "components/at-a-glance.scss";
 @import "components/project-list.scss";
-
-#page-footer {
-	margin-top: 100px;
-	padding: 50px 0px;
-	color: #FFFFFF;
-	background-color: #313439;
-}
+@import "components/social.scss";
 
 .panel-profile {
 	margin-top: 20px;
@@ -234,47 +229,6 @@
 
 .project-video-play > .glyphicon {
 	left: 2px;
-}
-
-/* Social */
-
-.social {
-	display: block;
-	width: 32px;
-	height: 32px;
-	background-color: #808080;
-	background-image: url("../media/images/social.png");
-	background-repeat: no-repeat;
-	border-radius: 16px;
-	background-clip: padding-box;
-}
-
-a.social-twitter {
-	background-position: -32px 0;
-}
-a.social-twitter:hover {
-	background-color: #5ec3df;
-}
-
-a.social-google {
-	background-position: -256px 0;
-}
-a.social-google:hover {
-	background-color: #c63d2d;
-}
-
-a.social-linkedin {
-	background-position: -192px 0;
-}
-a.social-linkedin:hover {
-	background-color: #2089b5;
-}
-
-a.social-skype {
-	background-position: -320px 0;
-}
-a.social-skype:hover {
-	background-color: #00aff0;
 }
 
 /* Badges */

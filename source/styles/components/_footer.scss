@@ -1,0 +1,29 @@
+footer {
+	display: grid;
+	grid-row-gap: 24px;
+	background: $clr-highlight-500;
+	color: $clr-highlight-100;
+	padding: 24px;
+
+	h1 {
+		font-size: $text-size-l;
+		text-align: left;
+		color: $clr-highlight-100;
+	}
+
+	p {
+		margin: 0;
+	}
+
+	.email {
+		background: $clr-highlight-700;
+		color: $clr-highlight-100;
+		text-decoration: none;
+		padding: 8px 12px;
+		border-radius: 8px;
+
+		&:hover {
+			background: $clr-highlight-300;
+		}
+	}
+}

@@ -1,0 +1,36 @@
+.social-list {
+	display: grid;
+	grid-template-columns: repeat(3, min-content);
+	grid-column-gap: 12px;
+	align-items: center;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.social {
+	display: block;
+	width: 32px;
+	height: 32px;
+	background-color: $clr-highlight-700;
+	background-image: url("../media/images/social.png");
+	background-repeat: no-repeat;
+	border-radius: 16px;
+	background-clip: padding-box;
+	
+	&.social--twitter {
+		background-position: -32px 0;
+
+		&:hover {
+			background-color: #5ec3df;
+		}
+	}
+
+	&.social--linkedin {
+		background-position: -192px 0;
+
+		&:hover {
+			background-color: #2089b5;
+		}
+	}
+}
