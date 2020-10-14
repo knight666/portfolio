@@ -1,10 +1,13 @@
 @import "globals.scss";
 
+@import "atoms/breadcrumb.scss";
+
 @import "components/body.scss";
 @import "components/header.scss";
 @import "components/section.scss";
 @import "components/footer.scss";
 
+@import "components/breadcrumbs.scss";
 @import "components/about-me.scss";
 @import "components/at-a-glance.scss";
 @import "components/download.scss";

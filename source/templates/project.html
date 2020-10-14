@@ -4,17 +4,20 @@
 	<!-- @include header.html -->
 </head>
 <body>
-	<ul class="breadcrumb">
-		<li><a href="../index.html">Portfolio</a></li>
-		<li><a href="../projects-by-date.html">Projects</a></li>
-		<li><!-- @echo PAGE_TITLE --></li>
-	</ul>
+	<header class="o-header">
+		<div class="a-headshot o-header__headshot">
+			<img src="../media/images/profile.jpg" />
+		</div>
+		<ul class="o-breadcrumbs o-header__breadcrumbs">
+			<li><a class="a-breadcrumb" href="../index.html">Portfolio</a></li>
+			<li>/</li>
+			<li><a class="a-breadcrumb" href="../projects-by-date.html">Projects</a></li>
+			<li>/</li>
+		</ul>
+		<div class="o-header__intro"><!-- @echo PAGE_TITLE --></div>
+	</header>
 
 	<div class="container">
-		<div class="page-header">
-			<h1><!-- @echo PAGE_TITLE --></h1>
-		</div>
-
 		<div class="row">
 			<div class="col-md-4 col-xs-12">
 				<div class="panel panel-primary project-brief">

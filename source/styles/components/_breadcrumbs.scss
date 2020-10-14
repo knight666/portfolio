@@ -1,0 +1,8 @@
+.o-breadcrumbs {
+    display: grid;
+    grid-template-columns: repeat(4, min-content);
+    grid-column-gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}

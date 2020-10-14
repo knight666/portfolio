@@ -1,16 +1,17 @@
 .o-header {
     display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: min-content 1fr;
+    grid-template-areas: 
+        "face  breadcrumbs "
+        "face  title       ";
+    grid-column-gap: 24px;
+    align-items: center;
     background: $clr-highlight-500;
     color: white;
     padding: 12px 24vw;
 
     &.-main {
-        grid-template-columns: min-content 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: 
-            "face  intro";
-        grid-column-gap: 24px;
-        align-items: center;
         min-height: 240px;
     }
 
@@ -18,8 +19,12 @@
         grid-area: face;
     }
 
+    &__breadcrumbs {
+        grid-area: breadcrumbs;
+    }
+
     &__intro {
-        grid-area: intro;
+        grid-area: title;
         font-size: $text-size-xl;
 
         // undoing bootstrap!
@@ -41,7 +46,7 @@
             grid-template-rows: 1fr min-content;
             grid-template-areas: 
                 "face  "
-                "intro ";
+                "title ";
             grid-row-gap: 24px;
             justify-items: center;
             min-height: auto;
@@ -61,7 +66,7 @@
             grid-template-rows: 1fr min-content;
             grid-template-areas: 
                 "face  "
-                "intro ";
+                "title ";
             grid-row-gap: 24px;
             justify-items: center;
             min-height: auto;
