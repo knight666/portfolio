@@ -1,21 +1,24 @@
-header {
+.o-header {
     display: grid;
-    grid-template-columns: min-content 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: 
-        "face  intro";
-    grid-column-gap: 24px;
-    align-items: center;
     background: $clr-highlight-500;
     color: white;
-    min-height: 240px;
     padding: 12px 24vw;
 
-    .img-profile {
+    &.-main {
+        grid-template-columns: min-content 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "face  intro";
+        grid-column-gap: 24px;
+        align-items: center;
+        min-height: 240px;
+    }
+
+    &__headshot {
         grid-area: face;
     }
 
-    .header__intro {
+    &__intro {
         grid-area: intro;
         font-size: $text-size-xl;
 
@@ -32,48 +35,55 @@ header {
 }
 
 @include size-small {
-    header {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr min-content;
-        grid-template-areas: 
-            "face  "
-            "intro ";
-        grid-row-gap: 24px;
-        justify-items: center;
-        min-height: auto;
-        padding: 12px 0;
-
-        .header__intro {
+    .o-header {
+        &.-main {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr min-content;
+            grid-template-areas: 
+                "face  "
+                "intro ";
+            grid-row-gap: 24px;
+            justify-items: center;
+            min-height: auto;
+            padding: 12px 0;
+        }
+    
+        &__intro {
             font-size: $text-size-l;
         }
     }
 }
 
 @include size-medium {
-    header {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr min-content;
-        grid-template-areas: 
-            "face  "
-            "intro ";
-        grid-row-gap: 24px;
-        justify-items: center;
-        min-height: auto;
-        padding: 12px 0;
+    .o-header {
+        &.-main {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr min-content;
+            grid-template-areas: 
+                "face  "
+                "intro ";
+            grid-row-gap: 24px;
+            justify-items: center;
+            min-height: auto;
+            padding: 12px 0;
+    
+        }
 
-        .intro {
+        &__intro {
             font-size: $text-size-l;
         }
     }
 }
 
 @include size-large {
-    header {
-        min-height: auto;
-        padding: 12px 24vw;
+    .o-header {
+        &.-main {
+            min-height: auto;
+            padding: 12px 24vw;
 
-        .intro {
-            font-size: 28px;
+            &__intro {
+                font-size: 28px;
+            }
         }
     }
 }
