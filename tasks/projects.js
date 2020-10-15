@@ -57,7 +57,7 @@ module.exports = function(grunt) {
 
 			// build brief
 
-			context['PAGE_DESCRIPTION'] = marked(entry.brief.description);
+			context['PAGE_DESCRIPTION'] = entry.brief.description;
 
 			if (entry.brief.released)
 			{

@@ -5,15 +5,18 @@
 @import "atoms/a-paragraph.scss";
 @import "atoms/a-projectHeader.scss";
 @import "atoms/a-projectImage.scss";
+@import "atoms/a-propertyList.scss";
 @import "atoms/headshot.scss";
 
 @import "molecules/m-breadcrumbs.scss";
 @import "molecules/m-glanceTable.scss";
 @import "molecules/m-project.scss";
+@import "molecules/m-projectProperties.scss";
 @import "molecules/m-section.scss";
 
 @import "organisms/o-glance.scss";
 @import "organisms/o-header.scss";
+@import "organisms/o-projectIntro.scss";
 @import "organisms/o-projects.scss";
 
 @import "components/body.scss";
