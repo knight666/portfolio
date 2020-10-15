@@ -58,8 +58,14 @@ module.exports = function(grunt) {
 		'copy:bootstrap',
 		'copy:scripts',
 		'copy:media',
-		'uncss:portfolio',
 	];
+
+	// ship it
+
+	if (grunt.option('build'))
+	{
+		defaultTasks.push('uncss:portfolio');
+	}
 
 	// deploy to server
 
