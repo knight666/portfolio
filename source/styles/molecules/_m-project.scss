@@ -1,5 +1,27 @@
 .m-project {
 	display: grid;
 	grid-row-gap: 24px;
-	grid-template-rows: repeat(2, min-content) 1fr;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(2, min-content) 1fr min-content;
+	grid-template-areas: 
+		"preview  preview "
+		"header   header  "
+		"desc     desc    "
+		"link     .       ";
+
+	&__preview {
+		grid-area: preview;
+	}
+
+	&__header {
+		grid-area: header;
+	}
+
+	&__description {
+		grid-area: desc;
+	}
+
+	&__link {
+		grid-area: link;
+	}
 }
