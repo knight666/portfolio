@@ -1,3 +1,9 @@
 .a-paragraph {
 	@include text-paragraph('M');
 }
+
+@include size-small {
+	.a-paragraph {
+		@include text-size('S');
+	}
+}
