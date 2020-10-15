@@ -3,6 +3,28 @@
     flex-direction: column;
     padding: 0 24vw;
     
+    &.-title {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content 1fr;
+        grid-template-areas: 
+            "header"
+            "text  ";
+        grid-row-gap: $body-gap;
+        padding: 0 6vw;
+    }
+
+    &__header {
+        grid-area: header;
+    }
+
+    &__text {
+        grid-area: text;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     &__centered {
         padding: 0 6vw;
     }
@@ -17,5 +39,17 @@
 @include size-medium {
     .m-section {
         padding: 0 12vw;
+    }
+}
+
+@include size-huge {
+    .m-section {
+        &.-title {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            grid-template-areas: 
+                "text  header";
+            padding: 0;
+        }
     }
 }
