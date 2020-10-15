@@ -23,20 +23,21 @@
 			<div class="m-projectProperties">
 				<h2 class="m-projectProperties__header">Type</h2>
 				<ul class="a-propertyList">
-					<li class="a-propertyList__item">Free-to-play game</li>
+					<li class="a-propertyList__item"><!-- @echo PAGE_BRIEF_TYPE --></li>
 				</ul>
 			</div>
 			<div class="m-projectProperties">
 				<h2 class="m-projectProperties__header">Role</h2>
 				<ul class="a-propertyList">
-					<li class="a-propertyList__item">Senior UI Developer</li>
+					<li class="a-propertyList__item"><!-- @echo PAGE_BRIEF_ROLE --></li>
 				</ul>
 			</div>
 			<div class="m-projectProperties">
 				<h2 class="m-projectProperties__header">Stack</h2>
 				<ul class="a-propertyList">
-					<li class="a-propertyList__item">Amazon Lumberyard</li>
-					<li class="a-propertyList__item">Coherent UI</li>
+					<!-- @foreach $TECH in PAGE_BRIEF_STACK -->
+					<li class="a-propertyList__item">$TECH</li>
+					<!-- @endfor -->
 				</ul>
 			</div>
 		</div>
@@ -64,12 +65,6 @@
 							<tr>
 								<td>Platforms</td>
 								<td><!-- @echo PAGE_BRIEF_PLATFORMS --></td>
-							</tr>
-							<!-- @endif -->
-							<!-- @ifdef PAGE_BRIEF_TECHNOLOGIES -->
-							<tr>
-								<td>Technologies</td>
-								<td><!-- @echo PAGE_BRIEF_TECHNOLOGIES --></td>
 							</tr>
 							<!-- @endif -->
 						</table>

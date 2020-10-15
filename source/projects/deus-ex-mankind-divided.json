@@ -5,7 +5,10 @@
 		"released": "2016-08-23",
 		"employer": "nixxes",
 		"platforms": [ "steam", "windows" ],
-		"technologies": [ "g2", "scaleform", "c++", "as" ]
+		"technologies": [ "g2", "scaleform", "c++", "as" ],
+		"role": "Systems Programmer",
+		"type": "AAA video game",
+		"stack": [ "Dawn Engine", "Autodesk Scaleform", "ActionScript 3" ]
 	},
 	"trailer": {
 		"link": "yt://CfV01sTqB68",

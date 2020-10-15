@@ -45,6 +45,7 @@ module.exports = function(grunt) {
 				'PAGE_TITLE': entry.title,
 				'PAGE_DESCRIPTION': '',
 				'PAGE_CONTENT': '',
+				PAGE_BRIEF_STACK: []
 			};
 
 			// build text
@@ -114,6 +115,10 @@ module.exports = function(grunt) {
 					}
 				});
 			}
+
+			context['PAGE_BRIEF_TYPE'] = entry.brief.type || '';
+			context['PAGE_BRIEF_ROLE'] = entry.brief.role || '';
+			context['PAGE_BRIEF_STACK'] = (entry.brief.stack || []).toString();
 
 			// trailer
 
