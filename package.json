@@ -36,5 +36,8 @@
   },
   "engines": {
     "node": ">=2.7.4"
+  },
+  "dependencies": {
+    "sass-unused": "^0.5.0"
   }
 }

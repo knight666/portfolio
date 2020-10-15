@@ -1,11 +1,5 @@
 @use "sass:map";
 
-$text-size-xs: 12px;
-$text-size-s: 14px;
-$text-size-m: 18px;
-$text-size-l: 24px;
-$text-size-xl: 32px;
-
 $text-sizes: (
     "XS": 12px,
     "S": 14px,
@@ -20,12 +14,12 @@ $text-sizes: (
 
 @mixin text-paragraph($size) {
     font-family: 'PT Serif', serif;
-    font-size: map-get($text-sizes, $size);
+    @include text-size($size);
 }
 
 @mixin text-sans-serif($size) {
     font-family: 'PT Sans', sans-serif;
-    font-size: map-get($text-sizes, $size);
+    @include text-size($size);
 }
 
 @mixin text-header($size) {

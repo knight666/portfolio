@@ -51,6 +51,7 @@ module.exports = function(grunt) {
 		'env:' + grunt.config('TARGET'),
 		'clean:build',
 		'sass:portfolio',
+		'sass-unused',
 		'index',
 		'projects',
 		'ordering',
