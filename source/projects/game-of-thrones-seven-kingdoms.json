@@ -1,7 +1,7 @@
 {
 	"title": "Game of Thrones: Seven Kingdoms",
 	"brief": {
-		"description": "MMO",
+		"description": "Massive multiplayer online game with free-to-play business model, based on the GoT license.",
 		"employer": "bigpoint",
 		"platforms": [ "windows" ],
 		"technologies": [ "c++", "ly" ]
