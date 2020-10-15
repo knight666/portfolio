@@ -11,7 +11,7 @@ window.onload = function() {
 		{
 			target.onclick = function() {
 				var video = document.createElement("iframe");
-				video.class = "embed-responsive-item";
+				video.className = "m-trailer__item";
 				video.src = "https://www.youtube.com/embed/" + link.substring('yt://'.length) + "?rel=0&vq=highres&autoplay=1";
 				video.allowfullscreen = "";
 
@@ -23,7 +23,7 @@ window.onload = function() {
 		{
 			target.onclick = function() {
 				var video = document.createElement("iframe");
-				video.class = "embed-responsive-item";
+				video.className = "m-trailer__item";
 				video.src = "http://player.vimeo.com/video/" + link.substring('vimeo://'.length);
 				video.allowfullscreen = "";
 
