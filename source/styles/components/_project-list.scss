@@ -35,10 +35,8 @@
         }
 
         h2 {
+            @include text-header('M');
             width: 100%;
-            text-transform: uppercase;
-            font-size: $text-size-m;
-            letter-spacing: 0.1em;
             background: linear-gradient(90deg, #000000 0%, #000000 100%);
             color: white;
             padding: 12px;
@@ -58,7 +56,7 @@
 
         > .project-list__item {
             h2 {
-                font-size: $text-size-s;
+                @include text-size('S');
             }
         }
     }

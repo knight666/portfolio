@@ -1,12 +1,9 @@
 .a-breadcrumb {
-	font-family: 'Roboto', sans-serif;
-    font-size: $text-size-m;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-	color: $clr-highlight-300;
-	
-	&:hover,
-	&:focus {
-		color: $clr-highlight-100;
-	}
+    @include text-header('M');
+    color: $clr-highlight-300;
+    
+    &:hover,
+    &:focus {
+        color: $clr-highlight-100;
+    }
 }

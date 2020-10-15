@@ -1,12 +1,9 @@
 .download {
+    @include text-header('M');
     background: $clr-highlight-500;
     color: white;
-    font-family: 'Roboto', sans-serif;
-    font-size: $text-size-m;
     text-align: center;
     text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
     padding: 12px;
     border: none;
 
@@ -19,6 +16,6 @@
 
 @include size-small {
     .download {
-        font-size: $text-size-s;
+        @include text-size('S');
     }
 }

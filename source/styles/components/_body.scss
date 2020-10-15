@@ -1,6 +1,5 @@
 body {
+    @include text-paragraph('M');
     display: grid;
     grid-row-gap: $body-gap;
-    font-family: 'PT Sans', sans-serif;
-    font-size: $text-size-m;
 }

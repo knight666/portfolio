@@ -1,0 +1,35 @@
+@use "sass:map";
+
+$text-size-xs: 12px;
+$text-size-s: 14px;
+$text-size-m: 18px;
+$text-size-l: 24px;
+$text-size-xl: 32px;
+
+$text-sizes: (
+    "XS": 12px,
+    "S": 14px,
+    "M": 18px,
+    "L": 24px,
+    "XL": 32px
+);
+
+@mixin text-size($size) {
+    font-size: map-get($text-sizes, $size);
+}
+
+@mixin text-paragraph($size) {
+    font-family: 'PT Serif', serif;
+    font-size: map-get($text-sizes, $size);
+}
+
+@mixin text-sans-serif($size) {
+    font-family: 'PT Sans', sans-serif;
+    font-size: map-get($text-sizes, $size);
+}
+
+@mixin text-header($size) {
+    @include text-sans-serif($size);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}

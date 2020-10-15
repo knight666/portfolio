@@ -1,4 +1,5 @@
 .at-a-glance {
+    @include text-sans-serif('M');
     display: grid;
     grid-template-areas: 
         "table    table      table"
@@ -9,11 +10,11 @@
     border: 2px solid $clr-highlight-500;
 
     table {
+        @include text-size('M');
         grid-area: table;
         width: 100%;
         border-spacing: 0;
         border-collapse: collapse;
-        font-size: $text-size-m;
 
         tr {
             display: grid;
@@ -41,7 +42,7 @@
         margin: 0;
 
         table {
-            font-size: $text-size-s;
+            @include text-size('S');
         }
     }
 }

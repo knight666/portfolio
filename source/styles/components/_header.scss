@@ -29,8 +29,8 @@
     }
 
     &__intro {
+        @include text-sans-serif('XL');
         grid-area: title;
-        font-size: $text-size-xl;
 
         // undoing bootstrap!
         p {
@@ -59,7 +59,7 @@
         }
     
         &__intro {
-            font-size: $text-size-l;
+            @include text-size('L');
         }
     }
 }
@@ -80,7 +80,7 @@
         }
 
         &__intro {
-            font-size: $text-size-l;
+            @include text-size('L');
         }
     }
 }
@@ -92,7 +92,7 @@
             padding: 12px 24vw;
 
             &__intro {
-                font-size: 28px;
+                font-size: 28px; // HACK!
             }
         }
     }

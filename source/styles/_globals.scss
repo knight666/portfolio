@@ -1,3 +1,5 @@
+@import "tools/text-sizes.scss";
+
 $clr-highlight-100: hsl(248, 50, 95%);
 $clr-highlight-300: hsl(248, 50, 75%);
 $clr-highlight-500: hsl(248, 50, 55%);
@@ -5,12 +7,6 @@ $clr-highlight-700: hsl(248, 50, 35%);
 $clr-highlight-900: hsl(248, 50, 15%);
 
 $body-gap: 55px;
-
-$text-size-xs: 12px;
-$text-size-s: 14px;
-$text-size-m: 18px;
-$text-size-l: 24px;
-$text-size-xl: 32px;
 
 $media-width-small: 560px;
 $media-width-medium: 960px;
@@ -41,10 +37,7 @@ $media-width-large: 1920px;
 }
 
 h1 {
-    font-family: 'Roboto', sans-serif;
-    font-size: $text-size-xl;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    @include text-header("XL");
     text-align: center;
     color: $clr-highlight-500;
     margin: 0;
@@ -52,6 +45,6 @@ h1 {
 
 @include size-small {
     h1 {
-        font-size: $text-size-l;
+        @include text-size("L");
     }
 }
