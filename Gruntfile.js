@@ -50,14 +50,15 @@ module.exports = function(grunt) {
 	var defaultTasks = [
 		'env:' + grunt.config('TARGET'),
 		'clean:build',
-		'sass:portfolio',
 		'sass-unused',
+		'sass:portfolio',
 		'index',
 		'projects',
 		'ordering',
 		'copy:bootstrap',
 		'copy:scripts',
 		'copy:media',
+		'uncss:portfolio',
 	];
 
 	// deploy to server
