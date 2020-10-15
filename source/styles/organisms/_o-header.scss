@@ -9,15 +9,14 @@
     align-items: center;
     background: $clr-highlight-500;
     color: white;
-    padding: 12px 24vw;
 
     &.-main {
         min-height: 240px;
+        padding: 12px 24vw;
     }
 
     &.-project {
-        padding-left: 12vw;
-        padding-right: 12vw;
+        padding: 12px 12vw;
     }
 
     &__headshot {
@@ -57,6 +56,12 @@
             min-height: auto;
             padding: 12px 0;
         }
+
+        &.-project {
+            display: flex;
+            flex-direction: column;
+            padding: 12px;
+        }
     
         &__intro {
             @include text-size('L');
@@ -76,7 +81,6 @@
             justify-items: center;
             min-height: auto;
             padding: 12px 0;
-    
         }
 
         &__intro {
