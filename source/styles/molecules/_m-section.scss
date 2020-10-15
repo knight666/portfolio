@@ -1,0 +1,20 @@
+.m-section {
+    display: block;
+    padding: 0 24vw;
+    
+    &__centered {
+        padding: 0 6vw;
+    }
+}
+
+@include size-small {
+    .m-section {
+        padding: 0 12px;
+    }
+}
+
+@include size-medium {
+    .m-section {
+        padding: 0 12vw;
+    }
+}

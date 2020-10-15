@@ -1,9 +1,10 @@
 .a-paragraph {
-	@include text-paragraph('M');
+    @include text-paragraph('M');
+    max-width: 70ch;
 }
 
 @include size-small {
-	.a-paragraph {
-		@include text-size('S');
-	}
+    .a-paragraph {
+        @include text-size('S');
+    }
 }
