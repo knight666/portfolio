@@ -1,11 +1,11 @@
 .o-projectIntro {
-	display: grid;
-	grid-row-gap: $body-gap;
+    display: grid;
+    grid-row-gap: $body-gap;
 
-	&__properties {
-		display: grid;
-		flex-direction: row;
-		grid-template-columns: repeat(3, 1fr);
-		grid-column-gap: 12px;
-	}
+    &__properties {
+        display: grid;
+        flex-direction: row;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 12px;
+    }
 }

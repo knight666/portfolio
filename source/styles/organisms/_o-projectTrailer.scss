@@ -1,0 +1,9 @@
+.o-projectTrailer {
+    padding: 0 12vw;
+}
+
+@include size-small {
+	.o-projectTrailer {
+		padding: 0 12px;
+	}
+}
