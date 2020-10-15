@@ -1,5 +1,6 @@
 .m-section {
-    display: block;
+    display: flex;
+    flex-direction: column;
     padding: 0 24vw;
     
     &__centered {

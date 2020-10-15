@@ -7,9 +7,11 @@
 @import "atoms/breadcrumb.scss";
 @import "atoms/headshot.scss";
 
+@import "molecules/m-glanceTable.scss";
 @import "molecules/m-project.scss";
 @import "molecules/m-section.scss";
 
+@import "organisms/o-glance.scss";
 @import "organisms/o-header.scss";
 @import "organisms/o-projects.scss";
 
@@ -19,9 +21,6 @@
 
 @import "components/breadcrumbs.scss";
 @import "components/about-me.scss";
-@import "components/at-a-glance.scss";
-@import "components/intro.scss";
-@import "components/project-list.scss";
 @import "components/social.scss";
 
 .panel-profile {
