@@ -1,0 +1,14 @@
+.a-projectImage {
+	position: relative;
+	overflow: hidden;
+	height: 0;
+	background: url('../media/previews/got.jpg') center no-repeat;
+	padding-top: 315px / 560px * 100%;
+	border-radius: 4px;
+	background-size: 100%;
+	transition: background-size 0.4s;
+
+	&:hover {
+		background-size: 120%;
+	}
+}

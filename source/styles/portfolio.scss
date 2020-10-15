@@ -1,7 +1,14 @@
 @import "globals.scss";
 
+@import "atoms/a-paragraph.scss";
+@import "atoms/a-projectHeader.scss";
+@import "atoms/a-projectImage.scss";
 @import "atoms/breadcrumb.scss";
 @import "atoms/headshot.scss";
+
+@import "molecules/m-project.scss";
+
+@import "organisms/o-projects.scss";
 
 @import "components/body.scss";
 @import "components/header.scss";

@@ -107,7 +107,6 @@ module.exports = function(grunt) {
 			return left.brief.released < right.brief.released;
 		})
 
-		context['PROJECT_LIST'] = '<h2>Projects</h2>\n';
 		context['PROJECT_LIST'] += grunt.project_utils.compileProjectList(grunt, sorted_date, { 'description': false });
 
 		grunt.project_utils.compileTemplate(grunt, 'ordering', context, 'projects-by-date');
@@ -136,7 +135,6 @@ module.exports = function(grunt) {
 			});
 			var properties = grunt.project_utils.getEmployer(name);
 
-			context['PROJECT_LIST'] += '<h2 id="' + name + '">' + properties.name + '</h2>\n';
 			context['PROJECT_LIST'] += grunt.project_utils.compileProjectList(grunt, employer, { 'description': false });
 		});
 
@@ -160,7 +158,6 @@ module.exports = function(grunt) {
 			});
 			var properties = grunt.project_utils.getPlatform(name);
 
-			context['PROJECT_LIST'] += '<h2 id="' + name + '">' + properties.name + '</h2>\n';
 			context['PROJECT_LIST'] += grunt.project_utils.compileProjectList(grunt, platform, { 'description': false });
 		});
 
@@ -184,7 +181,6 @@ module.exports = function(grunt) {
 			});
 			var properties = grunt.project_utils.getTechnology(name);
 
-			context['PROJECT_LIST'] += '<h2 id="' + name + '">' + properties.name + '</h2>\n';
 			context['PROJECT_LIST'] += grunt.project_utils.compileProjectList(grunt, technology, { 'description': false });
 		});
 

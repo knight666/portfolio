@@ -1,40 +1,32 @@
+const pp = require('preprocess');
+
 module.exports = function(grunt, list, options) {
 	var description = options.description;
 	var featured = options.featured || false;
 
-	var result = '<ul class="project-list">\n';
+	var result = '';
 
-	list.forEach(function(project) {
+	const loaded = grunt.file.read(grunt.template.process('<%= TEMPLATES_PATH %>/project-item.html'));
+
+	const processOptions = {
+		srcDir: grunt.template.process('<%= TEMPLATES_PATH %>/')
+	};
+
+	list.forEach((project) => {
 		if (!project.hidden)
 		{
-			var style = '';
+			let context = {
+				FILENAME: project.filename,
+				TITLE: project.title,
+				DESCRIPTION: project.brief.description,
+				PREVIEW: project.trailer.image
+			};
 
-			if (project.trailer.image)
-			{
-				style = ' style="background-image: url(\'./media/previews/' + project.trailer.image + '\');';
-
-				if (!featured)
-				{
-					style += ' background-size: 100%;';
-				}
-
-				style += '"';
-			}
-
-			result +=
-				'<li class="project-list__item"' + style + '>' +
-					'<a href="projects/' + project.filename + '">' +
-						'<h2>' +
-							project.title +
-						'</h2>';
-
-			result +=
-					'</a>' +
-				'</li>\n';
+			result += pp.preprocess(loaded, context, processOptions);
 		}
 	});
 
-	result += '</ul>\n';
+	result += '\n';
 
 	return result;
 }
