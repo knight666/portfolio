@@ -1,12 +1,13 @@
 @import "globals.scss";
 
+@import "atoms/a-breadcrumb.scss";
 @import "atoms/a-button.scss";
 @import "atoms/a-paragraph.scss";
 @import "atoms/a-projectHeader.scss";
 @import "atoms/a-projectImage.scss";
-@import "atoms/breadcrumb.scss";
 @import "atoms/headshot.scss";
 
+@import "molecules/m-breadcrumbs.scss";
 @import "molecules/m-glanceTable.scss";
 @import "molecules/m-project.scss";
 @import "molecules/m-section.scss";
@@ -16,11 +17,7 @@
 @import "organisms/o-projects.scss";
 
 @import "components/body.scss";
-@import "components/section.scss";
 @import "components/footer.scss";
-
-@import "components/breadcrumbs.scss";
-@import "components/social.scss";
 
 .panel-profile {
 	margin-top: 20px;

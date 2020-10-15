@@ -1,4 +1,4 @@
-.o-breadcrumbs {
+.m-breadcrumbs {
     display: grid;
     grid-template-columns: repeat(4, min-content);
     grid-column-gap: 12px;
@@ -6,7 +6,7 @@
     padding: 0;
     margin: 0;
 
-    > li {
+    &__item {
         color: $clr-highlight-300;
     }
 }
