@@ -2,6 +2,7 @@
 
 @import "atoms/a-breadcrumb.scss";
 @import "atoms/a-button.scss";
+@import "atoms/a-email.scss";
 @import "atoms/a-headerText.scss";
 @import "atoms/a-projectHeader.scss";
 @import "atoms/a-projectImage.scss";
@@ -9,6 +10,7 @@
 @import "atoms/headshot.scss";
 
 @import "molecules/m-breadcrumbs.scss";
+@import "molecules/m-footer.scss";
 @import "molecules/m-glanceTable.scss";
 @import "molecules/m-project.scss";
 @import "molecules/m-projectProperties.scss";
@@ -21,7 +23,6 @@
 @import "organisms/o-projectTrailer.scss";
 @import "organisms/o-projects.scss";
 
-@import "components/body.scss";
 @import "components/footer.scss";
 @import "components/social.scss";
 
