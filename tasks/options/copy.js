@@ -5,15 +5,6 @@ module.exports = {
 		src: '**/*.*',
 		dest: '<%= OUTPUT_PATH %>/<%= MEDIA_PATH %>/'
 	},
-	bootstrap: {
-		expand: true,
-		cwd: 'node_modules/bootstrap/dist/',
-		src: [
-			'css/*.min.css',
-			'fonts/*.*',
-		],
-		dest: '<%= OUTPUT_PATH %>/'
-	},
 	styles: {
 		expand: true,
 		cwd: '<%= SOURCE_PATH %>/styles/',

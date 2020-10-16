@@ -1,6 +1,7 @@
 .a-breadcrumb {
     @include text-header('M');
     color: $clr-highlight-300;
+    text-decoration: none;
     
     &:hover,
     &:focus {
