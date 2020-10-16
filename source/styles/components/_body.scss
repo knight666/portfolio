@@ -1,5 +1,0 @@
-body {
-    @include text-paragraph('M');
-    display: grid;
-    grid-row-gap: $body-gap;
-}

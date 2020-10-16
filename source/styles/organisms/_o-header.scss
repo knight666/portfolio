@@ -28,18 +28,7 @@
     }
 
     &__intro {
-        @include text-sans-serif('XL');
         grid-area: title;
-
-        // undoing bootstrap!
-        p {
-            margin: 0;
-            line-height: initial;
-        }
-
-        .bold {
-            font-weight: bold;
-        }
     }
 }
 
@@ -62,10 +51,6 @@
             flex-direction: column;
             padding: 12px;
         }
-    
-        &__intro {
-            @include text-size('L');
-        }
     }
 }
 
@@ -82,10 +67,6 @@
             min-height: auto;
             padding: 12px 0;
         }
-
-        &__intro {
-            @include text-size('L');
-        }
     }
 }
 
@@ -94,10 +75,6 @@
         &.-main {
             min-height: auto;
             padding: 12px 24vw;
-
-            &__intro {
-                font-size: 28px; // HACK!
-            }
         }
     }
 }

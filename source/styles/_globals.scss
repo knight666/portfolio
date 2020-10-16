@@ -35,16 +35,3 @@ $media-width-large: 1920px;
         @content;
     }
 }
-
-h1 {
-    @include text-header("XL");
-    text-align: center;
-    color: $clr-highlight-500;
-    margin: 0;
-}
-
-@include size-small {
-    h1 {
-        @include text-size("L");
-    }
-}
