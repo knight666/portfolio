@@ -1,0 +1,26 @@
+.o-homeHeader {
+    min-height: 240px;
+    padding: 12px 24vw;
+}
+
+@include size-small {
+    .o-homeHeader {
+        min-height: auto;
+        padding: 12px;
+        grid-row-gap: 0;
+    }
+}
+
+@include size-medium {
+    .o-homeHeader {
+        min-height: auto;
+        padding: 12px 12vw;
+    }
+}
+
+@include size-large {
+    .o-homeHeader {
+        min-height: auto;
+        padding: 12px 24vw;
+    }
+}

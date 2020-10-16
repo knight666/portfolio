@@ -12,13 +12,14 @@
 @import "molecules/m-breadcrumbs.scss";
 @import "molecules/m-footer.scss";
 @import "molecules/m-glanceTable.scss";
+@import "molecules/m-header.scss";
 @import "molecules/m-project.scss";
 @import "molecules/m-projectProperties.scss";
 @import "molecules/m-section.scss";
 @import "molecules/m-trailer.scss";
 
 @import "organisms/o-glance.scss";
-@import "organisms/o-header.scss";
+@import "organisms/o-homeHeader.scss";
 @import "organisms/o-projectIntro.scss";
 @import "organisms/o-projectTrailer.scss";
 @import "organisms/o-projects.scss";
