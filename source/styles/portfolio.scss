@@ -4,10 +4,11 @@
 @import "atoms/a-button.scss";
 @import "atoms/a-email.scss";
 @import "atoms/a-headerText.scss";
+@import "atoms/a-headshot.scss";
 @import "atoms/a-projectHeader.scss";
 @import "atoms/a-projectImage.scss";
 @import "atoms/a-propertyList.scss";
-@import "atoms/headshot.scss";
+@import "atoms/a-socialItem.scss";
 
 @import "molecules/m-breadcrumbs.scss";
 @import "molecules/m-footer.scss";
@@ -16,6 +17,7 @@
 @import "molecules/m-project.scss";
 @import "molecules/m-projectProperties.scss";
 @import "molecules/m-section.scss";
+@import "molecules/m-socialList.scss";
 @import "molecules/m-trailer.scss";
 
 @import "organisms/o-glance.scss";
@@ -23,9 +25,6 @@
 @import "organisms/o-projectIntro.scss";
 @import "organisms/o-projectTrailer.scss";
 @import "organisms/o-projects.scss";
-
-@import "components/footer.scss";
-@import "components/social.scss";
 
 /* Body */
 

@@ -1,0 +1,26 @@
+.a-socialItem {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-color: $clr-highlight-700;
+    background-image: url("../media/images/social.png");
+    background-repeat: no-repeat;
+    border-radius: 16px;
+    background-clip: padding-box;
+    
+    &--twitter {
+        background-position: -32px 0;
+
+        &:hover {
+            background-color: #5ec3df;
+        }
+    }
+
+    &--linkedin {
+        background-position: -192px 0;
+
+        &:hover {
+            background-color: #2089b5;
+        }
+    }
+}
