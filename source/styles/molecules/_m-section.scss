@@ -26,19 +26,27 @@
     }
 
     &__centered {
-        padding: 0 6vw;
+        padding: 0 12px;
     }
 }
 
 @include size-small {
     .m-section {
         padding: 0 12px;
+
+        &__centered {
+            padding: 0;
+        }
     }
 }
 
 @include size-medium {
     .m-section {
         padding: 0 12vw;
+
+        &__centered {
+            padding: 0;
+        }
     }
 }
 
