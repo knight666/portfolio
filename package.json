@@ -32,7 +32,7 @@
     "popper.js": ">=1.16.1",
     "preprocess": ">=3.2.0",
     "requirejs": ">=2.3.6",
-    "sanitize-html": ">=2.1.0"
+    "sanitize-html": ">=2.3.2"
   },
   "engines": {
     "node": ">=2.7.4"
