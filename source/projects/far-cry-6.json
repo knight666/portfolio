@@ -1,0 +1,18 @@
+{
+	"title": "Far Cry 6",
+	"brief": {
+		"description": "Fight a tyrannical dictator with improvised weapons in this open-world first person shooter.",
+		"released": "2021-10-06",
+		"employer": "ubisoft",
+		"platforms": [ "uplay", "windows", "xbone", "xbonex", "ps4", "ps5" ],
+		"technologies": [ "c++" ],
+		"role": "UI Programmer",
+		"type": "AAA video game",
+		"stack": [ "Dawn Engine", "Autodesk Scaleform", "ActionScript 3" ]
+	},
+	"trailer": {
+		"link": "yt://CfV01sTqB68",
+		"image": "far-cry-6.jpg"
+	},
+	"source": "far-cry-6.md"
+}

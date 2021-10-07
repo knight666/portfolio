@@ -1,35 +1,46 @@
 module.exports = function(name) {
-	var properties = {
-		'steam': {
-			'name': 'Steam',
+	const platforms = {
+		steam: {
+			name: 'Steam',
 		},
-		'xbone': {
-			'name': 'Xbox One',
+		uplay: {
+			name: 'Ubisoft Connect',
 		},
-		'ps4': {
-			'name': 'PlayStation 4',
+		xbone: {
+			name: 'Xbox One',
 		},
-		'windows': {
-			'name': 'Windows',
+		xbonex: {
+			name: 'Xbox Series X|S',
 		},
-		'linux': {
-			'name': 'Linux',
+		ps4: {
+			name: 'PlayStation 4',
 		},
-		'mac': {
-			'name': 'Mac OS X',
+		ps4: {
+			name: 'PlayStation 5',
 		},
-		'web': {
-			'name': 'Website'
+		stadia: {
+			name: 'Stadia',
 		},
-		'uwp': {
-			'name': 'Universal Windows Platform'
+		windows: {
+			name: 'Windows',
+		},
+		linux: {
+			name: 'Linux',
+		},
+		mac: {
+			name: 'Mac OS X',
+		},
+		web: {
+			name: 'Website'
+		},
+		uwp: {
+			name: 'Universal Windows Platform'
 		},
 	}
 
-	if (!properties[name])
-	{
+	if (!platforms[name]) {
 		console.error('Failed to find platform with identifier "' + name + '".');
 	}
 
-	return properties[name];
+	return platforms[name];
 }

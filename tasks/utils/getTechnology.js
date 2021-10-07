@@ -68,8 +68,7 @@ module.exports = function(name) {
 		}
 	}
 
-	if (!properties[name])
-	{
+	if (!properties[name]) {
 		console.log('Failed to find technology with identifier "' + name + '".');
 	}
 
