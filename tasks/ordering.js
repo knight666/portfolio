@@ -13,8 +13,7 @@ module.exports = function(grunt) {
 			entry.brief.employer = entry.brief.employer || [];
 			entry.brief.technologies = entry.brief.technologies || [];
 
-			if (!entry.hidden)
-			{
+			if (!entry.hidden) {
 				by_date.push(entry);
 
 				if (entry.employer != '')
@@ -103,11 +102,15 @@ module.exports = function(grunt) {
 		context['SUBTITLE'] = 'Ordered by date';
 		context['NAVIGATION'] = writeNavigation('date');
 
-		var sorted_date = by_date.sort(function(left, right) {
-			return left.brief.released < right.brief.released;
-		})
+		const sortedByDate = by_date.sort((left, right) => {
+			releaseLeft = Date.parse(left.brief.released);
+			releaseRight = Date.parse(right.brief.released);
+			return releaseLeft > releaseRight ? -1 : 0;
+		});
 
-		context['PROJECT_LIST'] += grunt.project_utils.compileProjectList(grunt, sorted_date, { 'description': false });
+		console.log(sortedByDate);
+
+		context['PROJECT_LIST'] += grunt.project_utils.compileProjectList(grunt, sortedByDate, { 'description': false });
 
 		grunt.project_utils.compileTemplate(grunt, 'ordering', context, 'projects-by-date');
 
@@ -119,7 +122,7 @@ module.exports = function(grunt) {
 		context['NAVIGATION'] = writeNavigation('employer');
 		context['PROJECT_LIST'] = '';
 
-		var sorted_employer = Object.keys(by_employer).sort(function(left, right) {
+		var sortedByEmployer = Object.keys(by_employer).sort(function(left, right) {
 			var propsLeft = grunt.project_utils.getEmployer(left);
 			var startLeft = Date.parse(propsLeft['service-start']);
 
@@ -129,7 +132,7 @@ module.exports = function(grunt) {
 			return startLeft < startRight;
 		});
 
-		sorted_employer.forEach(function(name) {
+		sortedByEmployer.forEach(function(name) {
 			var employer = by_employer[name].sort(function(left, right) {
 				return left.brief.released < right.brief.released;
 			});

@@ -1,10 +1,7 @@
 const pp = require('preprocess');
 
 module.exports = function(grunt, list, options) {
-	var description = options.description;
-	var featured = options.featured || false;
-
-	var result = '';
+	let result = '';
 
 	const loaded = grunt.file.read(grunt.template.process('<%= TEMPLATES_PATH %>/project-item.html'));
 
@@ -13,8 +10,7 @@ module.exports = function(grunt, list, options) {
 	};
 
 	list.forEach((project) => {
-		if (!project.hidden)
-		{
+		if (!project.hidden) {
 			let context = {
 				FILENAME: project.filename,
 				TITLE: project.title,
