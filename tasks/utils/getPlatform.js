@@ -15,7 +15,7 @@ module.exports = function(name) {
 		ps4: {
 			name: 'PlayStation 4',
 		},
-		ps4: {
+		ps5: {
 			name: 'PlayStation 5',
 		},
 		stadia: {

@@ -50,7 +50,7 @@ module.exports = function(grunt) {
 	var defaultTasks = [
 		'env:' + grunt.config('TARGET'),
 		'clean:build',
-		'sass-unused',
+		// 'sass-unused',
 		'sass:portfolio',
 		'index',
 		'projects',
@@ -61,15 +61,13 @@ module.exports = function(grunt) {
 
 	// ship it
 
-	if (grunt.option('build'))
-	{
+	if (grunt.option('build')) {
 		defaultTasks.push('uncss:portfolio');
 	}
 
 	// deploy to server
 
-	if (grunt.option('deploy'))
-	{
+	if (grunt.option('deploy')) {
 		defaultTasks.push('ftp-deploy:build');
 	}
 

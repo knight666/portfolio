@@ -6,38 +6,35 @@
     "type": "git",
     "url": "https://github.com/knight666/portfolio/"
   },
-  "devDependencies": {
-    "glob": ">=7.1.6",
-    "grunt": ">=1.3.0",
-    "grunt-build-number": ">=1.0.0",
-    "grunt-contrib-clean": ">=2.0.0",
-    "grunt-contrib-concat": ">=1.0.1",
-    "grunt-contrib-copy": ">=1.0.0",
-    "grunt-contrib-requirejs": ">=1.0.0",
-    "grunt-contrib-uglify": ">=5.0.0",
-    "grunt-env": ">=1.0.1",
-    "grunt-ftp-deploy": ">=0.2.0",
-    "grunt-imagemagick": ">=0.1.5",
-    "grunt-marked": ">=0.1.3",
-    "grunt-open": ">=0.2.4",
-    "grunt-preprocess": ">=5.1.0",
-    "grunt-sass": "^3.1.0",
-    "grunt-uncss": "^0.9.1",
-    "imagemagick": ">=0.1.3",
-    "jquery": ">=3.5.0",
-    "marked": ">=2.0.0",
-    "matchdep": ">=2.0.0",
-    "node-imagemagick": ">=0.1.8",
-    "node-sass": "^4.14.1",
-    "popper.js": ">=1.16.1",
-    "preprocess": ">=3.2.0",
-    "requirejs": ">=2.3.6",
-    "sanitize-html": ">=2.3.2"
-  },
-  "engines": {
-    "node": ">=2.7.4"
-  },
   "dependencies": {
     "sass-unused": "^0.5.0"
+  },
+  "devDependencies": {
+    "glob": "^7.2.0",
+    "grunt": "^1.4.1",
+    "grunt-build-number": "^1.0.0",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-requirejs": "^1.0.0",
+    "grunt-contrib-uglify": "^5.0.1",
+    "grunt-env": "^1.0.1",
+    "grunt-ftp-deploy": "^0.2.0",
+    "grunt-imagemagick": "^0.1.5",
+    "grunt-marked": "^0.1.3",
+    "grunt-open": "^0.2.4",
+    "grunt-preprocess": "^5.1.0",
+    "grunt-sass": "^3.1.0",
+    "grunt-uncss": "^0.10.1",
+    "marked": "^3.0.6",
+    "matchdep": "^2.0.0",
+    "node-imagemagick": "^0.1.8",
+    "node-sass": "^6.0.1",
+    "preprocess": "^3.2.0",
+    "requirejs": "^2.3.6",
+    "sanitize-html": "^2.5.1"
+  },
+  "engines": {
+    "npm": ">=7.20.5"
   }
 }
