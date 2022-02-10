@@ -29,7 +29,7 @@
     "marked": "^3.0.6",
     "matchdep": "^2.0.0",
     "node-imagemagick": "^0.1.8",
-    "node-sass": "^6.0.1",
+    "node-sass": "^7.0.0",
     "preprocess": "^3.2.0",
     "requirejs": "^2.3.6",
     "sanitize-html": "^2.5.1"
