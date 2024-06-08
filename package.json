@@ -7,6 +7,7 @@
     "url": "https://github.com/knight666/portfolio/"
   },
   "dependencies": {
+    "sass": "^1.77.4",
     "sass-unused": "^0.5.0"
   },
   "devDependencies": {
@@ -29,7 +30,6 @@
     "marked": "^3.0.6",
     "matchdep": "^2.0.0",
     "node-imagemagick": "^0.1.8",
-    "node-sass": "^7.0.0",
     "preprocess": "^3.2.0",
     "requirejs": "^2.3.6",
     "sanitize-html": "^2.5.1"
