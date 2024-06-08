@@ -108,8 +108,6 @@ module.exports = function(grunt) {
 			return releaseLeft > releaseRight ? -1 : 0;
 		});
 
-		console.log(sortedByDate);
-
 		context['PROJECT_LIST'] += grunt.project_utils.compileProjectList(grunt, sortedByDate, { 'description': false });
 
 		grunt.project_utils.compileTemplate(grunt, 'ordering', context, 'projects-by-date');
