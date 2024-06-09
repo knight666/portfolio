@@ -5,6 +5,7 @@
 	import Project from "./widgets/organisms/Project.svelte";
 
 	import intro from '../intro.md?raw';
+	import index from '../index.json';
 </script>
 
 <HomeHeader></HomeHeader>
@@ -16,9 +17,13 @@
 <AtAGlance></AtAGlance>
 
 <h1>Projects</h1>
-<Project
-	fileName="far-cry-6"
-></Project>
+<div class="project-list">
+	{#each index.featured as p}
+	<Project
+		fileName={p}
+	></Project>
+	{/each}
+</div>
 
 <style lang="scss">
 	@import 'styles/globals';
@@ -85,6 +90,19 @@
 		:global(p) {
 			@include text-size('S');
 		}
+	}
+
+	// Projects
+
+	.project-list {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 120px 60px;
+		box-sizing: border-box;
+		list-style: none;
+		width: 100%;
+		padding: 0 6vw;
+		margin: 0 0 120px 0;
 	}
 
 	/* Thumbnails */
