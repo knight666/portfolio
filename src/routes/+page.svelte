@@ -2,9 +2,9 @@
 	import Section from "./widgets/molecules/Section.svelte";
 	import AtAGlance from "./widgets/organisms/AtAGlance.svelte";
 	import HomeHeader from "./widgets/organisms/HomeHeader.svelte";
+	import Project from "./widgets/organisms/Project.svelte";
 
 	import intro from '../intro.md?raw';
-	import project from '../projects/far-cry-6.json';
 </script>
 
 <HomeHeader></HomeHeader>
@@ -16,7 +16,9 @@
 <AtAGlance></AtAGlance>
 
 <h1>Projects</h1>
-<h2>{project.title}</h2>
+<Project
+	fileName="far-cry-6"
+></Project>
 
 <style lang="scss">
 	@import 'styles/globals';
