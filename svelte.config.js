@@ -19,7 +19,7 @@ const config = {
 			strict: true,
 		}),
 		alias: {
-			$styles: 'src/styles',
+			$styles: 'src/routes/styles',
 		},
 	},
 };

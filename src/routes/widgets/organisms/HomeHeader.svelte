@@ -11,7 +11,7 @@
 </header>
 
 <style lang="scss">
-	@import '../../styles/globals';
+	@import '$styles/globals';
 
 	.o-homeHeader {
 		display: grid;
