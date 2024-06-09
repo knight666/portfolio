@@ -1,0 +1,31 @@
+@use 'sass:list';
+
+$font-family-settings: (
+	('BoldItalic', italic, 700),
+	('Bold', normal, 700),
+	('Italic', italic, 400),
+	('Regular', normal, 400)
+);
+
+@for $i from 1 through list.length($font-family-settings) {
+	$settings: list.nth($font-family-settings, $i);
+	$file: list.nth($settings, 1);
+	$style: list.nth($settings, 2);
+	$weight: list.nth($settings, 3);
+
+	@font-face {
+		font-family: 'PT Serif';
+		src: url('../fonts/PT_Serif/PTSerif-#{$file}.ttf') format('truetype');
+		font-display: swap;
+		font-style: $style;
+		font-weight: $weight;
+	}
+
+	@font-face {
+		font-family: 'PT Serif';
+		src: url('../fonts/PT_Sans/PTSans-#{$file}.ttf') format('truetype');
+		font-display: swap;
+		font-style: $style;
+		font-weight: $weight;
+	}
+}
