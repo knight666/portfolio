@@ -1,8 +1,12 @@
 <script lang="ts">
+	import AtAGlance from "./widgets/organisms/AtAGlance.svelte";
 	import HomeHeader from "./widgets/organisms/HomeHeader.svelte";
 </script>
 
 <HomeHeader></HomeHeader>
+
+<h1>At a glance</h1>
+<AtAGlance></AtAGlance>
 
 
 <style lang="scss">
