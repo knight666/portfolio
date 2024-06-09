@@ -1,4 +1,6 @@
 <script lang="ts">
+	import SvelteMarkdown from "svelte-markdown";
+
 	export let content = '';
 
 	let className = '';
@@ -8,7 +10,9 @@
 <section
 	class={['m-section', className].join(' ')}
 >
-	{content}
+	<SvelteMarkdown
+		source={content}
+	></SvelteMarkdown>
 </section>
 
 <style lang="scss">
@@ -18,9 +22,9 @@
 		display: flex;
 		flex-direction: column;
 		padding: 0 24vw;
+	}
 
-		> p {
-			padding: 0 12px;
-		}
+	:global(.m-section p) {
+		padding: 0 12px;
 	}
 </style>
