@@ -2,10 +2,9 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"type": "grunt",
-			"task": "default",
-			"problemMatcher": [],
-			"label": "grunt: default",
+			"label": "Svelte: Open",
+			"type": "shell",
+			"command": "npm run dev -- --open",
 			"group": {
 				"kind": "build",
 				"isDefault": true
