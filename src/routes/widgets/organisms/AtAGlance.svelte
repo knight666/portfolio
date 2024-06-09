@@ -1,4 +1,5 @@
 <script lang="ts">
+	import LinkButton from '../atoms/LinkButton.svelte';
 </script>
 
 <section class="o-glance">
@@ -30,9 +31,11 @@
 			</tr>
 		</tbody>
 	</table>
-	<a href="media/CV_Quinten_Lansu_2024.pdf" class="o-glance__download">
-		Download my CV
-	</a>
+	<LinkButton
+		class="o-glance__download"
+		url="media/CV_Quinten_Lansu_2024.pdf"
+		text="Download my CV"
+	></LinkButton>
 </section>
 
 <style lang="scss">
