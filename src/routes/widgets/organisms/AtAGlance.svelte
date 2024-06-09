@@ -75,10 +75,10 @@
 				}
 			}
 		}
+	}
 
-		&__download {
-			grid-area: download;
-		}
+	:global(.o-glance__download) {
+		grid-area: download;
 	}
 
 	@include size-small {
