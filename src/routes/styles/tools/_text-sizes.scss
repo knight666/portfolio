@@ -2,11 +2,11 @@
 @use 'sass:string';
 
 $text-sizes: (
-	"XS": 12px,
-	"S": 14px,
-	"M": 18px,
-	"L": 24px,
-	"XL": 32px
+	'xs': 12px,
+	's': 14px,
+	'm': 18px,
+	'l': 24px,
+	'xl': 32px
 );
 
 @mixin text-size($size) {
