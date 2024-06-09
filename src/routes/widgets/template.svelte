@@ -1,7 +1,11 @@
 <script lang="ts">
+	let className = '';
+	export { className as class };
 </script>
 
-<section></section>
+<section
+	class={['a-button', className].join(' ')}
+></section>
 
 <style lang="scss">
 	@import '$styles/globals';
