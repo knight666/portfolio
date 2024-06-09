@@ -1,14 +1,58 @@
 {
 	"version": "2.0.0",
+	// shared
+
+	"presentation": {
+		"reveal": "always",
+		"panel": "dedicated",
+		"clear": false,
+	},
+
+	// tasks
+
 	"tasks": [
+		// building
+
 		{
-			"label": "Svelte: Open",
+			"label": "Vite: Dev Server",
 			"type": "shell",
-			"command": "npm run dev -- --open",
+			"command": "npx",
+			"args": [
+				"vite",
+				"dev",
+				"--",
+				"--open"
+			],
 			"group": {
 				"kind": "build",
-				"isDefault": true
-			}
-		}
+				"isDefault": true,
+			},
+		},
+		{
+			"label": "Vite: Build",
+			"type": "shell",
+			"command": "npx",
+			"args": [
+				"vite",
+				"build",
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true,
+			},
+		},
+		{
+			"label": "Vite: Preview",
+			"type": "shell",
+			"command": "npx",
+			"args": [
+				"vite",
+				"preview",
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true,
+			},
+		},
 	]
 }
