@@ -29,7 +29,7 @@
 	@import 'styles/globals';
 	@import 'styles/tools/fonts';
 
-	/* Body */
+	// Body
 
 	:global(body) {
 		@include text-paragraph('M');
@@ -45,7 +45,7 @@
 		margin: 0;
 	}
 
-	/* Headings */
+	// Headings
 
 	:global(h1) {
 		@include text-header('XL');
@@ -76,7 +76,7 @@
 		}
 	}
 
-	/* Paragraph */
+	// Paragraph
 
 	:global(p) {
 		@include text-paragraph('M');
@@ -103,108 +103,5 @@
 		width: 100%;
 		padding: 0 6vw;
 		margin: 0 0 120px 0;
-	}
-
-	/* Thumbnails */
-
-	.thumbnail-box-sm {
-		display: block;
-		width: 100%;
-		text-align: center;
-	}
-
-	.thumbnail-sm {
-		margin: 0px auto;
-	}
-
-	.thumbnail-sm > img {
-		width: 100%;
-		max-height: 100%;
-	}
-
-	@media (min-width: 512px) {
-		.thumbnail-box-md {
-			display: inline;
-			max-width: 240px;
-			padding: 0px;
-		}
-		.thumbnail-box-left {
-			float: left !important;
-			margin-right: 20px;
-		}
-		.thumbnail-box-right {
-			float: right !important;
-			margin-left: 20px;
-		}
-	}
-
-	/* Project */
-
-	.project-video-load-container {
-		display: flex;
-		width: 100%;
-		height: 100%;
-		margin-bottom: 20px;
-		vertical-align: middle;
-		float: none;
-		background-color: #000000;
-		border: 1px solid #337AB7;
-		border-radius: 4px;
-		box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
-	}
-
-	.project-video-play-container {
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		top: 0px;
-		left: 0px;
-		vertical-align: middle;
-		float: none;
-	}
-
-	.project-video-play-link {
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		top: 0px;
-		left: 0px;
-		color: #000000;
-		background-color: #000000;
-		text-align: center;
-		vertical-align: middle;
-		float: none;
-		margin: auto;
-		border: 0px none;
-	}
-
-	.project-video-play-link:hover {
-		color: #337AB7;
-	}
-
-	.project-video-highlight {
-		width: 100%;
-		height: 100%;
-		vertical-align: middle;
-		float: none;
-		background-color: rgba(255, 255, 255, 0.0);
-		padding: 25% 0px;
-	}
-
-	.project-video-play-link:hover > .project-video-highlight {
-		background-color: rgba(255, 255, 255, 0.25);
-	}
-
-	.project-video-play {
-		width: 48px;
-		height: 48px;
-		line-height: 1.75em;
-		background-color: #FFFFFF;
-		border-radius: 24px;
-		margin: -12px auto 0px auto;
-	}
-
-	.project-video-play > .glyphicon {
-		left: 2px;
 	}
 </style>

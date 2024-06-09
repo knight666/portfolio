@@ -41,7 +41,7 @@
 		<h2 class="o-project__header">{file.title}</h2>
 			<p class="o-project__description">{file.brief.description}</p>
 			<LinkButton
-				class="o-project__link"
+				class="a-button--secondary o-project__link"
 				url="projects/{fileName}.html"
 				text="&gt; READ MORE"
 			></LinkButton>
