@@ -1,0 +1,15 @@
+{
+	"title": "Thief",
+	"brief": {
+		"description": "Stealth action adventure, in which Garret, the Master Thief, must claim back the City from the Baron's grasp.",
+		"released": "2014-02-01",
+		"employer": "nixxes",
+		"platforms": [ "steam" ],
+		"technologies": [ "c++", "as", "scaleform", "ue3" ]
+	},
+	"trailer": {
+		"link": "yt://6FtOFv5oGEI",
+		"image": "thief.jpg"
+	},
+	"source": "thief.md"
+}
