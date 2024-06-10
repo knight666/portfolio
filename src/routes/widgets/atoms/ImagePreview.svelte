@@ -26,7 +26,8 @@
 </script>
 
 <div class={getClassNames(className)}>
-	<img src={href} {title} alt={text} />
+	<img class="a-imagePreview__image" src={href} title={text} alt={text} />
+	<div class="a-imagePreview__text">{text}</div>
 </div>
 
 <style lang="scss">
@@ -36,15 +37,14 @@
 		display: block;
 		width: 100%;
 		text-align: center;
+		margin: 1rem 0;
 
-		&--left {
-			float: left;
-			margin-right: 2rem;
+		&__image {
+			width: 100%;
 		}
 
-		&--right {
-			float: right;
-			margin-left: 2rem;
+		&__text {
+			@include text-size('s');
 		}
 	}
 </style>
