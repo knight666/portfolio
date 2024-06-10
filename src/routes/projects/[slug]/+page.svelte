@@ -1,7 +1,7 @@
 <script lang="ts">
-	import SvelteMarkdown from "svelte-markdown";
 	import type { PageData } from "./$types";
-	import { marked } from 'marked'
+	import { marked } from 'marked';
+	import Section from "$widgets/molecules/Section.svelte";
 
 	export let data: PageData;
 
@@ -9,17 +9,15 @@
 	marked.walkTokens(tokens, (token) => {
 		if (token.type == 'heading') {
 			token.depth = 3;
+		} else if (token.type == 'image') {
+			token.href = `../media/screenshots/${token.href}`;
 		}
 	});
 </script>
 
-<div class="m-section">
-	<div class="m-section__container">
-		<SvelteMarkdown
-			source={tokens}
-		></SvelteMarkdown>
-	</div>
-</div>
+<Section
+	content={tokens}
+></Section>
 
 <style lang="scss">
 	@import '$styles/globals';

@@ -1,7 +1,9 @@
 <script lang="ts">
+	import Image from "$widgets/atoms/Image.svelte";
 	import SvelteMarkdown from "svelte-markdown";
+	import { marked } from 'marked';
 
-	export let content = '';
+	export let content: string | marked.TokensList = '';
 
 	let className = '';
 	export { className as class };
@@ -12,6 +14,7 @@
 >
 	<SvelteMarkdown
 		source={content}
+		renderers={{ image: Image }}
 	></SvelteMarkdown>
 </section>
 
@@ -22,9 +25,5 @@
 		display: flex;
 		flex-direction: column;
 		padding: 0 24vw;
-	}
-
-	:global(.m-section > p) {
-		padding: 0 12px;
 	}
 </style>
