@@ -20,6 +20,7 @@ const config = {
 		}),
 		alias: {
 			$styles: 'src/routes/styles',
+			$widgets: 'src/routes/widgets',
 		},
 	},
 };

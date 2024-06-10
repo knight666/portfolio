@@ -1,26 +1,8 @@
 <script lang="ts">
+	import { type IProject } from "../../../project-types";
 	import LinkButton from "../atoms/LinkButton.svelte";
 
 	export let fileName: string;
-
-	interface IProject {
-		title: string;
-		brief: {
-			description: string;
-			released: string;
-			employer: string;
-			platforms: string[];
-			technologies: string[]
-			role: string;
-			type: string;
-			stack: string[];
-		},
-		trailer: {
-			link: string;
-			image: string;
-		}
-		source: string;
-	};
 
 	const filePromise: Promise<IProject> = import(/* @vite-ignore */ `../../../projects/${fileName}.json`);
 

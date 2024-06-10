@@ -1,11 +1,14 @@
 <script lang="ts">
-	import Section from "./widgets/molecules/Section.svelte";
-	import AtAGlance from "./widgets/organisms/AtAGlance.svelte";
-	import HomeHeader from "./widgets/organisms/HomeHeader.svelte";
-	import Project from "./widgets/organisms/Project.svelte";
+	import Section from "$widgets/molecules/Section.svelte";
+	import AtAGlance from "$widgets/organisms/AtAGlance.svelte";
+	import HomeHeader from "$widgets/organisms/HomeHeader.svelte";
+	import Project from "$widgets/organisms/Project.svelte";
 
 	import intro from '../intro.md?raw';
-	import index from '../index.json';
+
+	import type { PageData } from './$types';
+	
+	export let data: PageData;
 </script>
 
 <HomeHeader></HomeHeader>
@@ -18,7 +21,7 @@
 
 <h1>Projects</h1>
 <div class="project-list">
-	{#each index.featured as p}
+	{#each data.featured as p}
 	<Project
 		fileName={p}
 	></Project>
