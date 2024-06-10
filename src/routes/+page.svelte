@@ -45,4 +45,18 @@
 		padding: 0 6vw;
 		margin: 0 0 120px 0;
 	}
+
+	@include size-small() {
+		.project-list {
+			display: flex;
+			flex-direction: column;
+			gap: 2rem;
+		}
+	}
+
+	@include size-medium() {
+		.project-list {
+			grid-gap: 60px 30px;
+		}
+	}
 </style>
