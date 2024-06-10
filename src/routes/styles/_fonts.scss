@@ -15,7 +15,7 @@ $font-family-settings: (
 
 	@font-face {
 		font-family: 'PT Serif';
-		src: url('../media/fonts/PT_Serif/PTSerif-#{$file}.ttf') format('truetype');
+		src: url('media/fonts/PT_Serif/PTSerif-#{$file}.ttf') format('truetype');
 		font-display: swap;
 		font-style: $style;
 		font-weight: $weight;
@@ -23,7 +23,7 @@ $font-family-settings: (
 
 	@font-face {
 		font-family: 'PT Serif';
-		src: url('../media/fonts/PT_Sans/PTSans-#{$file}.ttf') format('truetype');
+		src: url('media/fonts/PT_Sans/PTSans-#{$file}.ttf') format('truetype');
 		font-display: swap;
 		font-style: $style;
 		font-weight: $weight;

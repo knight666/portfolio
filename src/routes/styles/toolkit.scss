@@ -1,0 +1,65 @@
+@import '$styles/globals';
+@import '$styles/fonts';
+
+// Body
+
+body {
+	@include text-paragraph('M');
+	display: grid;
+	grid-row-gap: $body-gap;
+	line-height: 1.42857143;
+	margin: 0;
+}
+
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+// Headings
+
+h1 {
+	@include text-header('XL');
+	text-align: center;
+	color: $clr-highlight-500;
+}
+
+h2 {
+	@include text-header('L');
+	text-align: left;
+	color: $clr-highlight-500;
+}
+
+h3 {
+	@include text-header('M');
+	text-align: left;
+	color: $clr-highlight-500;
+	margin: 0;
+}
+
+@include size-small {
+	h1 {
+		@include text-size('L');
+	}
+
+	h2 {
+		@include text-size('M');
+	}
+}
+
+// Paragraph
+
+p {
+	@include text-paragraph('M');
+	line-height: 1.42857143;
+	color: #333333;
+	max-width: 70ch;
+	margin: 0 0 12px;
+}
+
+@include size-small {
+	p {
+		@include text-size('S');
+	}
+}

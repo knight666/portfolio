@@ -1,7 +1,9 @@
 <script lang="ts">
-	import type { PageData } from "./$types";
+	import '../../styles/toolkit.scss';
+
 	import { marked } from 'marked';
 	import Section from "$widgets/molecules/Section.svelte";
+	import type { PageData } from "./$types";
 
 	export let data: PageData;
 
@@ -20,8 +22,3 @@
 <Section
 	content={tokens}
 ></Section>
-
-<style lang="scss">
-	@import '$styles/globals';
-	@import '$styles/tools/fonts';
-</style>

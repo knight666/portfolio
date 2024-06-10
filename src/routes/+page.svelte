@@ -1,4 +1,6 @@
 <script lang="ts">
+	import '$styles/toolkit.scss';
+
 	import Section from "$widgets/molecules/Section.svelte";
 	import AtAGlance from "$widgets/organisms/AtAGlance.svelte";
 	import HomeHeader from "$widgets/organisms/HomeHeader.svelte";
@@ -29,71 +31,7 @@
 </div>
 
 <style lang="scss">
-	@import 'styles/globals';
-	@import 'styles/tools/fonts';
-
-	// Body
-
-	:global(body) {
-		@include text-paragraph('M');
-		display: grid;
-		grid-row-gap: $body-gap;
-		line-height: 1.42857143;
-		margin: 0;
-	}
-
-	:global(*) {
-		box-sizing: border-box;
-		padding: 0;
-		margin: 0;
-	}
-
-	// Headings
-
-	:global(h1) {
-		@include text-header('XL');
-		text-align: center;
-		color: $clr-highlight-500;
-	}
-
-	:global(h2) {
-		@include text-header('L');
-		text-align: left;
-		color: $clr-highlight-500;
-	}
-
-	:global(h3) {
-		@include text-header('M');
-		text-align: left;
-		color: $clr-highlight-500;
-		margin: 0;
-	}
-
-	@include size-small {
-		:global(h1) {
-			@include text-size('L');
-		}
-
-		:global(h2) {
-			@include text-size('M');
-		}
-	}
-
-	// Paragraph
-
-	:global(p) {
-		@include text-paragraph('M');
-		line-height: 1.42857143;
-		color: #333333;
-		max-width: 70ch;
-		margin: 0 0 12px;
-	}
-
-	@include size-small {
-		:global(p) {
-			@include text-size('S');
-		}
-	}
+	@import '$styles/globals';
 
 	// Projects
 
