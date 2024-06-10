@@ -18,13 +18,13 @@
 <style lang="scss">
 	@import '$styles/globals';
 
-	.m-section {
+	:global(.m-section) {
 		display: flex;
 		flex-direction: column;
 		padding: 0 24vw;
 	}
 
-	:global(.m-section p) {
+	:global(.m-section > p) {
 		padding: 0 12px;
 	}
 </style>
