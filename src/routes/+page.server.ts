@@ -1,11 +1,23 @@
 import { error } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
-import type { IIndex } from '../project-types';
+import type { IIndex, IProject } from '../project-types';
 
-export const load: PageServerLoad<IIndex> = async () => {
-	const index = await import(/* @vite-ignore */ '../index.json');
-	if (index) {
-		return index.default;
+export const load: PageServerLoad = async () => {
+	const module = await import('../index.json');
+	if (module) {
+		const index = module.default;
+
+		const promises: Promise<IProject>[] = index.featured.map(async (id) => {
+			const project = await import(`../projects/${id}.json`);
+			return {
+				id,
+				...project.default
+			};
+		});
+
+		return {
+			projects: await Promise.all(promises),
+		};
 	}
 
 	error(404, 'Not found');

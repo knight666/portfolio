@@ -2,33 +2,29 @@
 	import { type IProject } from "../../../project-types";
 	import LinkButton from "../atoms/LinkButton.svelte";
 
-	export let fileName: string;
-
-	const filePromise: Promise<IProject> = import(/* @vite-ignore */ `../../../projects/${fileName}.json`);
+	export let project: IProject;
 
 	let className = '';
 	export { className as class };
 </script>
 
-{#await filePromise then file}
-	<div
-		class={['o-project', className].join(' ')}
+<div
+	class={['o-project', className].join(' ')}
+>
+	<a
+		class="o-project__preview"
+		href="projects/{project.id}.html"
+		style="background-image: url('./media/previews/{project.trailer.image}')"
 	>
-		<a
-			class="o-project__preview"
-			href="projects/{fileName}.html"
-			style="background-image: url('./media/previews/{file.trailer.image}')"
-		>
-		</a>
-		<h2 class="o-project__header">{file.title}</h2>
-			<p class="o-project__description">{file.brief.description}</p>
-			<LinkButton
-				class="a-button--secondary o-project__link"
-				url="projects/{fileName}.html"
-				text="&gt; READ MORE"
-			></LinkButton>
-	</div>
-{/await}
+	</a>
+	<h2 class="o-project__header">{project.title}</h2>
+		<p class="o-project__description">{project.brief.description}</p>
+		<LinkButton
+			class="a-button--secondary o-project__link"
+			url="projects/{project.id}.html"
+			text="&gt; READ MORE"
+		></LinkButton>
+</div>
 
 <style lang="scss">
 	@import '$styles/globals';

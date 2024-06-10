@@ -21,9 +21,9 @@
 
 <h1>Projects</h1>
 <div class="project-list">
-	{#each data.featured as p}
+	{#each data.projects as p}
 	<Project
-		fileName={p}
+		project={p}
 	></Project>
 	{/each}
 </div>
