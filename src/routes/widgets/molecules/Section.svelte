@@ -1,9 +1,20 @@
 <script lang="ts">
-	import Image from "$widgets/atoms/Image.svelte";
+	import ImagePreview from "$widgets/atoms/ImagePreview.svelte";
 	import SvelteMarkdown from "svelte-markdown";
 	import { marked } from 'marked';
 
 	export let content: string | marked.TokensList = '';
+
+	const renderer = new marked.Renderer;
+	renderer.paragraph = function (text) {
+		// do not enclose images in additional paragraphs
+
+		if (text.match(/^<(figure|img)/)) {
+			return text;
+		}
+
+		return `<p>${text}</p>`;
+	};
 
 	let className = '';
 	export { className as class };
@@ -14,7 +25,9 @@
 >
 	<SvelteMarkdown
 		source={content}
-		renderers={{ image: Image }}
+		renderers={{
+			image: ImagePreview
+		}}
 	></SvelteMarkdown>
 </section>
 

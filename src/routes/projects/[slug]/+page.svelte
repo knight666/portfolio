@@ -11,6 +11,8 @@
 			token.depth = 3;
 		} else if (token.type == 'image') {
 			token.href = `../media/screenshots/${token.href}`;
+			console.log(token.raw);
+			console.log(token.text);
 		}
 	});
 </script>
