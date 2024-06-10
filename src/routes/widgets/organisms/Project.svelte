@@ -13,7 +13,7 @@
 >
 	<a
 		class="o-project__preview"
-		href="projects/{project.id}.html"
+		href="projects/{project.id}"
 		style="background-image: url('./media/previews/{project.trailer.image}')"
 	>
 	</a>
@@ -21,7 +21,7 @@
 		<p class="o-project__description">{project.brief.description}</p>
 		<LinkButton
 			class="a-button--secondary o-project__link"
-			url="projects/{project.id}.html"
+			url="projects/{project.id}"
 			text="&gt; READ MORE"
 		></LinkButton>
 </div>

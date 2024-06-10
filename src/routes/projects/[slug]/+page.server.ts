@@ -1,11 +1,16 @@
 import { error } from '@sveltejs/kit';
-import { type PageServerLoad } from './$types';
-import type { IProject } from '../../../project-types';
+import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async ({ params }) => {
-	const project: IProject = await import(/* @vite-ignore */ `../../../projects/${params.slug}.json`);
+	const project = await import(`../../../projects/${params.slug}.json`);
 	if (project) {
-		return project;
+		const source = (await import(`../../../projects/${params.slug}.md?raw`)).default;
+
+		return {
+			...project.default,
+			id: params.slug,
+			source,
+		};
 	}
 
 	error(404, 'Not found');

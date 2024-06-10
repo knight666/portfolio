@@ -9,7 +9,6 @@
 <a
 	class={['a-button', className].join(' ')}
 	href={url}
-	target="_blank"
 >
 	{text}
 </a>
