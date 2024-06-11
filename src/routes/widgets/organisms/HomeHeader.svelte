@@ -16,15 +16,12 @@
 	.o-homeHeader {
 		display: grid;
 		grid-template-columns: min-content 1fr;
-		grid-template-rows: min-content 1fr;
 		grid-template-areas: 
-			"face  breadcrumbs "
 			"face  intro       ";
 		grid-column-gap: 24px;
 		align-items: center;
 		background: $clr-highlight-500;
 		color: white;
-		padding: 12px 12vw;
 		min-height: 240px;
     	padding: 12px 24vw;
 
@@ -33,14 +30,10 @@
 			display: table;
 			width: 120px;
 			height: 120px;
-			background: url('../media/images/profile.jpg') center/contain no-repeat;
+			background: url('/media/images/profile.jpg') center/contain no-repeat;
 			border: 4px solid white;
 			border-radius: 50%;
 			margin: 5px;
-		}
-
-		&__breadcrumbs {
-			grid-area: breadcrumbs;
 		}
 
 		&__intro {
@@ -54,21 +47,36 @@
 
 			em {
 				font-weight: bold;
+				font-style: normal;
 			}
 		}
 	}
 
 	@include size-small {
-		.m-header {
+		.o-homeHeader {
 			grid-template-columns: 1fr;
 			grid-template-rows: 1fr min-content;
 			grid-template-areas: 
 				"face         "
-				"breadcrumbs  "
 				"intro        ";
 			grid-row-gap: 12px;
 			justify-items: center;
 			padding: 12px;
+		}
+	}
+
+	@include size-medium {
+		.o-homeHeader {
+			padding: 0;
+			align-content: center;
+			grid-template-columns: 1fr min-content 3fr 1fr;
+			grid-template-areas: ". face intro .";
+
+			&__intro {
+				p {
+					@include text-sans-serif('L');
+				}
+			}
 		}
 	}
 </style>
