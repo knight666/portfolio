@@ -35,7 +35,7 @@
 			display: block;
 			width: 32px;
 			height: 32px;
-			background-color: $clr-highlight-700;
+			background-color: get-shade($clr-highlight, 700);
 			background-image: url("/media/images/social.png");
 			background-repeat: no-repeat;
 			border-radius: 16px;

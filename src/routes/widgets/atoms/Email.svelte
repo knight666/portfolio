@@ -24,14 +24,14 @@
 
 	.a-email {
 		@include text-size('M');
-		background: $clr-highlight-700;
-		color: $clr-highlight-100;
+		background: get-shade($clr-highlight, 700);
+		color: get-shade($clr-highlight, 100);
 		text-decoration: none;
 		padding: 8px 12px;
 		border-radius: 8px;
 
 		&:hover {
-			background: $clr-highlight-300;
+			background: get-shade($clr-highlight, 300);
 		}
 	}
 

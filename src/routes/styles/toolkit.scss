@@ -22,19 +22,19 @@ body {
 h1 {
 	@include text-header('XL');
 	text-align: center;
-	color: $clr-highlight-500;
+	color: get-shade($clr-highlight, 500);
 }
 
 h2 {
 	@include text-header('L');
 	text-align: left;
-	color: $clr-highlight-500;
+	color: get-shade($clr-highlight, 500);
 }
 
 h3 {
 	@include text-header('M');
 	text-align: left;
-	color: $clr-highlight-500;
+	color: get-shade($clr-highlight, 500);
 	margin: 0;
 }
 

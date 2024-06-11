@@ -44,15 +44,15 @@
 		display: flex;
 		flex-direction: column;
 		gap: 24px;
-		background: $clr-highlight-500;
-		color: $clr-highlight-100;
+		background: get-shade($clr-highlight, 500);
+		color: get-shade($clr-highlight, 100);
 		padding: 24px;
 
 		&__header {
 			@include text-sans-serif('L');
 			font-weight: bold;
 			text-align: left;
-			color: $clr-highlight-100;
+			color: get-shade($clr-highlight, 100);
 		}
 
 		&__text {

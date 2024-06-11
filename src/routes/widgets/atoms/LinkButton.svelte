@@ -18,7 +18,7 @@
 
 	.a-button {
 		@include text-header('M');
-		background: $clr-highlight-500;
+		background: get-shade($clr-highlight, 500);
 		color: white;
 		text-align: center;
 		text-decoration: none;
@@ -27,13 +27,13 @@
 
 		&--secondary {
 			background: none;
-			color: $clr-highlight-500;
-			border-color: $clr-highlight-500;
+			color: get-shade($clr-highlight, 500);
+			border-color: get-shade($clr-highlight, 500);
 		}
 
 		&:hover {
 			text-decoration: none;
-			background: $clr-highlight-300;
+			background: get-shade($clr-highlight, 300);
 			color: white;
 			border-color: transparent;
 		}

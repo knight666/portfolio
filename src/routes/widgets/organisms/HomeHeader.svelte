@@ -20,7 +20,7 @@
 			"face  intro       ";
 		grid-column-gap: 24px;
 		align-items: center;
-		background: $clr-highlight-500;
+		background: get-shade($clr-highlight, 500);
 		color: white;
 		min-height: 240px;
     	padding: 12px 24vw;

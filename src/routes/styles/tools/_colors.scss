@@ -1,0 +1,40 @@
+@use 'sass:color';
+@use 'sass:map';
+@use 'sass:math';
+@use 'sass:meta';
+
+$clr-highlight: hsl(248, 40%, 50%);
+$clr-shade-map: (
+	highlight: $clr-highlight,
+);
+
+@function get-shade($color, $shade: 500, $alpha: 1) {
+	@if meta.type-of($color) == string {
+		$color: map.get($clr-shade-map, $color);
+
+		@if not $color {
+			$color: map.get($clr-shade-map, 'neutral');
+		}
+	}
+
+	// get hue from color
+	$h: color.hue($color);
+
+	// lightness is linear from 90% (100) to 10% (900)
+	$shade: math.max(100, math.min($shade, 900));
+	$l: 100% - math.div($shade, 10) * 1%;
+
+	// get saturation from color
+	$saturation: color.saturation($color);
+
+	// low saturation means we should not try to bend it towards 100%
+	@if $saturation < 50% {
+		@return rgba(hsl($h, $saturation, $l), $alpha);
+	}
+
+	// bend saturation towards 100% with a parabolic curve
+	$multiplier: math.pow(math.div($shade - 500, 100), 2);
+	$s: $saturation + math.div((100 - $saturation), 16) * $multiplier;
+
+	@return rgba(hsl($h, $s, $l), $alpha);
+}

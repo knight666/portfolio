@@ -50,7 +50,7 @@
 		grid-row-gap: 12px;
 		padding: 12px 6vw;
 		margin: 0 auto;
-		border: 2px solid $clr-highlight-500;
+		border: 2px solid get-shade($clr-highlight, 500);
 
 		&__table {
 			grid-area: table;
