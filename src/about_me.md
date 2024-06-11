@@ -1,0 +1,7 @@
+I've always been fascinated with making games. All the way back in 2002, I started my career in game development with Game Maker 4.2 when I was twelve years old. I shipped my first game, _Element_, just two years later. It was a side-scrolling RPG where you explored an underwater world. Unfortunately, it wasn't a commercial success since I released the game on the Internet for free. GameMakerGames.com gave it a 6/10 in their review.
+
+After graduating high school in 2007, I studied International Game Architecture and Design (IGAD) at NHTV University for Applied Science in Breda, the Netherlands. Soon after, I joined the ranks of Nixxes Software in Utrecht, the Netherlands, where I worked on multiple AAA game projects like [_Deus Ex: Mankind Divided_](/projects/deus-ex-mankind-divided) and [_Rise of the Tomb Raider_](/projects/rise-of-the-tomb-raider). It was at Nixxes that I realized I wanted to specialize in programming user interfaces for games, and have done so ever since.
+
+I love working closely with artists and designers to realize their vision for the game. I approach my role as a UI programmer as a facilitator; I help them figure out what's possible and breathe life into their ideas. I'm a big fan of always saying "yes, and" to outlandish ideas.
+
+After living in Berlin for six years, I've now settled down in Deventer, the Netherlands with Lydia, my best friend and partner of seventeen years. And our cat Poppy, of course.

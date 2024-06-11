@@ -8,6 +8,7 @@
 	import Section from "$widgets/molecules/Section.svelte";
 
 	import intro from '../intro.md?raw';
+	import aboutMe from '../about_me.md?raw';
 
 	import type { PageData } from './$types';
 	
@@ -30,6 +31,10 @@
 	></Project>
 	{/each}
 </div>
+
+<h1>About Me</h1>
+<Section content={aboutMe}>
+</Section>
 
 <Footer></Footer>
 
