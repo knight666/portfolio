@@ -17,7 +17,7 @@ The first constraint we posed was that only the first player could switch betwee
 
 Because there were so many options for the player(s) behind the screen, we had to make sure the ability to select the amount of players was as clearly communicated as possible. After a number of iterations, we settled on adding a local player selector to the party widget, which allows the main player to select between one and four players.
 
-After first sketching out this widget on paper, I was put in charge of putting it into the game. _Lara Croft and the Temple of Osiris_ uses the [Autodesk Scaleform](../projects-by-technology.html#scaleform) framework to display Flash movies for every UI element on the screen. I created a new Flash movie for the widget and linked it to the game by writing a new widget class in C++.
+After first sketching out this widget on paper, I was put in charge of putting it into the game. _Lara Croft and the Temple of Osiris_ uses the Autodesk Scaleform framework to display Flash movies for every UI element on the screen. I created a new Flash movie for the widget and linked it to the game by writing a new widget class in C++.
 
 ### Hot-swapping the context bar ###
 
