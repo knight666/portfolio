@@ -1,7 +1,8 @@
 import { error } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
+import type { IProject } from '../../../project-types';
 
-export const load: PageServerLoad = async ({ params }) => {
+export const load: PageServerLoad<IProject> = async ({ params }) => {
 	const project = await import(`../../../projects/${params.slug}.json`);
 	if (project) {
 		const source = (await import(`../../../projects/${params.slug}.md?raw`)).default;

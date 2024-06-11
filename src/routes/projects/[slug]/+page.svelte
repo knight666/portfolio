@@ -3,10 +3,14 @@
 
 	import { marked } from 'marked';
 	import Section from "$widgets/molecules/Section.svelte";
-	import type { PageData } from "./$types";
 	import Footer from '$widgets/organisms/Footer.svelte';
+	import ProjectHeader from '$widgets/organisms/ProjectHeader.svelte';
+	import type { PageData } from "./$types";
+	import type { IProject } from '../../../project-types';
 
 	export let data: PageData;
+
+	const project = data as unknown as IProject;
 
 	const tokens = marked.lexer(data.source);
 	marked.walkTokens(tokens, (token) => {
@@ -17,6 +21,8 @@
 		}
 	});
 </script>
+
+<ProjectHeader {project}></ProjectHeader>
 
 <Section
 	content={tokens}
