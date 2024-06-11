@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Email from "$widgets/atoms/Email.svelte";
 	import SocialItem from "$widgets/atoms/SocialItem.svelte";
 
 	function getClassNames(name: string) {
@@ -19,7 +20,7 @@
 	<p class="o-footer__text">Feel free to reach out to me if you have a question or just want to connect.</p>
 	<ul class="o-footer__socials">
 		<li>
-			<a href="mailto:quintenlansu@gmail.com" class="a-email">quintenlansu@gmail.com</a>
+			<Email email="quintenlansu@gmail.com"></Email>
 		</li>
 		<li>
 			<SocialItem
