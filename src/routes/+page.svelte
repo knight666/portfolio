@@ -46,7 +46,7 @@
 		margin: 0 0 120px 0;
 	}
 
-	@include size-small() {
+	@include size-small {
 		.project-list {
 			display: flex;
 			flex-direction: column;
@@ -54,7 +54,7 @@
 		}
 	}
 
-	@include size-medium() {
+	@include size-medium {
 		.project-list {
 			grid-gap: 60px 30px;
 		}

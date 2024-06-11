@@ -37,6 +37,22 @@
 	:global(.m-section) {
 		display: flex;
 		flex-direction: column;
-		padding: 0 24vw;
+		margin: 0 auto;
+	}
+
+	:global(.m-section > p) {
+		max-width: 70ch;
+	}
+
+	@include size-small {
+		:global(.m-section) {
+			padding: 0 6vw;
+		}
+	}
+
+	@include size-medium {
+		:global(.m-section) {
+			padding: 0 12vw;
+		}
 	}
 </style>
