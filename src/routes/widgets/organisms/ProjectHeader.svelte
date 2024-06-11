@@ -28,7 +28,7 @@
 		align-items: center;
 		background: get-shade($clr-highlight, 500);
 		color: white;
-    	padding: 12px 24vw;
+    	padding: 12px 12vw;
 
 		&__headshot {
 			grid-area: face;
@@ -78,7 +78,6 @@
 
 	@include size-medium {
 		.o-projectHeader {
-			padding: 12px 12vw;
 			align-content: center;
 		}
 	}

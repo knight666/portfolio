@@ -28,12 +28,6 @@
 				href="http://www.linkedin.com/profile/view?id=46334816"
 			></SocialItem>
 		</li>
-		<li>
-			<SocialItem
-				logo="twitter"
-				href="https://twitter.com/knight666"
-			></SocialItem>
-		</li>
 	</ul>
 </footer>
 
@@ -46,7 +40,7 @@
 		gap: 24px;
 		background: get-shade($clr-highlight, 500);
 		color: get-shade($clr-highlight, 100);
-		padding: 24px;
+		padding: 24px 12vw;
 
 		&__header {
 			@include text-sans-serif('L');
@@ -72,6 +66,7 @@
 	@include size-small {
 		.o-footer {
 			gap: 12px;
+			padding: 12px;
 		}
 	}
 </style>
