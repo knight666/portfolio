@@ -4,6 +4,7 @@
 	import { marked } from 'marked';
 	import Section from "$widgets/molecules/Section.svelte";
 	import type { PageData } from "./$types";
+	import Footer from '$widgets/organisms/Footer.svelte';
 
 	export let data: PageData;
 
@@ -20,3 +21,5 @@
 <Section
 	content={tokens}
 ></Section>
+
+<Footer></Footer>

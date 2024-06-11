@@ -65,6 +65,13 @@
 			grid-column-gap: 12px;
 			align-items: center;
 			list-style: none;
+			margin: 0;
+		}
+	}
+
+	@include size-small {
+		.o-footer {
+			gap: 12px;
 		}
 	}
 </style>
