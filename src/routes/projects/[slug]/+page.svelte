@@ -3,6 +3,7 @@
 
 	import { marked } from 'marked';
 	import Section from "$widgets/molecules/Section.svelte";
+	import Trailer from "$widgets/molecules/Trailer.svelte";
 	import Footer from '$widgets/organisms/Footer.svelte';
 	import ProjectHeader from '$widgets/organisms/ProjectHeader.svelte';
 	import type { PageData } from "./$types";
@@ -24,8 +25,23 @@
 
 <ProjectHeader {project}></ProjectHeader>
 
+<div class="o-projectTrailer">
+	<Trailer
+		title={project.title}
+		link={project.trailer.link}
+	></Trailer>
+</div>
+
 <Section
 	content={tokens}
 ></Section>
 
 <Footer></Footer>
+
+<style lang="scss">
+	@import '$styles/globals';
+
+	.o-projectTrailer {
+		padding: 0 12vw;
+	}
+</style>

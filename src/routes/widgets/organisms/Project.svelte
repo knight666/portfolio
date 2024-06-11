@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { type IProject } from "../../../project-types";
-	import LinkButton from "../atoms/LinkButton.svelte";
+	import LinkButton from "$widgets/atoms/LinkButton.svelte";
 
 	export let project: IProject;
 
