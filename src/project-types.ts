@@ -1,3 +1,8 @@
+export interface ITrailer {
+	link?: string;
+	image: string;
+}
+
 export interface IProject {
 	id: string;
 	title: string;

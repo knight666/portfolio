@@ -1,6 +1,10 @@
 <script lang="ts">
-	export let link: string;
+	import type { ITrailer } from "../../../project-types";
+
+	export let trailer: ITrailer;
 	export let title: string;
+
+	const link = trailer.link ?? '';
 
 	function getClassNames(name: string) {
 		const combined = ['m-trailer'];
@@ -16,6 +20,7 @@
 <div
 	class={getClassNames(className)}
 >
+{#if link !== ''}
 	<iframe
 		class="m-trailer__item"
 		src={`https://www.youtube.com/embed/${link.substring('yt://'.length)}`}
@@ -23,6 +28,14 @@
 		allowfullscreen={true}
 		frameborder="0"
 	></iframe>
+{/if}
+{#if link === ''}
+	<img
+		class="m-trailer__item"
+		src={`../media/previews/${trailer.image}`}
+		alt={title}
+	/>
+{/if}
 </div>
 
 <style lang="scss">
