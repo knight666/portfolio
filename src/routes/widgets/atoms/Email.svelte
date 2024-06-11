@@ -13,7 +13,7 @@
 </script>
 
 <a
-	href={email}
+	href={`mailto:${email}`}
 	class={getClassNames(className)}
 >
 	{@html email}
