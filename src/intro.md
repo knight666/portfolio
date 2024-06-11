@@ -1,7 +1,5 @@
-I'm an experienced front-end developer working in the AAA games industry.
+I'm a game developer with over a decade of experience with making best-in-class user interfaces for AAA games, and I want to help you get the most out of your team and take your projects to the next level. I've shipped multiple AAA video games with teams spread all across the globe, and I've worked with every UI framework under the sun; I've even made a few myself.
 
-I have shipped multiple AAA video game projects with teams spread all across the globe. I have worked with all kinds of UI frameworks and have even built a few of them myself over the years.
+What excites me about front-end development is seeing results quickly and being able to bring creative visions to life. I love working with designers to optimize an interaction flow just as much as I love figuring out an optimal way to grab data from a backend.
 
-What excites me about front-end development is seeing results quickly and being able to bring creative visions to life. I love working with user experience designers to figure out how to optimize an interaction flow equally as much as I love figuring out an optimal way to grab data from a backend.
-
-And although I mainly work in C++, I built [this portfolio](https://github.com/knight666/portfolio) myself using nothing but HTML and CSS best practices.
+And although I mainly work in C++, I built [this portfolio](https://github.com/knight666/portfolio) using modern web development practices. That's because I believe the future of games UI is actually the web, using frameworks like [Coherent Gameface](https://coherent-labs.com/).
