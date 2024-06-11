@@ -11,16 +11,6 @@
 
 	let className = '';
 	export { className as class };
-
-	/**
-	 * var video = document.createElement("iframe");
-				video.className = "m-trailer__item";
-				video.src = "https://www.youtube.com/embed/" + link.substring('yt://'.length) + "?rel=0&vq=highres&autoplay=1";
-				video.allowfullscreen = "";
-
-				parent.removeChild(target);
-				parent.appendChild(video);
-	*/
 </script>
 
 <div

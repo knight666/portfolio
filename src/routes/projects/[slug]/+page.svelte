@@ -25,12 +25,14 @@
 
 <ProjectHeader {project}></ProjectHeader>
 
+{#if project.trailer.link !== ''}
 <div class="o-projectTrailer">
 	<Trailer
 		title={project.title}
 		link={project.trailer.link}
 	></Trailer>
 </div>
+{/if}
 
 <Section
 	content={tokens}

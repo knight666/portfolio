@@ -8,6 +8,7 @@
 		"technologies": [ "c++", "opengl2" ]
 	},
 	"trailer": {
+		"link": "",
 		"image": "procedural.jpg"
 	},
 	"source": "procedural.md"

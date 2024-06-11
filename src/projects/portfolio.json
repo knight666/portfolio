@@ -6,6 +6,7 @@
 		"technologies": [ "html5", "js", "css3", "nodejs" ]
 	},
 	"trailer": {
+		"link": "",
 		"image": "portfolio.jpg"
 	},
 	"source": "portfolio.md",

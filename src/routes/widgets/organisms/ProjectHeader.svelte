@@ -9,7 +9,7 @@
 	<div class="o-projectHeader__breadcrumbs">
 		<a class="o-projectHeader__breadcrumbs__item" href="/">Home</a>
 		<div class="o-projectHeader__breadcrumbs__item">/</div>
-		<a class="o-projectHeader__breadcrumbs__item" href="../projects-by-date.html">Projects</a>
+		<a class="o-projectHeader__breadcrumbs__item" href="/">Projects</a>
 		<div class="o-projectHeader__breadcrumbs__item">/</div>
 	</div>
 	<h2 class="o-projectHeader__title">{project.title}</h2>

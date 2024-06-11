@@ -7,6 +7,7 @@
 		"technologies": [ "c++", "ly" ]
 	},
 	"trailer": {
+		"link": "",
 		"image": "got.jpg"
 	},
 	"source": "game-of-thrones-seven-kingdoms.md"
