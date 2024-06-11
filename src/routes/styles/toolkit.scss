@@ -63,3 +63,19 @@ p {
 		@include text-size('S');
 	}
 }
+
+// Lists
+
+ul {
+	margin-left: 1rem;
+
+	> li {
+		max-width: 65ch;
+	}
+}
+
+@include size-small {
+	ul > li {
+		@include text-size('S');
+	}
+}
