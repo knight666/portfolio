@@ -4,7 +4,7 @@ _Rise of the Tomb Raider_ is the sequel to _Tomb Raider (2013)_ and was develope
 
 ![Expeditions mode took a lot of work to get right when using a mouse.][1]
 
-My main body of work for this project constituted of getting the numerous menus to work with mouse and keyboard input. Luckily, most of the hard work had already been done for [the previous project](lara-croft-and-the-temple-of-osiris.html) built with this engine, but there were a lot more menu screens this time around.
+My main body of work for this project constituted of getting the numerous menus to work with mouse and keyboard input. Luckily, most of the hard work had already been done for [the previous project](/projects/lara-croft-and-the-temple-of-osiris) built with this engine, but there were a lot more menu screens this time around.
 
 Besides the usual main menu and in-game screens, _Rise of the Tomb Raider_ also sports an "Expeditions" mode, where users can combine collectible cards into challenges. Getting these menus to work with mouse and keyboard proved to be a real challenge, because selecting elements out of order with the mouse often brought underlying issues to the surface.
 
