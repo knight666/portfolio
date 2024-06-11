@@ -1,10 +1,11 @@
 <script lang="ts">
 	import '$styles/toolkit.scss';
 
-	import Section from "$widgets/molecules/Section.svelte";
 	import AtAGlance from "$widgets/organisms/AtAGlance.svelte";
+	import Footer from '$widgets/organisms/Footer.svelte';
 	import HomeHeader from "$widgets/organisms/HomeHeader.svelte";
 	import Project from "$widgets/organisms/Project.svelte";
+	import Section from "$widgets/molecules/Section.svelte";
 
 	import intro from '../intro.md?raw';
 
@@ -29,6 +30,8 @@
 	></Project>
 	{/each}
 </div>
+
+<Footer></Footer>
 
 <style lang="scss">
 	@import '$styles/globals';
