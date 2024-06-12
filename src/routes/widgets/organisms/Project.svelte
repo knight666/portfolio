@@ -17,13 +17,18 @@
 		style="background-image: url('./media/previews/{project.trailer.image}')"
 	>
 	</a>
-	<h2 class="o-project__header">{project.title}</h2>
-		<p class="o-project__description">{project.brief.description}</p>
+	<div class="o-project__header">
+		{project.title}
+		<div class="o-project__company">{project.brief.employer}</div>
+	</div>
+	<p class="o-project__description">{project.brief.description}</p>
+	<div class="o-project__link">
 		<LinkButton
-			class="a-button--secondary o-project__link"
+			class="a-button--secondary"
 			url="projects/{project.id}"
 			text="&gt; READ MORE"
 		></LinkButton>
+	</div>
 </div>
 
 <style lang="scss">
@@ -31,14 +36,18 @@
 
 	.o-project {
 		display: grid;
-		grid-row-gap: 24px;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: repeat(2, min-content) 1fr min-content;
+		grid-row-gap: 1rem;
+		grid-template-columns:
+			2fr
+			1fr;
+		grid-template-rows:
+			1fr
+			min-content
+			min-content;
 		grid-template-areas: 
 			"preview  preview "
-			"header   header  "
-			"desc     desc    "
-			"link     .       ";
+			"header   link    "
+			"desc     desc    ";
 
 		&__preview {
 			grid-area: preview;
@@ -56,6 +65,16 @@
 
 		&__header {
 			grid-area: header;
+			@include text-paragraph('l');
+			display: flex;
+			flex-direction: column;
+			font-weight: bold;
+		}
+
+		&__company {
+			grid-area: company;
+			@include text-paragraph('m');
+			font-weight: normal;
 		}
 
 		&__description {
@@ -64,6 +83,36 @@
 
 		&__link {
 			grid-area: link;
+			display: flex;
+			align-self: center;
+
+			> * {
+				width: 100%;
+			}
+		}
+	}
+
+	@include size-medium {
+		.o-project {
+			&__header {
+				@include text-paragraph('m');
+			}
+
+			&__company {
+				@include text-paragraph('s');
+			}
+		}
+	}
+
+	@include size-small {
+		.o-project {
+			&__header {
+				@include text-paragraph('m');
+			}
+
+			&__company {
+				@include text-paragraph('s');
+			}
 		}
 	}
 </style>
