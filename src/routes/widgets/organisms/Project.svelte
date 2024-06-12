@@ -39,7 +39,7 @@
 		grid-row-gap: 0.5rem;
 		grid-template-columns: 1fr;
 		grid-template-rows:
-			1fr
+			min-content
 			min-content
 			min-content
 			min-content;
