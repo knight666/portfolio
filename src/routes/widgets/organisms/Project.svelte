@@ -74,6 +74,8 @@
 		&__company {
 			grid-area: company;
 			@include text-paragraph('m');
+			text-transform: uppercase;
+			color: get-shade($clr-highlight, 400);
 			font-weight: normal;
 		}
 

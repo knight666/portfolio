@@ -1,7 +1,7 @@
 {
 	"title": "Deus Ex: Mankind Divided",
 	"brief": {
-		"description": "Single player stealth action adventure, continuing the story of Adam Jensen.",
+		"description": "I implemented several key features for the Steam version, including the weapons bar and the key rebinding screen.",
 		"released": "2016-08-23",
 		"employer": "nixxes",
 		"platforms": [ "steam", "windows" ],
