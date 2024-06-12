@@ -1,7 +1,4 @@
-<script lang="ts">
-	import "@slidy/svelte/dist/slidy.css";
-	import { Slidy, type Slide } from '@slidy/svelte';
-	
+<script lang="ts">	
 	import '$styles/toolkit.scss';
 
 	import AtAGlance from "$widgets/organisms/AtAGlance.svelte";
@@ -16,15 +13,6 @@
 	import type { PageData } from './$types';
 	
 	export let data: PageData;
-
-	const slides: Slide[] = data.projects.map((p) => {
-		return <Slide>{
-			id: p.id,
-			width: 560,
-			height: 315,
-			src: `./media/previews/${p.trailer.image}`,
-		}
-	})
 </script>
 
 <Header></Header>
@@ -36,14 +24,6 @@
 <AtAGlance></AtAGlance>
 
 <h1>Projects</h1>
-<div class="slides">
-	<Slidy
-		{slides}
-		axis={'x'}
-		snap={'start'}
-	>
-	</Slidy>
-</div>
 <div class="project-list">
 	{#each data.projects as p}
 	<Project
@@ -60,12 +40,6 @@
 
 <style lang="scss">
 	@import '$styles/globals';
-
-	.slides {
-		width: 100%;
-		padding: 0 6vw;
-		margin: 0 0 120px 0;
-	}
 
 	// Projects
 
