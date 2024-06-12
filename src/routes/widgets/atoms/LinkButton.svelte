@@ -44,4 +44,10 @@
 			@include text-size('S');
 		}
 	}
+
+	@include size-medium {
+		.a-button {
+			@include text-size('S');
+		}
+	}
 </style>

@@ -36,18 +36,18 @@
 
 	.o-project {
 		display: grid;
-		grid-row-gap: 1rem;
-		grid-template-columns:
-			2fr
-			1fr;
+		grid-row-gap: 0.5rem;
+		grid-template-columns: 1fr;
 		grid-template-rows:
 			1fr
 			min-content
+			min-content
 			min-content;
 		grid-template-areas: 
-			"preview  preview "
-			"header   link    "
-			"desc     desc    ";
+			"preview  "
+			"header   "
+			"desc     "
+			"link     ";
 
 		&__preview {
 			grid-area: preview;
@@ -85,6 +85,7 @@
 			grid-area: link;
 			display: flex;
 			align-self: center;
+			justify-self: flex-end;
 
 			> * {
 				width: 100%;
