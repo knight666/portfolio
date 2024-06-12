@@ -1,3 +1,8 @@
+export interface IBreadcrumb {
+	url: string;
+	title: string;
+}
+
 export interface ITrailer {
 	link?: string;
 	image: string;
