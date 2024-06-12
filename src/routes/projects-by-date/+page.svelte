@@ -2,8 +2,8 @@
 	import '$styles/toolkit.scss';
 	import type { PageData } from "./$types";
 	import type { IBreadcrumb, IProject } from '../../project-types';
-	import Header from '$widgets/organisms/Header.svelte';
 	import Footer from '$widgets/organisms/Footer.svelte';
+	import Header from '$widgets/organisms/Header.svelte';
 
 	export let data: PageData;
 

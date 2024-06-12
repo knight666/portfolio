@@ -3,7 +3,7 @@
 
 	import AtAGlance from "$widgets/organisms/AtAGlance.svelte";
 	import Footer from '$widgets/organisms/Footer.svelte';
-	import HomeHeader from "$widgets/organisms/HomeHeader.svelte";
+	import Header from "$widgets/organisms/Header.svelte";
 	import Project from "$widgets/organisms/Project.svelte";
 	import Section from "$widgets/molecules/Section.svelte";
 
@@ -15,7 +15,7 @@
 	export let data: PageData;
 </script>
 
-<HomeHeader></HomeHeader>
+<Header></Header>
 
 <Section content={intro}>
 </Section>
