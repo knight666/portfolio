@@ -5,8 +5,7 @@
 	import Section from "$widgets/molecules/Section.svelte";
 	import Trailer from "$widgets/molecules/Trailer.svelte";
 	import Footer from '$widgets/organisms/Footer.svelte';
-	import HomeHeader from '$widgets/organisms/HomeHeader.svelte';
-	import ProjectHeader from '$widgets/organisms/ProjectHeader.svelte';
+	import Header from '$widgets/organisms/Header.svelte';
 	import type { PageData } from "./$types";
 	import type { IBreadcrumb, IProject } from '../../../project-types';
 
@@ -18,7 +17,7 @@
 		{ url: '/', title: 'Home' },
 		{ url: '/projects-by-date', title: 'Projects' },
 		{ url: `/projects/${project.id}`, title: project.title },
-	]
+	];
 
 	const tokens = marked.lexer(data.source);
 	marked.walkTokens(tokens, (token) => {
@@ -30,7 +29,7 @@
 	});
 </script>
 
-<HomeHeader {breadcrumbs}></HomeHeader>
+<Header {breadcrumbs}></Header>
 
 <div class="o-projectTrailer">
 	<Trailer
