@@ -1,5 +1,5 @@
 <script lang="ts">
-	import '../../styles/toolkit.scss';
+	import '$styles/toolkit.scss';
 
 	import { marked } from 'marked';
 	import Section from "$widgets/molecules/Section.svelte";
