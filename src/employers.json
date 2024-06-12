@@ -1,0 +1,66 @@
+{
+	"employers": {
+		"collective": {
+			"name": "IEC Collective",
+			"location": "Berlin, Germany",
+			"function": "Senior Programmer",
+			"serviceStart": "2021-10"
+		},
+		"mpg": {
+			"name": "The Multiplayer Guys",
+			"location": "Berlin, Germany",
+			"function": "Senior UI Programmer",
+			"serviceStart": "2021-01",
+			"serviceEnd": "2021-10"
+		},
+		"ubisoft": {
+			"name": "Ubisoft Berlin GmbH",
+			"location": "Berlin, Germany",
+			"function": "Lead UI Programmer",
+			"serviceStart": "2018-03",
+			"serviceEnd": "2021-01"
+		},
+		"bigpoint": {
+			"name": "Bigpoint GmbH",
+			"location": "Berlin, Germany",
+			"function": "Senior UI Developer",
+			"serviceStart": "2016-06",
+			"serviceEnd": "2018-02"
+		},
+		"nixxes": {
+			"name": "Nixxes Software BV",
+			"location": "Utrecht, the Netherlands",
+			"function": "Systems Programmer",
+			"serviceStart": "2013-08",
+			"serviceEnd": "2016-05"
+		},
+		"flexposure": {
+			"name": "FlexPosure BV",
+			"location": "Tiel, the Netherlands",
+			"function": "Junior Developer",
+			"serviceStart": "2012-10",
+			"serviceEnd": "2013-08"
+		},
+		"digc": {
+			"name": "Dutch Indie Games Company",
+			"location": "Breda, the Netherlands",
+			"function": "Programmer",
+			"serviceStart": "2012-03",
+			"serviceEnd": "2012-09"
+		},
+		"igad": {
+			"name": "NHTV Hogeschool voor de Kunsten",
+			"location": "Breda, the Netherlands",
+			"function": "Student",
+			"serviceStart": "2008-09",
+			"serviceEnd": "2012-09"
+		},
+		"scripta": {
+			"name": "Scripta Consultancy BV",
+			"location": "Rotterdam, the Netherlands",
+			"function": "Web Developer",
+			"serviceStart": "2005-01",
+			"serviceEnd": "2012-01"
+		}
+	}
+}

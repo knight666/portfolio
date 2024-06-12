@@ -8,9 +8,18 @@ export interface ITrailer {
 	image: string;
 }
 
+export interface IEmployer {
+	name: string;
+	location: string;
+	function: string;
+	serviceStart: string;
+	serviceEnd?: string;
+}
+
 export interface IProject {
 	id: string;
 	title: string;
+	employer: IEmployer;
 	brief: {
 		description: string;
 		released: string;

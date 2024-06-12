@@ -12,8 +12,6 @@ export const load: PageServerLoad<{ projects: IProject[] }> = async () => {
 		projects.push(JSON.parse(await projectJsonList[path]()));
 	}
 
-	console.log(projects);
-
 	return {
 		projects
 	};

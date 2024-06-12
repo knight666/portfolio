@@ -19,7 +19,7 @@
 	</a>
 	<div class="o-project__header">
 		{project.title}
-		<div class="o-project__company">{project.brief.employer}</div>
+		<div class="o-project__company">{project.employer.name}</div>
 	</div>
 	<p class="o-project__description">{project.brief.description}</p>
 	<div class="o-project__link">

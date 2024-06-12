@@ -1,17 +1,12 @@
 import { error } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 import type { IProject } from '../../../project-types';
+import { getProject } from '../../../helpers';
 
 export const load: PageServerLoad<IProject> = async ({ params }) => {
-	const project = await import(`../../../projects/${params.slug}.json`);
+	const project = await getProject(params.slug);
 	if (project) {
-		const source = (await import(`../../../projects/${params.slug}.md?raw`)).default;
-
-		return {
-			...project.default,
-			id: params.slug,
-			source,
-		};
+		return project;
 	}
 
 	error(404, 'Not found');
