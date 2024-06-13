@@ -1,13 +1,7 @@
-# Unreleased Game Mode
+During my tenure at Ubisoft Berlin, I spearheaded the development of a game mode for Far Cry 6. Although this mode didn't make it to the final release, my leadership as the team lead for this feature spanned over nine months. I was instrumental in helping a diverse team bring their vision to life, ensuring smooth production, team satisfaction, and effective communication with the lead studio. And on some days, I even found the time to contribute to UI programming.
 
-During my time on Far Cry 6 at Ubisoft Berlin, I worked on a game mode that was ultimately cut from the final release. I was the team lead for the feature for about nine months, helping a multi-disciplinary team to realize their vision for this game mode.
-
-As a lead, my responsibilities included making sure the production was running smoothly, the team members were happy, and interfacing with the lead studio. I even managed to get some UI programming in myself.
-
-The team had a lot of freedom to iterate on the design, which helped to improve the game mode over time. We used regular internal tests to see if the game mode was progressing.
-
-Ultimately, a decision was made to cancel the game mode and pool the resources on other aspects of the game.
+The team had a lot of freedom to iterate on the design, which helped to improve the game mode quickly. We used regular internal tests with user researchers to see if the game mode was progressing in the right direction.
 
 # HUD
 
-As a UI programmer, I created a system for managing the visiblity of HUD elements and menu screens. Dunia, the engine that runs Far Cry, makes a hard distinction between the two types of UI. Menu screens are able to accept user input while HUD elements cannot. Part of our experimentation was to see if we could create a HUD element that could still accept user input.
+As a UI programmer, I created a system for managing the visibility of HUD elements and menu screens. Dunia, the engine that runs _Far Cry_, makes a hard distinction between the two types of UI. Menu screens can accept user input, while HUD elements cannot. Part of our experimentation was to see if we could create a HUD element that would receive user input. This experiment helped to improve the HUD system for the whole game.
