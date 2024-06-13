@@ -8,33 +8,28 @@
 	export { className as class };
 </script>
 
-<div
+<a
 	class={['o-project', className].join(' ')}
+	href="projects/{project.id}"
 >
-	<a
+	<div
 		class="o-project__preview"
-		href="projects/{project.id}"
 		style="background-image: url('./media/previews/{project.trailer.image}')"
 	>
-	</a>
+	</div>
 	<div class="o-project__header">
 		{project.title}
 		<div class="o-project__company">{project.employer.name}</div>
 	</div>
 	<p class="o-project__description">{project.brief.description}</p>
-	<div class="o-project__link">
-		<LinkButton
-			class="a-button--secondary"
-			url="projects/{project.id}"
-			text="&gt; READ MORE"
-		></LinkButton>
-	</div>
-</div>
+</a>
 
 <style lang="scss">
 	@import '$styles/globals';
 
 	.o-project {
+		$padding: 1rem;
+
 		display: grid;
 		grid-row-gap: 0.5rem;
 		grid-template-columns: 1fr;
@@ -48,6 +43,15 @@
 			"header   "
 			"desc     "
 			"link     ";
+		text-decoration: none;
+		color: initial;
+		filter: drop-shadow(1px 2px 2px lightgray);
+		background: white;
+		border-radius: 0.5rem;
+
+		&:hover {
+			filter: drop-shadow(3px 4px 8px gray);
+		}
 
 		&__preview {
 			grid-area: preview;
@@ -58,7 +62,8 @@
 			background-position: center;
 			background-repeat: no-repeat;
 			padding-top: 56.25%;
-			border-radius: 4px;
+			border-top-left-radius: 0.5rem;
+			border-top-right-radius: 0.5rem;
 			background-size: 100%;
 			transition: background-size 0.4s;
 		}
@@ -69,6 +74,7 @@
 			display: flex;
 			flex-direction: column;
 			font-weight: bold;
+			padding: 0 $padding;
 		}
 
 		&__company {
@@ -81,6 +87,7 @@
 
 		&__description {
 			grid-area: desc;
+			padding: 0 $padding;
 		}
 
 		&__link {
@@ -98,11 +105,15 @@
 	@include size-medium {
 		.o-project {
 			&__header {
-				@include text-paragraph('m');
+				@include text-size('m');
 			}
 
 			&__company {
-				@include text-paragraph('s');
+				@include text-size('s');
+			}
+
+			&__description {
+				@include text-size('s');
 			}
 		}
 	}
@@ -110,11 +121,11 @@
 	@include size-small {
 		.o-project {
 			&__header {
-				@include text-paragraph('m');
+				@include text-size('m');
 			}
 
 			&__company {
-				@include text-paragraph('s');
+				@include text-size('s');
 			}
 		}
 	}

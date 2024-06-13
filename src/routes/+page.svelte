@@ -46,12 +46,11 @@
 	.project-list {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		grid-gap: 120px 60px;
+		grid-gap: 48px 48px;
 		box-sizing: border-box;
 		list-style: none;
 		width: 100%;
 		padding: 0 6vw;
-		margin: 0 0 120px 0;
 	}
 
 	@include size-small {
