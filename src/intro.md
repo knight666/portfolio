@@ -1,5 +1,3 @@
-I'm a game developer with over a decade of experience with making best-in-class user interfaces for AAA games, and I want to help you get the most out of your team and take your projects to the next level. I've shipped multiple AAA video games with teams spread all across the globe, and I've worked with every UI framework under the sun; I've even made a few myself.
+As a seasoned game developer with over a decade of experience, I specialize in creating best-in-class user interfaces for AAA games. And I want to help you elevate your projects to new heights. I've successfully shipped multiple award-winning titles, collaborating with teams across the globe and mastering every UI framework under the sun.
 
-What excites me about front-end development is seeing results quickly and being able to bring creative visions to life. I love working with designers to optimize an interaction flow just as much as I love figuring out an optimal way to grab data from a backend.
-
-And although I mainly work in C++, I built [this portfolio](https://github.com/knight666/portfolio) using modern web development practices. That's because I believe the future of games UI is actually the web, using frameworks like [Coherent Gameface](https://coherent-labs.com/).
+What excites me about front-end development for games is that I can see immediate results when bringing creative visions to life. I equally enjoy working with designers to optimize interaction flows and devising efficient methods to extract data from a backend.
