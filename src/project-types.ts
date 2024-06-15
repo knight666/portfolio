@@ -22,7 +22,7 @@ export interface IProject {
 	employer: IEmployer;
 	brief: {
 		description: string;
-		released: string;
+		released?: string;
 		employer: string;
 		platforms: string[];
 		technologies: string[]
