@@ -1,7 +1,7 @@
 {
 	"title": "Rise of the Tomb Raider",
 	"brief": {
-		"description": "Single player action adventure, continuing the adventures (and struggles) of Lara Croft.",
+		"description": "As a Systems Programmer, I ensured the Steam version worked well with mouse and keyboard and integrated Razer Chroma features.",
 		"released": "2016-01-26",
 		"employer": "nixxes",
 		"platforms": [ "windows", "steam", "uwp" ],

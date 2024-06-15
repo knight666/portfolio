@@ -1,7 +1,7 @@
 {
 	"title": "Game of Thrones: Seven Kingdoms",
 	"brief": {
-		"description": "As Senior UI Programmer, I built custom UI features for this free-to-play title, which used Amazon's Lumberyard engine.",
+		"description": "As a Senior UI Programmer, I built custom UI features for this free-to-play title, which was based on Amazon's Lumberyard engine.",
 		"employer": "bigpoint",
 		"platforms": [ "windows" ],
 		"technologies": [ "c++", "ly" ]
