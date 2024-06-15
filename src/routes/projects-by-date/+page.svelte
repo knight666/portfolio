@@ -64,7 +64,7 @@
 
 		&__link {
 			color: get-shade($clr-highlight, 700);
-			text-decoration: wavy;
+			text-decoration: none;
 		}
 	}
 </style>
