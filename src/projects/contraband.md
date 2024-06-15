@@ -1,0 +1,11 @@
+As the Principal UI Programmer for Something Mighty, I did client work on _Contraband_, a project by Avalanche Studios. Working for this client, I was chiefly responsible for implementing the in-game map screens and HUD minimap widget. I also introduced code generation for bindings to the [Coherent Gameface](https://coherent-labs.com/products/coherent-gameface/) UI framework using my open-source [Panini](https://github.com/MrHands/Panini) framework for C++ code generation and helped streamline their processes in many areas.
+
+# In-game map screen textures
+
+My first task was to procedurally generate the textures for the in-game map screen. Previously, all open world games by Avalanche Studios featured hand-drawn maps, but my client realized this approach would not scale for their latest title. I built them a custom tool in Qt/C++ that reads the height map data and sea level for the world and applies a simple lighting equation to create the base terrain textures. I then used the same height map data to generate height lines and applied a pre-rendered road texture on top. Finally, the textures are generated at five levels of detail (LOD) for a combined total resolution of 32,768 x 32,768px.
+
+What was critical is that the application ran on the CPU only since it needed to work on build machines that often lack a dedicated GPU. Using a multi-threaded approach that divides the work into jobs, all textures are generated with shading programs that manipulate pixels directly, without uploading them to the graphics card. On an 8-core machine, generating all 1351 textures takes less than 90 seconds, where it previously took an artist a day and a half to create the same textures at only one LOD. This meant we could run the process on the build machines every time the world was modified, which was a huge boon for the level designers on the project.
+
+## Map screen optimization
+
+## Code generation
