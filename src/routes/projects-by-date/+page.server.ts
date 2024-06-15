@@ -1,5 +1,6 @@
 import type { PageServerLoad } from './$types';
 import type { IProject } from '../../project-types';
+import { getProject } from '../../helpers';
 
 export const load: PageServerLoad<Record<string, IProject[]>> = async () => {
 	const projectJsonList = import.meta.glob<string>('../../projects/*.json', {
@@ -10,8 +11,9 @@ export const load: PageServerLoad<Record<string, IProject[]>> = async () => {
 		'Ongoing': [],
 	};
 
-	for (const path in projectJsonList) {
-		const project = JSON.parse(await projectJsonList[path]()) as IProject;
+	for (const p in projectJsonList) {
+		const filename = (p.split('/').pop() ?? '').split('.')[0];
+		const project = await getProject(filename);
 		if (project.brief.released === undefined) {
 			projectMap['Ongoing'].push(project);
 			continue;
