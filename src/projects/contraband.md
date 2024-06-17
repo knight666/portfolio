@@ -1,4 +1,4 @@
-As the Principal UI Programmer for Something Mighty, I did client work on _Contraband_, a project by Avalanche Studios. Working for this client, I was chiefly responsible for implementing the in-game map screens and HUD minimap widget. I also introduced code generation for bindings to the [Coherent Gameface](https://coherent-labs.com/products/coherent-gameface/) UI framework using my open-source [Panini](https://github.com/MrHands/Panini) framework for C++ code generation and helped streamline their processes in many areas.
+As the Principal UI Programmer for Something Mighty, I did client work on _Contraband_, a project by Avalanche Studios. Working for this client, I was chiefly responsible for implementing the in-game map screens and HUD minimap widget. _Contraband_ uses the [Coherent Gameface](https://coherent-labs.com/products/coherent-gameface/) package for their user interface.
 
 # In-game map screen textures
 
@@ -9,3 +9,5 @@ What was critical is that the application ran on the CPU only since it needed to
 ## Map screen optimization
 
 ## Code generation
+
+Gameface uses the MVVM paradigm where view model code creates a separation between gameplay code and the UI. Unfortunately, this means that bindings must be set up to transfer data between the systems. To avoid human errors when setting up these bindings, I introduced code generation using my open-source [Panini](https://github.com/MrHands/Panini) framework for C++ code generation. I then set up JSON documents as the source of truth for view models to generate the C++ bindings and eventually simultaneously generate Typescript code too. The major advantage of this C++-centered approach compared to other code generation solutions is ease-of-maintenance; whenever there was an issue with the code generation we could attach the Visual Studio debugger to the application and step through its execution line-by-line.
