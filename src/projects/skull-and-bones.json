@@ -1,15 +1,15 @@
 {
 	"title": "Skull & Bones",
 	"brief": {
-		"description": "Single player action adventure, continuing the adventures (and struggles) of Lara Croft.",
+		"description": "As a Lead UI Programmer, I implemented online features, managed production priorities on the UI team, and mentored several direct reports.",
 		"released": "2024-02-13",
 		"employer": "ubisoft",
 		"platforms": [ "windows", "steam" ],
 		"technologies": []
 	},
 	"trailer": {
-		"link": "yt://PhGEFLcPHsY",
-		"image": "rise-of-the-tomb-raider.jpg"
+		"link": "yt://OmDYo7MbQxo",
+		"image": "skull-and-bones.jpg"
 	},
 	"source": "skull-and-bones.md"
 }
