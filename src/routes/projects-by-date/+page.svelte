@@ -22,6 +22,10 @@
 	];
 </script>
 
+<svelte:head>
+	<title>Quinten Lansu - Projects By Date</title> 
+</svelte:head>
+
 <Header {breadcrumbs}></Header>
 
 <section class="o-project-list">

@@ -15,6 +15,10 @@
 	export let data: PageData;
 </script>
 
+<svelte:head>
+	<title>Quinten Lansu - Portfolio</title> 
+</svelte:head>
+
 <Header></Header>
 
 <Section content={intro}>

@@ -29,6 +29,10 @@
 	});
 </script>
 
+<svelte:head>
+	<title>Quinten Lansu - {project.title}</title> 
+</svelte:head>
+
 <Header {breadcrumbs}></Header>
 
 <div class="o-projectTrailer">
