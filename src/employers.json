@@ -1,7 +1,7 @@
 {
 	"employers": {
-		"collective": {
-			"name": "somethingmighty",
+		"iec": {
+			"name": "Something Mighty",
 			"location": "Berlin, Germany",
 			"function": "Prinicpal UI Programmer",
 			"serviceStart": "2021-10"

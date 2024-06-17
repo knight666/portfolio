@@ -3,16 +3,16 @@
 	"brief": {
 		"description": "As the Principal UI Programmer, I designed and built a high-performance widget framework for my client and streamlined their UI development practices.",
 		"released": "2024-01-01",
-		"employer": "somethingmighty",
+		"employer": "iec",
 		"platforms": [ "steam", "windows" ],
-		"technologies": [ "g2", "scaleform", "c++", "as" ],
+		"technologies": [ "coherent", "c++", "ts", "js" ],
 		"role": "Principal UI Programmer",
 		"type": "AAA video game",
 		"stack": [ "Apex Engine", "Coherent Gameface" ]
 	},
 	"trailer": {
-		"link": "yt://CfV01sTqB68",
-		"image": "deus-ex-mankind-divided.jpg"
+		"link": "yt://reuri4lT7jI",
+		"image": "contraband.webp"
 	},
 	"source": "contraband.md"
 }
