@@ -37,8 +37,10 @@
 </div>
 
 <h1>About Me</h1>
-<Section content={aboutMe}>
-</Section>
+<div class="m-section about-me">
+	<div class="about-me__image"></div>
+	<Section content={aboutMe} class="about-me__text"></Section>
+</div>
 
 <Footer></Footer>
 
@@ -69,5 +71,27 @@
 		.project-list {
 			grid-gap: 60px 30px;
 		}
+	}
+
+	// About me
+
+	:global(.about-me) {
+		display: grid;
+		grid-template-columns: 1fr 4fr;
+		gap: 1rem;
+		justify-content: center;
+	}
+
+	:global(.about-me__image) {
+		background: url('./media/images/quinten-and-lydia.webp');
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position-y: center;
+		aspect-ratio: 3 / 12;
+	}
+
+	:global(.about-me__text) {
+		margin: 0 !important;
+		padding: 0 !important;
 	}
 </style>
