@@ -37,7 +37,6 @@
 		display: block;
 		width: 100%;
 		text-align: center;
-		margin: 1rem 0;
 
 		&__image {
 			width: 100%;

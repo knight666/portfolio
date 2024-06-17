@@ -5,17 +5,6 @@
 
 	export let content: string | marked.TokensList = '';
 
-	const renderer = new marked.Renderer;
-	renderer.paragraph = function (text) {
-		// do not enclose images in additional paragraphs
-
-		if (text.match(/^<(figure|img)/)) {
-			return text;
-		}
-
-		return `<p>${text}</p>`;
-	};
-
 	let className = '';
 	export { className as class };
 </script>
@@ -37,11 +26,17 @@
 	:global(.m-section) {
 		display: flex;
 		flex-direction: column;
+		gap: 1rem;
 		margin: 0 auto;
 	}
 
 	:global(.m-section > p) {
 		max-width: 70ch;
+		margin: 0;
+	}
+
+	:global(.m-section > h3) {
+		margin-top: 1rem;
 	}
 
 	@include size-small {
