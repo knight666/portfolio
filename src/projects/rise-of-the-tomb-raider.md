@@ -14,7 +14,7 @@ On top of that, a lot of the menu screens had been tilted with a 3D effect, caus
 
 ![The gamepad prompts change to clickable buttons automatically and vice versa.][2]
 
-On our previous collaboration with Crystal Dynamics, I implemented a context bar widget for [Lara Croft and the Temple of Osiris](lara-croft-and-the-temple-of-osiris.html). Because _Rise of the Tomb Raider_ is built on the same codebase, I was able to bring the widget over wholesale. The widget allows for the adding of gamepad button prompts that are automatically transformed to clickable buttons when playing with mouse and keyboard.
+On our previous collaboration with Crystal Dynamics, I implemented a context bar widget for [Lara Croft and the Temple of Osiris](/projects/lara-croft-and-the-temple-of-osiris). Because _Rise of the Tomb Raider_ is built on the same codebase, I was able to bring the widget over wholesale. The widget allows for the adding of gamepad button prompts that are automatically transformed to clickable buttons when playing with mouse and keyboard.
 
 For this project, I improved the look and feel of the widget, making it easier to integrate in existing menu screens. The widget was used to add mouse interaction to all menu screens in _Rise of the Tomb Raider_.
 

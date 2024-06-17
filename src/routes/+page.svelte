@@ -83,7 +83,7 @@
 	}
 
 	:global(.about-me__image) {
-		background: url('./media/images/quinten-and-lydia.webp');
+		background: url('/media/images/quinten-and-lydia.webp');
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position-y: center;
