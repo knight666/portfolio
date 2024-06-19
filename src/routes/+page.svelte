@@ -28,7 +28,7 @@
 <AtAGlance></AtAGlance>
 
 <h1>Projects</h1>
-<div class="project-list">
+<div class="o-project-list">
 	{#each data.projects as p}
 	<Project
 		project={p}
@@ -37,9 +37,9 @@
 </div>
 
 <h1>About Me</h1>
-<div class="m-section about-me">
-	<div class="about-me__image"></div>
-	<Section content={aboutMe} class="about-me__text"></Section>
+<div class="m-section o-about-me">
+	<div class="o-about-me__image"></div>
+	<Section content={aboutMe} class="o-about-me__text"></Section>
 </div>
 
 <Footer></Footer>
@@ -49,7 +49,7 @@
 
 	// Projects
 
-	.project-list {
+	.o-project-list {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-gap: 48px 48px;
@@ -60,7 +60,7 @@
 	}
 
 	@include size-small {
-		.project-list {
+		.o-project-list {
 			display: flex;
 			flex-direction: column;
 			gap: 2rem;
@@ -68,21 +68,21 @@
 	}
 
 	@include size-medium {
-		.project-list {
+		.o-project-list {
 			grid-gap: 60px 30px;
 		}
 	}
 
 	// About me
 
-	:global(.about-me) {
-		display: grid;
+	:global(.o-about-me) {
+		display: grid !important;
 		grid-template-columns: 1fr 4fr;
 		gap: 1rem;
 		justify-content: center;
 	}
 
-	:global(.about-me__image) {
+	:global(.o-about-me__image) {
 		background: url('/media/images/quinten-and-lydia.webp');
 		background-size: contain;
 		background-repeat: no-repeat;
@@ -90,7 +90,7 @@
 		aspect-ratio: 3 / 12;
 	}
 
-	:global(.about-me__text) {
+	:global(.o-about-me__text) {
 		margin: 0 !important;
 		padding: 0 !important;
 	}
