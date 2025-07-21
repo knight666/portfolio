@@ -33,7 +33,7 @@
 	</table>
 	<LinkButton
 		class="o-glance__download"
-		url="media/CV_Quinten_Lansu_2024.pdf"
+		url="media/CV_Quinten_Lansu_2025.pdf"
 		text="Download my CV"
 	></LinkButton>
 </section>
